@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c346a9e2503cda64ba4698db6aa5e707
+guid: 5b309a13c7bc8b945af8cdd018a65747
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -7,8 +7,8 @@ ModelImporter:
       74: 416870459326255563
     second: tpose
   - first:
-      74: -6206981513316247533
-    second: Idle
+      74: -4202689071170738779
+    second: RunLeft
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -25,7 +25,10 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'human_male_runleft_01' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Scapula_L' has translation
+      animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -50,14 +53,14 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -68,11 +71,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
-      takeName: human_male_idle_01
+      name: RunLeft
+      takeName: human_male_runleft_01
       internalID: 0
       firstFrame: 2
-      lastFrame: 54
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -585,19 +588,19 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Idle(Clone)
+    - name: RunLeft(Clone)
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Armature
-      parentName: Idle(Clone)
+      parentName: RunLeft(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Root_M
       parentName: Armature
-      position: {x: -1.9706458e-17, y: 1.058651, z: -0.013022041}
+      position: {x: -1.9984014e-17, y: 1.058651, z: -0.013022041}
       rotation: {x: 0.49653503, y: -0.50344115, z: -0.49653503, w: 0.50344115}
       scale: {x: 1, y: 1, z: 1}
     - name: Spine1_M
@@ -612,7 +615,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Chest_M
       parentName: Spine2_M
-      position: {x: -0.08937383, y: 3.1974422e-16, z: 2.0674236e-16}
+      position: {x: -0.08937383, y: 3.1974422e-16, z: 2.0677903e-16}
       rotation: {x: 0, y: 0, z: 0.046256915, w: 0.9989296}
       scale: {x: 1, y: 1, z: 1}
     - name: Neck_M
