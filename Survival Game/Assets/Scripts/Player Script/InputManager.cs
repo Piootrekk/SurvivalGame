@@ -13,11 +13,13 @@ public class InputManager : MonoBehaviour
     public Vector2 Move { get; private set; }
     public Vector2 Look { get; private set; }
     public bool Run { get; private set; }
+    public bool Jump { get; private set; }
 
     private InputActionMap currentMap;
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction runAction;
+    private InputAction jumpAction;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class InputManager : MonoBehaviour
         moveAction = currentMap.FindAction("Move");
         lookAction = currentMap.FindAction("Look");
         runAction = currentMap.FindAction("Run");
+        jumpAction = currentMap.FindAction("Jump");
 
         PerforAction();
         StopPerforAction();
@@ -45,31 +48,39 @@ public class InputManager : MonoBehaviour
 
     private void PerforAction()
     {
-        moveAction.performed += onMove;
-        lookAction.performed += onLook;
-        runAction.performed += onRun;
+        moveAction.performed += OnMove;
+        lookAction.performed += OnLook;
+        runAction.performed += OnRun;
+        jumpAction.performed += OnJump;
     }
 
     private void StopPerforAction()
     {
-        moveAction.canceled += onMove;
-        lookAction.canceled += onLook;
-        runAction.canceled += onRun;
+        moveAction.canceled += OnMove;
+        lookAction.canceled += OnLook;
+        runAction.canceled += OnRun;
+        jumpAction.canceled += OnJump;
     }
 
-    private void onLook(InputAction.CallbackContext callBack)
+    private void OnLook(InputAction.CallbackContext callBack)
     {
         Look = callBack.ReadValue<Vector2>();
     }
 
-    private void onMove(InputAction.CallbackContext callBack)
+    private void OnMove(InputAction.CallbackContext callBack)
     {
         Move = callBack.ReadValue<Vector2>();
     }
 
-    private void onRun(InputAction.CallbackContext callBack)
+    private void OnRun(InputAction.CallbackContext callBack)
     {
         Run = callBack.ReadValueAsButton();
+    }
+
+    private void OnJump(InputAction.CallbackContext callBack)
+    {
+        Jump = callBack.ReadValueAsButton();
+        Debug.Log("Zajebano spacjê");
     }
 
 

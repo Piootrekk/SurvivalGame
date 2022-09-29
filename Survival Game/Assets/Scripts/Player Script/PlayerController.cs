@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Camera: ")]
     [SerializeField] private Transform CameraRoot;
     [SerializeField] private Transform Camera;
-    [SerializeField] private Vector2 CameraAngle = new Vector2(-40f, 70f);
+    [SerializeField] private Vector2 CameraAngle = new(-40f, 70f);
     [SerializeField] private float Sensitivity = 20f;
 
     private Rigidbody rb;
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         xVelAnimator = Animator.StringToHash("X_Velocity");
         yVelAnimator = Animator.StringToHash("Y_Velocity");
+        
     }
 
     private void FixedUpdate()

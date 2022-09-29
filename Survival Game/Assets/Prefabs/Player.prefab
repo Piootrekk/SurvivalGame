@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997504930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0058, y: 1.72, z: 0.11}
+  m_LocalPosition: {x: -0.0058, y: 1.677, z: 0.272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2315,7 +2315,7 @@ GameObject:
   - component: {fileID: 3887432005082468515}
   - component: {fileID: 3887432005082468516}
   m_Layer: 0
-  m_Name: HumanMale_Character_FREE
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
