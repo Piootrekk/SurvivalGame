@@ -14,12 +14,14 @@ public class InputManager : MonoBehaviour
     public Vector2 Look { get; private set; }
     public bool Run { get; private set; }
     public bool Jump { get; private set; }
+    public bool Crouch { get; private set; }
 
     private InputActionMap currentMap;
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction runAction;
     private InputAction jumpAction;
+    private InputAction crouchAction;
 
     private void Awake()
     {
@@ -28,6 +30,7 @@ public class InputManager : MonoBehaviour
         lookAction = currentMap.FindAction("Look");
         runAction = currentMap.FindAction("Run");
         jumpAction = currentMap.FindAction("Jump");
+        crouchAction = currentMap.FindAction("Crouch");
 
         PerforAction();
         StopPerforAction();
@@ -52,6 +55,7 @@ public class InputManager : MonoBehaviour
         lookAction.performed += OnLook;
         runAction.performed += OnRun;
         jumpAction.performed += OnJump;
+        crouchAction.performed += OnCrouch;
     }
 
     private void StopPerforAction()
@@ -60,6 +64,7 @@ public class InputManager : MonoBehaviour
         lookAction.canceled += OnLook;
         runAction.canceled += OnRun;
         jumpAction.canceled += OnJump;
+        crouchAction.canceled += OnCrouch;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -82,7 +87,11 @@ public class InputManager : MonoBehaviour
         Jump = callBack.ReadValueAsButton();
     }
 
-
-
-
+    private void OnCrouch(InputAction.CallbackContext callBack)
+    {
+        if(callBack.control.IsPressed(0.5f))
+        {
+            Crouch = !Crouch;
+        }
+    }
 }
