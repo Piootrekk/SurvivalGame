@@ -7,12 +7,13 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 11f;
     [SerializeField] private float gravity = -15f;
-    [SerializeField] private LayerMask groundMask;
-    [SerializeField] private float jumpHeight = 3.5f;
+    [SerializeField] private float jumpHeight = 2f;
 
-    [SerializeField] private bool isGrounded;
+    [Header("Run: ")]
+    [SerializeField] private float RunMultiply = 1.5f;
+
+    private bool isGrounded;
     private Vector3 verticalVelocity = Vector3.zero;
-    private Vector3 transformPositionForCheck;
     private InputManager inputManager;
     private CharacterController characterController;
     public void Awake()
@@ -27,16 +28,15 @@ public class Movement : MonoBehaviour
         HorizontalMove();
         Jump();
         GravityDrop();
-
     }
 
 
 
     private void HorizontalMove()
     {
+        float multiply = Run();
         Vector3 horizontalMove = transform.right * inputManager.Move.x + transform.forward * inputManager.Move.y;
-        //horizontalMove = speed * Time.deltaTime * horizontalMove.normalized;;
-        horizontalMove *= speed * Time.deltaTime;
+        horizontalMove = speed * Time.deltaTime * horizontalMove.normalized * multiply;
         characterController.Move(horizontalMove);
 
     }
@@ -61,8 +61,20 @@ public class Movement : MonoBehaviour
     {
         if (inputManager.Jump && isGrounded)
         {
-            Debug.Log("Skoczono");
             verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
+        }
+    }
+
+    private float Run()
+    {
+        if(inputManager.Run)
+        {
+            float run = RunMultiply;
+            return run;
+        }
+        else
+        {
+            return 1f;
         }
     }
 }

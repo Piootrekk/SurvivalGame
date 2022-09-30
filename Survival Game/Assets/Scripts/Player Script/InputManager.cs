@@ -80,7 +80,6 @@ public class InputManager : MonoBehaviour
     private void OnJump(InputAction.CallbackContext callBack)
     {
         Jump = callBack.ReadValueAsButton();
-        Debug.Log("Zajebano spacjê");
     }
 
 
