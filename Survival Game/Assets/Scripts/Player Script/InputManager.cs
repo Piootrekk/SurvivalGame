@@ -94,4 +94,11 @@ public class InputManager : MonoBehaviour
             Crouch = !Crouch;
         }
     }
+
+    private void OnTestDamage(InputAction.CallbackContext callBack)
+    {
+        callBack.ReadValueAsButton();
+    }
+
+
 }
