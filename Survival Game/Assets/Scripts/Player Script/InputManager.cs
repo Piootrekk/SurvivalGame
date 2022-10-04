@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     public bool Run { get; private set; }
     public bool Jump { get; private set; }
     public bool Crouch { get; private set; }
+    public float Test { get; private set; }
 
     private InputActionMap currentMap;
     private InputAction moveAction;
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
     private InputAction runAction;
     private InputAction jumpAction;
     private InputAction crouchAction;
+    private InputAction testAction;
 
     private void Awake()
     {
@@ -31,6 +33,7 @@ public class InputManager : MonoBehaviour
         runAction = currentMap.FindAction("Run");
         jumpAction = currentMap.FindAction("Jump");
         crouchAction = currentMap.FindAction("Crouch");
+        testAction = currentMap.FindAction("TestDamage");
 
         PerforAction();
         StopPerforAction();
@@ -56,6 +59,8 @@ public class InputManager : MonoBehaviour
         runAction.performed += OnRun;
         jumpAction.performed += OnJump;
         crouchAction.performed += OnCrouch;
+        testAction.performed += OnTest;
+
     }
 
     private void StopPerforAction()
@@ -65,6 +70,7 @@ public class InputManager : MonoBehaviour
         runAction.canceled += OnRun;
         jumpAction.canceled += OnJump;
         crouchAction.canceled += OnCrouch;
+        testAction.canceled += OnTest;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -95,10 +101,12 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    private void OnTestDamage(InputAction.CallbackContext callBack)
+    private void OnTest(InputAction.CallbackContext callBack)
     {
-        callBack.ReadValueAsButton();
-    }
+        Debug.Log(callBack.ReadValue<float>());
+        Test = callBack.ReadValue<float>();
 
+
+    }
 
 }

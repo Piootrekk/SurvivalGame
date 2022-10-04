@@ -53,19 +53,10 @@
                 {
                     "name": "TestDamage",
                     "type": "Button",
-                    "id": "1e7aca39-efec-4e35-ab49-ce37b2699326",
+                    "id": "a0ecdd29-69a6-47a4-9f0c-7b98f2c786a9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "TestHealth",
-                    "type": "Button",
-                    "id": "573328dc-18cb-41ab-9172-c2f466cac504",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "initialStateCheck": false
                 }
             ],
@@ -171,23 +162,12 @@
                 },
                 {
                     "name": "",
-                    "id": "282139c1-2e90-4a82-a720-e06df3cbdc56",
+                    "id": "35196e89-9a92-416b-8cca-5beb77c1ab28",
                     "path": "<Keyboard>/leftBracket",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "TestDamage",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b1462d21-e2c3-4b57-8881-c8bcd5253f09",
-                    "path": "<Keyboard>/rightBracket",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TestHealth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
