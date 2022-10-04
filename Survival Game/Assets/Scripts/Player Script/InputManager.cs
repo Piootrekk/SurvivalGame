@@ -59,7 +59,7 @@ public class InputManager : MonoBehaviour
         runAction.performed += OnRun;
         jumpAction.performed += OnJump;
         crouchAction.performed += OnCrouch;
-        testAction.performed += OnTest;
+        testAction.started += OnTest;
 
     }
 
@@ -103,8 +103,9 @@ public class InputManager : MonoBehaviour
 
     private void OnTest(InputAction.CallbackContext callBack)
     {
-        Debug.Log(callBack.ReadValue<float>());
+        
         Test = callBack.ReadValue<float>();
+        Debug.Log(Test);
 
 
     }

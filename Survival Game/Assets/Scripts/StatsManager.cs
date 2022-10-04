@@ -13,7 +13,6 @@ public class StatsManager : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         GetAllChildren();
     }
-
     private void Update()
     {
         HealthManage();
@@ -21,25 +20,26 @@ public class StatsManager : MonoBehaviour
 
     private void GetAllChildren()
     {
-        foreach (Transform obj in StatsPanel)
+        foreach (Transform stats in StatsPanel)
         {
-            Statslist.Add(obj.GetComponent<PlayerStats>());
+            Statslist.Add(stats.GetComponent<PlayerStats>());
         }
     }
 
     private void HealthManage()
     {
+        if (inputManager.Test == default) { return; }
+
         if (inputManager.Test == -1)
         {
-            Statslist[0].TakePoints(5f);
-            Debug.Log("Zadano dmg");
+            Statslist[0].TakePoints(1f);
+            Debug.Log("Zabrano ¿ycie");
         }
-        else if (inputManager.Test == 1)
+        else
         {
-            Statslist[0].AddPoints(5f);
+            Statslist[0].AddPoints(1f);
             Debug.Log("Uleczono");
+
         }
     }
-
-
 }
