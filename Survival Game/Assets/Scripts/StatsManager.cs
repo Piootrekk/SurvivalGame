@@ -32,12 +32,12 @@ public class StatsManager : MonoBehaviour
 
         if (inputManager.Test == -1)
         {
-            Statslist[0].TakePoints(1f);
+            Statslist[0].TakePoints(10f);
             Debug.Log("Zabrano ¿ycie");
         }
-        else
+        else if (inputManager.Test == 1)
         {
-            Statslist[0].AddPoints(1f);
+            Statslist[0].AddPoints(10f);
             Debug.Log("Uleczono");
 
         }

@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private float totalSpeed;
 
     [SerializeField] private float speed = 11f;
+
+    [Header("Jump:")]
     [SerializeField] private float gravity = -15f;
     [SerializeField] private float jumpHeight = 2f;
 
