@@ -103,10 +103,11 @@ public class InputManager : MonoBehaviour
 
     private void OnTest(InputAction.CallbackContext callBack)
     {
-        
-        Test = callBack.ReadValue<float>();
-        Debug.Log(Test);
-
+        if (callBack.interaction is TapInteraction)
+        {
+            Test = callBack.ReadValue<float>();
+            Debug.Log(Test);
+        }
 
     }
 

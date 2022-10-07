@@ -7,19 +7,23 @@ public class GroundCheck : MonoBehaviour
     [SerializeField] private LayerMask ground;
     public bool IsGrounded { get; private set; }
 
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other != null && (((1 << other.gameObject.layer) & ground) != 0))
-        {
-            IsGrounded = true;
-            Debug.Log("Dziala");
-        }
+        Debug.Log(other.transform.gameObject.layer);
+        Debug.Log(other.tag);
+        //if (other != null && other.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        //{
+        //    IsGrounded = true;
+        //    Debug.Log("Dziala");
+        //}
 
     }
     private void OnTriggerExit(Collider other)
     {
         IsGrounded = false;
-        Debug.Log("Dziala exit");
-
+        Debug.Log($"{other.transform.gameObject.layer}, Dziala exit");
+        Debug.Log(other.tag);
     }
 }
