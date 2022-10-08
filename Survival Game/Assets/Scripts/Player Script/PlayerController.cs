@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [Header("Crouch:")]
     [SerializeField] private float CrouchMultiplySpeed = 0.5f;
 
+    [Header("Test:")]
     [SerializeField] bool isGrounded;
     private Vector3 verticalVelocity = Vector3.zero;
     private CharacterController characterController;
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private int xVelAnimator;
     private int yVelAnimator;
     private float xRotation;
+    private int jumpAnimator;
 
     private float speed = 5f;
     private Vector2 currentVelocity;
@@ -46,20 +48,15 @@ public class PlayerController : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         xVelAnimator = Animator.StringToHash("X_Velocity");
         yVelAnimator = Animator.StringToHash("Y_Velocity");
-        
+        jumpAnimator = Animator.StringToHash("Jump");
     }
 
     private void Update()
     {
         Move();
+        CameraMovements();
         isGrounded = IsGrounded();
     }
-
-    private void LateUpdate()
-    {
-        CameraMovements();
-    }
-
 
     private void Move()
     {
@@ -80,10 +77,10 @@ public class PlayerController : MonoBehaviour
     {
         if(!hasAnimator) { return; }
         Camera.position = CameraRoot.position;
-        xRotation -= inputManager.Look.y * Time.deltaTime * Sensitivity;
+        xRotation -= inputManager.Look.y * Time.smoothDeltaTime * Sensitivity;
         xRotation = Mathf.Clamp(xRotation, CameraAngle.x, CameraAngle.y);
         Camera.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        transform.Rotate(Vector3.up, inputManager.Look.x * Sensitivity * Time.deltaTime);
+        transform.Rotate(Vector3.up, inputManager.Look.x * Sensitivity * Time.smoothDeltaTime);
     }
 
     private void HorizontalMove()
@@ -123,8 +120,9 @@ public class PlayerController : MonoBehaviour
     {
         if (inputManager.Jump  && isGrounded)
         {
-            verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
+            animator.SetTrigger(jumpAnimator);
             inputManager.Jump = false;
+            
         }
     }
 
@@ -138,6 +136,12 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(ground.position, groundDistance);
         
+    }
+
+
+    public void AddVerticalVelocity()
+    {
+        verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
     }
 
 }
