@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = -15f;
     [SerializeField] private float jumpHeight = 2f;
     [SerializeField] private Transform ground;
-    [SerializeField] private float groundDistance = 0.5f;
+    [SerializeField] private float groundDistance = 0.1f;
     [SerializeField] private LayerMask groundmask;
 
     [Header("Crouch:")]
@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
         if (inputManager.Jump  && isGrounded)
         {
             verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
+            inputManager.Jump = false;
         }
     }
 

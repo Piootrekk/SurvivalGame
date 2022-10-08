@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     public Vector2 Move { get; private set; }
     public Vector2 Look { get; private set; }
     public bool Run { get; private set; }
-    public bool Jump { get; private set; }
+    public bool Jump { get; set; }
     public bool Crouch { get; private set; }
     public float Test { get; private set; }
 
@@ -57,7 +57,7 @@ public class InputManager : MonoBehaviour
         moveAction.performed += OnMove;
         lookAction.performed += OnLook;
         runAction.performed += OnRun;
-        jumpAction.performed += OnJump;
+        jumpAction.started += OnJump;
         crouchAction.performed += OnCrouch;
         testAction.started += OnTest;
 
@@ -90,7 +90,11 @@ public class InputManager : MonoBehaviour
 
     private void OnJump(InputAction.CallbackContext callBack)
     {
-        Jump = callBack.ReadValueAsButton();
+        if (callBack.interaction is TapInteraction)
+        {
+           Jump = callBack.ReadValueAsButton();
+
+        }
     }
 
     private void OnCrouch(InputAction.CallbackContext callBack)
