@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Test:")]
     [SerializeField] bool isGrounded;
-    private Vector3 verticalVelocity = Vector3.zero;
+    [SerializeField] private Vector3 verticalVelocity = Vector3.zero;
+    [SerializeField] private float totalSpeed;
     private CharacterController characterController;
     private InputManager inputManager;
     private Animator animator;
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
     private int yVelAnimator;
     private float xRotation;
     private int jumpAnimator;
+    private int fallAnimator;
+    private int crouchAnimator;
 
     private float speed = 5f;
     private Vector2 currentVelocity;
@@ -49,26 +52,32 @@ public class PlayerController : MonoBehaviour
         xVelAnimator = Animator.StringToHash("X_Velocity");
         yVelAnimator = Animator.StringToHash("Y_Velocity");
         jumpAnimator = Animator.StringToHash("Jump");
+        fallAnimator = Animator.StringToHash("Falling");
+        crouchAnimator = Animator.StringToHash("Crouch");
     }
-
+    private void Start()
+    {
+        totalSpeed = speed;
+    }
     private void Update()
     {
         Move();
         CameraMovements();
-        isGrounded = IsGrounded();
+        IsGrounded();
+        
     }
 
     private void Move()
     {
         if(!hasAnimator) { return; }
-
-        float targetSpeed = Run() * Crouch() * speed;
+        if (inputManager.Crouch) totalSpeed = speed * CrouchMultiplySpeed;
+        if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
         HorizontalMove();
         Jump();
-        GravityDrop();
+        CrouchHandle();
         var inputDirection = new Vector3(inputManager.Move.x, inputManager.Move.y).normalized;
-        currentVelocity.x = Mathf.Lerp(currentVelocity.x, targetSpeed * inputDirection.x, animationSpeed * Time.deltaTime);
-        currentVelocity.y = Mathf.Lerp(currentVelocity.y, targetSpeed * inputDirection.y, animationSpeed * Time.deltaTime);
+        currentVelocity.x = Mathf.Lerp(currentVelocity.x, totalSpeed * inputDirection.x, animationSpeed * Time.deltaTime);
+        currentVelocity.y = Mathf.Lerp(currentVelocity.y, totalSpeed * inputDirection.y, animationSpeed * Time.deltaTime);
         animator.SetFloat(xVelAnimator, currentVelocity.x);
         animator.SetFloat(yVelAnimator, currentVelocity.y);
     }
@@ -85,35 +94,18 @@ public class PlayerController : MonoBehaviour
 
     private void HorizontalMove()
     {
-        float totalSpeed = Run() * Crouch() * speed;
         Vector3 horizontalMove = transform.right * inputManager.Move.x + transform.forward * inputManager.Move.y;
         horizontalMove = totalSpeed * Time.deltaTime * horizontalMove.normalized;
         characterController.Move(horizontalMove);
-        //AdjustmentCrouch();
     }
 
-    private float Run()
-    {
-        if (inputManager.Run)
-        {
-            return RunMultiplySpeed;
-        }
-        else return 1f;
-    }
-
-    private float Crouch()
-    {
-        if (inputManager.Crouch)
-        {
-            return CrouchMultiplySpeed;
-        }
-        else return 1f;
-    }
 
     private void GravityDrop()
     {
         verticalVelocity.y += gravity * Time.deltaTime;
         characterController.Move(verticalVelocity * Time.deltaTime);
+        animator.SetBool(fallAnimator, true);
+        
     }
 
     private void Jump()
@@ -126,9 +118,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool IsGrounded()
+    private void IsGrounded()
     {
-        return Physics.CheckSphere(ground.position, groundDistance, groundmask);
+        isGrounded = Physics.CheckSphere(ground.position, groundDistance, groundmask);
+        if(!isGrounded)
+        {
+            GravityDrop();
+            
+        }
+        else
+        {
+            verticalVelocity.y = 0f;
+            if(animator.GetBool(fallAnimator))
+            {
+                animator.SetBool(fallAnimator, false);
+            }
+        }
+            
     }
 
     private void OnDrawGizmos()
@@ -138,10 +144,15 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void CrouchHandle()
+    {
+        animator.SetBool(crouchAnimator, inputManager.Crouch);
+    }
 
     public void AddVerticalVelocity()
     {
         verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
     }
+
 
 }

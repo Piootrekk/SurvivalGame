@@ -38,7 +38,7 @@
                     "id": "9d8921a3-3cff-4c04-ae29-51e6af2e9e13",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap(duration=0.01)",
+                    "interactions": "Tap(duration=0.01,pressPoint=0.05)",
                     "initialStateCheck": false
                 },
                 {
