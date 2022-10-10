@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
     public Vector2 Look { get; private set; }
     public bool Run { get; private set; }
     public bool Jump { get; set; }
-    public bool Crouch { get; private set; }
+    public bool Crouch { get; set; }
     public float Test { get; private set; }
 
     private InputActionMap currentMap;

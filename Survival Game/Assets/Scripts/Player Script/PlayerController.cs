@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float RunMultiplySpeed = 1.5f;
 
     [Header("Jump:")]
-    [SerializeField] private float gravity = -15f;
+    [SerializeField] private float gravity = -10f;
     [SerializeField] private float jumpHeight = 2f;
     [SerializeField] private Transform ground;
     [SerializeField] private float groundDistance = 0.1f;
@@ -71,7 +71,8 @@ public class PlayerController : MonoBehaviour
     {
         if(!hasAnimator) { return; }
         if (inputManager.Crouch) totalSpeed = speed * CrouchMultiplySpeed;
-        if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
+        else if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
+        else totalSpeed = speed;
         HorizontalMove();
         Jump();
         CrouchHandle();
@@ -102,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     private void GravityDrop()
     {
+        if (inputManager.Crouch) inputManager.Crouch = false;
         verticalVelocity.y += gravity * Time.deltaTime;
         characterController.Move(verticalVelocity * Time.deltaTime);
         animator.SetBool(fallAnimator, true);
@@ -112,6 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         if (inputManager.Jump  && isGrounded)
         {
+            if (inputManager.Crouch) inputManager.Crouch = false;
             animator.SetTrigger(jumpAnimator);
             inputManager.Jump = false;
             
