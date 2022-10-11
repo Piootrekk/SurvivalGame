@@ -1294,6 +1294,31 @@ PrefabInstance:
       propertyPath: HeadRotate
       value: 
       objectReference: {fileID: 857042138}
+    - target: {fileID: 3887432005082468515, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: coliderCrouch.heigh
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887432005082468515, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: coliderCrouch.radius
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887432005082468515, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: coliderCrouch.speed.y
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049338548312402152, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049338548312402152, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.97
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05f64eaebde3c864d8b21b19430ff504, type: 3}
 --- !u!1 &534796013

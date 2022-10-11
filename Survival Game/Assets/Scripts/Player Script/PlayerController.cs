@@ -26,6 +26,12 @@ public class PlayerController : MonoBehaviour
     [Header("Crouch:")]
     [SerializeField] private float CrouchMultiplySpeed = 0.5f;
 
+
+    [Header("Colider variables: ")]
+    [SerializeField] private PlayerColider coliderCrouch;
+
+    private PlayerColider coliderBase = new();
+
     [Header("Test:")]
     [SerializeField] bool isGrounded;
     [SerializeField] private Vector3 verticalVelocity = Vector3.zero;
@@ -58,6 +64,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         totalSpeed = speed;
+        GetCopyFromCharacter(coliderBase);
     }
     private void Update()
     {
@@ -112,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (inputManager.Jump  && isGrounded)
+        if (inputManager.Jump && isGrounded)
         {
             if (inputManager.Crouch) inputManager.Crouch = false;
             animator.SetTrigger(jumpAnimator);
@@ -152,9 +159,33 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(crouchAnimator, inputManager.Crouch);
     }
 
+    private void GetCopyFromCharacter(PlayerColider playerColider)
+    {
+        playerColider.Center = characterController.center;
+        playerColider.Height = characterController.height;
+        playerColider.Radius = characterController.radius;
+    }
+
+    private void AdjustmentColider(PlayerColider playerColider)
+    {
+        characterController.center = playerColider.Center;
+        characterController.height = playerColider.Height;
+        characterController.radius = playerColider.Radius;
+    }
+
     public void AddVerticalVelocity()
     {
         verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
+    }
+
+    public void AdjustColiderToCrouch()
+    {
+        AdjustmentColider(coliderCrouch);
+    }
+
+    public void AdjustColiderToBase()
+    {
+        AdjustmentColider(coliderBase);
     }
 
 
