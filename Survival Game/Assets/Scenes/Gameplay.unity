@@ -253,6 +253,7 @@ MonoBehaviour:
   frontBar: {fileID: 1035367789}
   backBar: {fileID: 1922749507}
   currentPoints: 0
+  decayRate: 0.01
 --- !u!1 &101570834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   frontBar: {fileID: 2089729325}
   backBar: {fileID: 163500818}
   currentPoints: 0
+  decayRate: 5
 --- !u!1 &639831158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1735,7 @@ MonoBehaviour:
   frontBar: {fileID: 639831160}
   backBar: {fileID: 9011660}
   currentPoints: 0
+  decayRate: 0.03
 --- !u!1001 &735405919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2002,6 +2005,7 @@ MonoBehaviour:
   frontBar: {fileID: 1706464753}
   backBar: {fileID: 759323301}
   currentPoints: 0
+  decayRate: 0.01
 --- !u!1 &1014754743
 GameObject:
   m_ObjectHideFlags: 0

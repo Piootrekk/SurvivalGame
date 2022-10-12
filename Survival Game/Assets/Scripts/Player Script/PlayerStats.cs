@@ -8,12 +8,13 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxPoints = 100f;
     [SerializeField] private Image frontBar;
     [SerializeField] private Image backBar;
-
     [SerializeField] private float currentPoints;
+    [SerializeField] private float decayRate;
     private float lerp = 2f;
 
     public float CurrentPoints { get { return currentPoints; } set { currentPoints = value; } }
     public float MaxPoints { get { return currentPoints; } set { currentPoints = value; } }
+    public float DecayRate { get { return decayRate; } set { decayRate = value; } }
 
 
     private void Start()
@@ -57,5 +58,9 @@ public class PlayerStats : MonoBehaviour
         currentPoints -= points;
     }
 
+    public void RenegeratePoints(float points)
+    {
+        currentPoints = Mathf.Lerp(currentPoints, currentPoints + points, lerp * Time.deltaTime);
+    }
 
 }
