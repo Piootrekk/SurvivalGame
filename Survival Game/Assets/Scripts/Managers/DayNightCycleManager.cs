@@ -9,7 +9,7 @@ public class DayNightCycleManager : MonoBehaviour
     [SerializeField] private float fullDayLenght;
     [SerializeField] private float startTime = 0.5f;
     [SerializeField] private Vector3 noon;
-    [SerializeField] private int dayCount = 0;
+    [SerializeField] private int dayCount = 1;
     private float timeRate;
 
     [Header("Sun")]
