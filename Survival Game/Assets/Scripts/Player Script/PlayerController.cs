@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Colider variables: ")]
     [SerializeField] private PlayerColider coliderCrouch;
+    [SerializeField] private Vector2 currentVelocity;
 
-    private PlayerColider coliderBase = new();
 
     [Header("Test:")]
     [SerializeField] bool isGrounded;
@@ -46,9 +46,9 @@ public class PlayerController : MonoBehaviour
     private int jumpAnimator;
     private int fallAnimator;
     private int crouchAnimator;
-
+    private PlayerColider coliderBase = new();
     private float speed = 5f;
-    private Vector2 currentVelocity;
+    
 
     private void Awake()
     {
@@ -113,7 +113,11 @@ public class PlayerController : MonoBehaviour
         if (inputManager.Crouch) inputManager.Crouch = false;
         verticalVelocity.y += gravity * Time.deltaTime;
         characterController.Move(verticalVelocity * Time.deltaTime);
-        animator.SetBool(fallAnimator, true);
+        if (verticalVelocity.y <= -5.0f)
+        {
+            animator.SetBool(fallAnimator, true);
+        }
+        
         
     }
 
@@ -124,7 +128,11 @@ public class PlayerController : MonoBehaviour
             if (inputManager.Crouch) inputManager.Crouch = false;
             animator.SetTrigger(jumpAnimator);
             inputManager.Jump = false;
-            
+
+            if (verticalVelocity.y <= -5.0f)
+            {
+                animator.SetBool(fallAnimator, true);
+            }
         }
     }
 

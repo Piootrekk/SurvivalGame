@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 101570834}
   m_LocalRotation: {x: 0, y: 0, z: 0.21311565, w: 0.977027}
   m_LocalPosition: {x: 9.9, y: 3.18, z: -3.47}
-  m_LocalScale: {x: 16.5, y: 1, z: 1}
+  m_LocalScale: {x: 16.5, y: 1, z: 27.72}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1238,12 +1238,12 @@ PrefabInstance:
     - target: {fileID: 2739402545792020199, guid: 05f64eaebde3c864d8b21b19430ff504,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 2739402545792020199, guid: 05f64eaebde3c864d8b21b19430ff504,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 23.14
       objectReference: {fileID: 0}
     - target: {fileID: 2739402545792020199, guid: 05f64eaebde3c864d8b21b19430ff504,
         type: 3}
@@ -1295,6 +1295,11 @@ PrefabInstance:
       propertyPath: HeadRotate
       value: 
       objectReference: {fileID: 857042138}
+    - target: {fileID: 3887432005082468515, guid: 05f64eaebde3c864d8b21b19430ff504,
+        type: 3}
+      propertyPath: groundDistance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3887432005082468515, guid: 05f64eaebde3c864d8b21b19430ff504,
         type: 3}
       propertyPath: coliderCrouch.heigh
@@ -2324,7 +2329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayCycle: 0
-  fullDayLenght: 24
+  fullDayLenght: 2400
   startTime: 0.5
   noon: {x: 90, y: 0, z: 0}
   dayCount: 0
