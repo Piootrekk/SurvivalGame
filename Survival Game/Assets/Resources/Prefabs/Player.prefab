@@ -2953,13 +2953,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.1
+  m_Height: 1.9
   m_Radius: 0.4
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.001
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.05, z: 0.15}
+  m_Center: {x: 0, y: 0.97, z: 0.15}
 --- !u!114 &3887432005082468515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,11 +2981,16 @@ MonoBehaviour:
   gravity: -10
   jumpHeight: 1
   ground: {fileID: 530898712}
-  groundDistance: 0.1
+  groundDistance: 0.2
   groundmask:
     serializedVersion: 2
     m_Bits: 64
   CrouchMultiplySpeed: 0.5
+  coliderCrouch:
+    heigh: 1.72
+    radius: 0.88
+    speed: {x: 0, y: 0.83, z: 0}
+  currentVelocity: {x: 0, y: 0}
   isGrounded: 0
   verticalVelocity: {x: 0, y: 0, z: 0}
   totalSpeed: 0
