@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "Tap(duration=0.005)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interactive",
+                    "type": "Button",
+                    "id": "9b5e9efe-615f-45f1-b26d-4a4e3753daa4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -192,6 +201,17 @@
                     "action": "TestDamage",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3e7d5754-2712-4273-ab80-9caddab73a66",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

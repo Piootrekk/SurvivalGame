@@ -142,7 +142,6 @@ public class PlayerController : MonoBehaviour
         if(!isGrounded)
         {
             GravityDrop();
-            
         }
         else
         {

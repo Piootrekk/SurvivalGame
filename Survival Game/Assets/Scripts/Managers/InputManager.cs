@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Interactions;
 
 
@@ -16,6 +17,9 @@ public class InputManager : MonoBehaviour
     public bool Jump { get; set; }
     public bool Crouch { get; set; }
     public float Test { get; private set; }
+    public bool Interactive { get; private set; }
+
+    public string CurrentPathAInput { get; private set; }
 
     private InputActionMap currentMap;
     private InputAction moveAction;
@@ -24,6 +28,7 @@ public class InputManager : MonoBehaviour
     private InputAction jumpAction;
     private InputAction crouchAction;
     private InputAction testAction;
+    private InputAction interactive;
 
     private void Awake()
     {
@@ -34,7 +39,7 @@ public class InputManager : MonoBehaviour
         jumpAction = currentMap.FindAction("Jump");
         crouchAction = currentMap.FindAction("Crouch");
         testAction = currentMap.FindAction("TestDamage");
-
+        interactive = currentMap.FindAction("Interactive");
         PerforAction();
         StopPerforAction();
 
@@ -60,8 +65,10 @@ public class InputManager : MonoBehaviour
         jumpAction.started += OnJump;
         crouchAction.performed += OnCrouch;
         testAction.started += OnTest;
-
+        interactive.started += OnInteractive;
     }
+
+
 
     private void StopPerforAction()
     {
@@ -71,6 +78,7 @@ public class InputManager : MonoBehaviour
         jumpAction.canceled += OnJump;
         crouchAction.canceled += OnCrouch;
         testAction.canceled += OnTest;
+        interactive.canceled += OnInteractive;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -93,9 +101,9 @@ public class InputManager : MonoBehaviour
         if (callBack.interaction is TapInteraction)
         {
            Jump = callBack.ReadValueAsButton();
-
         }
     }
+
 
     private void OnCrouch(InputAction.CallbackContext callBack)
     {
@@ -112,7 +120,18 @@ public class InputManager : MonoBehaviour
             Test = callBack.ReadValue<float>();
             Debug.Log(Test);
         }
+    }
 
+    private void OnInteractive(InputAction.CallbackContext callBack)
+    {
+        Interactive = callBack.ReadValueAsButton();
+        CurrentPathAInput = GetPathFromInputAction(callBack);
+        Debug.Log(CurrentPathAInput);
+    }
+
+    public string GetPathFromInputAction(InputAction.CallbackContext input)
+    {
+        return ((KeyControl)input.control).keyCode.ToString();
     }
 
 }
