@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
     public float Test { get; private set; }
     public bool Interactive { get; private set; }
 
-    public string CurrentPathAInput { get; private set; }
+    public string CurrentPathInput { get; private set; }
 
     private InputActionMap currentMap;
     private InputAction moveAction;
@@ -125,8 +125,7 @@ public class InputManager : MonoBehaviour
     private void OnInteractive(InputAction.CallbackContext callBack)
     {
         Interactive = callBack.ReadValueAsButton();
-        CurrentPathAInput = GetPathFromInputAction(callBack);
-        Debug.Log(CurrentPathAInput);
+        CurrentPathInput = GetPathFromInputAction(callBack);
     }
 
     public string GetPathFromInputAction(InputAction.CallbackContext input)
