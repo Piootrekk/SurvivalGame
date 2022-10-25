@@ -6,6 +6,9 @@ public class Item : MonoBehaviour, IInteractable
 {
     [SerializeField] ItemData item;
     [SerializeField] int amount;
+
+    public ItemData ItemData => item;
+    public int Amount => amount;
     
 
     public void OnInteract()

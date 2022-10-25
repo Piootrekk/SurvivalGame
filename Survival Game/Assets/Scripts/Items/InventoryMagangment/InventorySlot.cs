@@ -22,6 +22,12 @@ public class InventorySlot
         ClearSlot();
     }
 
+    public void UpdateInventorySlot(ItemData data, int quantity)
+    {
+        itemData = data;
+        itemQuantity = quantity;
+    }
+
     public void ClearSlot()
     {
         itemData = null;
