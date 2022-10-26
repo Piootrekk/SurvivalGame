@@ -28,12 +28,10 @@ public class InventorySystem
     {
         if (ContainsItem(item.ItemData, out List<InventorySlot> invSlot))
         {
-            Debug.Log("Test1");
             foreach (InventorySlot slot in invSlot)
             {
                 if(slot.IsSpaceLeftInStack(item.Amount))
                 {
-                    Debug.Log("Test2");
                     slot.AddToStack(item.Amount);
                     InvSlotChanged?.Invoke(slot);
                     return true;
@@ -42,7 +40,6 @@ public class InventorySystem
         }
         if (HasFreeSlot(out InventorySlot freeSlot))
         {
-            Debug.Log("Test3");
             freeSlot.UpdateInventorySlot(item.ItemData, item.Amount);
             InvSlotChanged?.Invoke(freeSlot);
             return true;

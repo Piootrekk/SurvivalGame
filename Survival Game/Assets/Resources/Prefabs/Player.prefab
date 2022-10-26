@@ -498,6 +498,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 256
+  pickUpText: {fileID: 0}
 --- !u!1 &1420276633
 GameObject:
   m_ObjectHideFlags: 0

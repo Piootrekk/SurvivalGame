@@ -32,10 +32,10 @@ public class PickItem : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer))
         {
-            SetUpText();
+            var item = hitInfo.collider.GetComponent<Item>();
+            SetUpText(item.ItemData.NameItem);
             if (inputManager.Interactive)
             {
-                var item = hitInfo.collider.GetComponent<Item>();
 
                 if(!inventoryHandler) { return; }
                 if(inventoryHandler.InventorySystem.AddToInventory(item))
@@ -47,10 +47,10 @@ public class PickItem : MonoBehaviour
         }
         else DistableText();
     }
-    private void SetUpText()
+    private void SetUpText(string name)
     {
         pickUpText.gameObject.SetActive(true);
-        pickUpText.text = string.Format($"<b> Press <F> to pick item </b>");
+        pickUpText.text = string.Format($"<b> Press <F> to pick {name}  </b>");
     }
 
     private void DistableText()

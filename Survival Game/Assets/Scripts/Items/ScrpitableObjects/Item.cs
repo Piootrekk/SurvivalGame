@@ -14,7 +14,6 @@ public class Item : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Destroy(this.gameObject);
-        Debug.Log("Item pick up");
     }
 
 
