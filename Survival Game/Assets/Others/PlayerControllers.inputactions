@@ -51,21 +51,30 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TestDamage",
-                    "type": "Button",
-                    "id": "a0ecdd29-69a6-47a4-9f0c-7b98f2c786a9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap(duration=0.005)",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interactive",
                     "type": "Button",
                     "id": "9b5e9efe-615f-45f1-b26d-4a4e3753daa4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HotBarKeys",
+                    "type": "PassThrough",
+                    "id": "b537af17-f5d4-436e-a79a-7779b18f1abb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestDamage",
+                    "type": "Button",
+                    "id": "a0ecdd29-69a6-47a4-9f0c-7b98f2c786a9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap(duration=0.005)",
                     "initialStateCheck": false
                 }
             ],
@@ -170,6 +179,127 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "3e7d5754-2712-4273-ab80-9caddab73a66",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "799cfab2-f78e-49c7-8805-e6b76cd94871",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de6ae4a6-fe64-45b9-a87d-15a2814cfb53",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c6d9a92b-3f4e-401e-835d-b778c682e45d",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1818c4fc-de03-439d-a1a9-6cabfe19f7e0",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41e9f555-b420-49b7-ac16-87f6640e61aa",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd4025f7-589a-4b21-a8a7-6ea089226107",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "282c67f2-4362-4d34-b3b3-ad455a549493",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e1eb176-c1e1-4765-a17f-81529865329c",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df78ef91-140e-4910-b69a-5397696de461",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6676e652-7222-46c2-9121-812229743d58",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HotBarKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "c1fdfbfb-a67c-43aa-a57b-720834aaff8a",
                     "path": "1DAxis",
@@ -201,17 +331,6 @@
                     "action": "TestDamage",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "3e7d5754-2712-4273-ab80-9caddab73a66",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interactive",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

@@ -18,6 +18,8 @@ public class InputManager : MonoBehaviour
     public bool Crouch { get; set; }
     public float Test { get; private set; }
     public bool Interactive { get; private set; }
+    public string HotBarKeyChange { get; private set; }
+
 
     public string CurrentPathInput { get; private set; }
 
@@ -29,6 +31,10 @@ public class InputManager : MonoBehaviour
     private InputAction crouchAction;
     private InputAction testAction;
     private InputAction interactive;
+    private InputAction hotbarkeys;
+
+
+    
 
     private void Awake()
     {
@@ -40,6 +46,7 @@ public class InputManager : MonoBehaviour
         crouchAction = currentMap.FindAction("Crouch");
         testAction = currentMap.FindAction("TestDamage");
         interactive = currentMap.FindAction("Interactive");
+        hotbarkeys = currentMap.FindAction("HotBarKeys");
         PerforAction();
         StopPerforAction();
 
@@ -66,6 +73,7 @@ public class InputManager : MonoBehaviour
         crouchAction.performed += OnCrouch;
         testAction.started += OnTest;
         interactive.started += OnInteractive;
+        hotbarkeys.started += OnChangeHotBarSlot;
     }
 
 
@@ -79,6 +87,7 @@ public class InputManager : MonoBehaviour
         crouchAction.canceled += OnCrouch;
         testAction.canceled += OnTest;
         interactive.canceled += OnInteractive;
+        hotbarkeys.canceled += OnChangeHotBarSlot;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -128,9 +137,26 @@ public class InputManager : MonoBehaviour
         CurrentPathInput = GetPathFromInputAction(callBack);
     }
 
+    public void OnChangeHotBarSlot(InputAction.CallbackContext callBack)
+    {
+        HotBarKeyChange = GetPathFromInputAction(callBack);
+        //IChangeBar changeBar = GetComponent
+
+            //TU skoñczy³em nie dzia³a interface, robie kurwa event action
+        //changeBar.HotBarChange();
+
+    }
+
+
     public string GetPathFromInputAction(InputAction.CallbackContext input)
     {
         return ((KeyControl)input.control).keyCode.ToString();
     }
 
+}
+
+
+public interface IChangeBar
+{
+    void HotBarChange();
 }

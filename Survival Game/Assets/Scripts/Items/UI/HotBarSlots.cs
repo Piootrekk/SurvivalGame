@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HotBarSlots : MonoBehaviour
+public class HotBarSlots : MonoBehaviour, IChangeBar
 {
-    // Start is called before the first frame update
-    void Start()
+    private InputManager inputManager;
+
+    public void Awake()
     {
-        
+        inputManager = GetComponent<InputManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void HotBarChange()
     {
-        
+        if (inputManager == null) { return; }
+        Debug.Log(inputManager.HotBarKeyChange);
+
     }
 }

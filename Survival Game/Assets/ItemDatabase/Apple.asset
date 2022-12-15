@@ -22,4 +22,4 @@ MonoBehaviour:
   itemType: 2
   staminaBonus: 10
   hungerBonus: 25
-  thirstBonus: 0
+  thirstBonus: 15
