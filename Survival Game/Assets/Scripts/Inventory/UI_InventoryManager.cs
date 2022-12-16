@@ -111,6 +111,23 @@ public class UI_InventoryManager : MonoBehaviour
             Instantiate(cursor.GetChild(0).gameObject, inventorySlots[currentSlot].Slot);
             Destroy(cursor.GetChild(0).gameObject);
         }
+        else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
+        {
+            if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId
+                == cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId)
+            {
+                int amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                int maxStack = cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit;
+                if (amount <= maxStack - amount)
+                {
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount 
+                        += cursor.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                    Destroy(cursor.GetChild(0).gameObject);
+
+                }
+            }
+        }
         CheckIfSlotIsFull();
     }
     public void ItemHandlerVisibility()
