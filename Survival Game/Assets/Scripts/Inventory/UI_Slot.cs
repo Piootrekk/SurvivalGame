@@ -7,7 +7,6 @@ public class UI_Slot : MonoBehaviour
     [SerializeField] private int id;
     
 
-
     private UI_InventoryManager inventoryManager;
 
     public int ID { get => id; set => id = value; }
@@ -20,11 +19,7 @@ public class UI_Slot : MonoBehaviour
     public void SetID()
     {
         inventoryManager.CurrentSlot = id;
+        inventoryManager.GetItemToHandler();
     }
 }
-// Zrobiæ Interfejs obs³uguj¹cy wy³¹czenie ruszaniem myszki
-public interface IInventoryManager
-{
-    public bool IsGUIOff { set; get; }
-    public void SetGUIOff();
-}
+

@@ -25,3 +25,11 @@ public class UI_MenuManager : MonoBehaviour
 
 
 }
+
+
+// Zrobiæ Interfejs obs³uguj¹cy wy³¹czenie ruszaniem myszki
+public interface IInventoryManager
+{
+    public bool IsGUIOff { set; get; }
+    public void SetGUIOff();
+}
