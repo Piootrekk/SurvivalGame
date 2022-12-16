@@ -22,3 +22,9 @@ public class UI_Slot : MonoBehaviour
         inventoryManager.CurrentSlot = id;
     }
 }
+// Zrobiæ Interfejs obs³uguj¹cy wy³¹czenie ruszaniem myszki
+public interface IInventoryManager
+{
+    public bool IsGUIOff { set; get; }
+    public void SetGUIOff();
+}

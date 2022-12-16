@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     public float Test { get; private set; }
     public bool Interactive { get; private set; }
     public string HotBarKeyChange { get; private set; }
+    public bool Inventory { get; set; }
 
 
     public string CurrentPathInput { get; private set; }
@@ -32,9 +33,10 @@ public class InputManager : MonoBehaviour
     private InputAction testAction;
     private InputAction interactive;
     private InputAction hotbarkeys;
+    private InputAction inventoryAction;
 
 
-    
+
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class InputManager : MonoBehaviour
         testAction = currentMap.FindAction("TestDamage");
         interactive = currentMap.FindAction("Interactive");
         hotbarkeys = currentMap.FindAction("HotBarKeys");
+        inventoryAction = currentMap.FindAction("OpenInventory");
         PerforAction();
         StopPerforAction();
 
@@ -74,6 +77,7 @@ public class InputManager : MonoBehaviour
         testAction.started += OnTest;
         interactive.started += OnInteractive;
         hotbarkeys.started += OnChangeHotBarSlot;
+        inventoryAction.started += OnInventory;
     }
 
 
@@ -88,6 +92,7 @@ public class InputManager : MonoBehaviour
         testAction.canceled += OnTest;
         interactive.canceled += OnInteractive;
         hotbarkeys.canceled += OnChangeHotBarSlot;
+        inventoryAction.canceled += OnInventory;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -153,7 +158,20 @@ public class InputManager : MonoBehaviour
         return ((KeyControl)input.control).keyCode.ToString();
     }
 
+    private void OnInventory(InputAction.CallbackContext callBack)
+    {
+        if (callBack.control.IsPressed(0.5f))
+        {
+            
+            Inventory = !Inventory;
+        }
+    }
+
+
 }
+
+
+
 
 
 public interface IChangeBar

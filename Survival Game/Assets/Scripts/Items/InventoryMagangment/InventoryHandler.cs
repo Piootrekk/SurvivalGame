@@ -14,10 +14,14 @@ public class InventoryHandler : MonoBehaviour
     public InventorySystem InventorySystem => inventorySystem;
     public UnityAction<InventorySystem> DynamicInvDisplay => dynamicInvDisplay;
 
-    public void Awake()
+    private void Awake()
     {
         inventorySystem = new InventorySystem(inventorySize);
     }
 
+
+  
+
+    
 
 }
