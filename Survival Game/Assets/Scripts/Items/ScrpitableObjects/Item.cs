@@ -9,7 +9,7 @@ public class Item : MonoBehaviour, IInteractable
 
     public ItemData ItemData => item;
     public int Amount => amount;
-    
+
 
     public void OnInteract()
     {

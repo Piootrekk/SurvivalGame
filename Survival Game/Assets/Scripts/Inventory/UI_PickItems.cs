@@ -1,29 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class PickItem : MonoBehaviour
+public class UI_PickItems : MonoBehaviour
 {
     [SerializeField] float maxPickUpDistance;
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] TextMeshProUGUI pickUpText;
-    
-    private InventoryHandler inventoryHandler;
+
+    private UI_InventoryManager inventoryHandler;
     private Ray ray;
     private InputManager inputManager;
 
     private void Awake()
     {
         inputManager = GameObject.Find("Player").GetComponent<InputManager>();
-        inventoryHandler = gameObject.GetComponent<InventoryHandler>();
+        inventoryHandler = gameObject.GetComponent<UI_InventoryManager>();
     }
 
     private void Update()
     {
         RayCastInteractionable();
     }
-    
+
 
     private void RayCastInteractionable()
     {
@@ -32,13 +32,13 @@ public class PickItem : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer))
         {
-            var item = hitInfo.collider.GetComponent<Item>();
-            SetUpText(item.ItemData.NameItem);
+            var item = hitInfo.collider.GetComponent<ItemObjectInGame>();
+            SetUpText(item.InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
             if (inputManager.Interactive)
             {
 
-                if(!inventoryHandler) { return; }
-                if(inventoryHandler.InventorySystem.AddToInventory(item))
+                if (!inventoryHandler) { return; }
+                if (inventoryHandler.ItemAdd(item.InstanceInInventory))
                 {
                     IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
                     interactable?.OnInteract();
@@ -66,7 +66,8 @@ public class PickItem : MonoBehaviour
 
 }
 
-public interface IInteractable2
+public interface IInteractable
 {
     void OnInteract();
 }
+

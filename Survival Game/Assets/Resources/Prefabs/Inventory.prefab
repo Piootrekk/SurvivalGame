@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4271772261929882545}
-  - component: {fileID: 4271772261929882546}
-  - component: {fileID: 4271772261929882547}
   - component: {fileID: 4271772262142235999}
+  - component: {fileID: 3267056113313770682}
   m_Layer: 7
   m_Name: Inventory
   m_TagString: Untagged
@@ -34,38 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4271772261929882546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4271772261929882544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af3d8ee18adeea4ca297d644a4d5c0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySize: 10
-  inventorySystem:
-    inventorySlots: []
---- !u!114 &4271772261929882547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4271772261929882544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec7ff0d8db67d0d4e9bca96b82befe08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPickUpDistance: 10
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  pickUpText: {fileID: 0}
 --- !u!114 &4271772262142235999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,5 +48,25 @@ MonoBehaviour:
   inventorySlotHolder: {fileID: 0}
   inventoryHotBarSlotHolder: {fileID: 0}
   inventorySlots: []
-  inventoryHotBarSlots: []
   currentSlot: 0
+  offset: {x: 0, y: 0}
+  cursor: {fileID: 0}
+  isCursorWithItem: 0
+--- !u!114 &3267056113313770682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4271772261929882544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f9bf6ba3b5bca40b38f21e6e7c04a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPickUpDistance: 3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  pickUpText: {fileID: 4361163031566369509, guid: 9877b612d934e9b4b92ac624bda0303d,
+    type: 3}

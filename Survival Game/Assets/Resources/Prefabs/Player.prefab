@@ -6292,6 +6292,7 @@ GameObject:
   - component: {fileID: 8014093496951642633}
   - component: {fileID: 8014093496951642638}
   - component: {fileID: 5119097932477546146}
+  - component: {fileID: 577158630}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -6450,6 +6451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StatsPanel: {fileID: 0}
+--- !u!114 &577158630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613884058611842807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec88aa42adacdb4a9bb8cd01aa5bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryMenu: {fileID: 0}
 --- !u!1 &8638750527384577353
 GameObject:
   m_ObjectHideFlags: 0
@@ -6761,6 +6775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 4271772261929882544, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inventory
+      objectReference: {fileID: 0}
     - target: {fileID: 4271772261929882545, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
         type: 3}
       propertyPath: m_RootOrder
@@ -6820,6 +6839,21 @@ PrefabInstance:
         type: 3}
       propertyPath: pickUpText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271772261929882547, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
+        type: 3}
+      propertyPath: maxPickUpDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271772262142235999, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
+        type: 3}
+      propertyPath: offset.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271772262142235999, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
+        type: 3}
+      propertyPath: offset.y
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4271772262142235999, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
         type: 3}

@@ -15,10 +15,12 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] private int currentSlot;
     [SerializeField] private Vector2 offset;
     [SerializeField] private Transform cursor;
-    
+
+    [SerializeField] bool isCursorWithItem;    
     private GameObject inventory;
 
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
+    public bool IsCursorWithItem => isCursorWithItem;
 
     private void Awake()
     {
@@ -66,22 +68,44 @@ public class UI_InventoryManager : MonoBehaviour
         }
     }
 
-    private void ItemAdd(GameObject item, int amount)
+    private void FindSameItemInIventory(UI_InventorySlot slot, GameObject item)
     {
-        for (int i = 0; i < amount; i++)
+        
+        if (slot.IsFull)
         {
-            foreach (UI_InventorySlot slot in inventorySlots)
+            if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == item.GetComponent<UI_ItemData>().ItemData.ItemId)
             {
-                if (!slot.IsFull)
+                int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
+                if (amount <= maxStack - amount)
                 {
-                    Instantiate(item, slot.Slot);
-                    CheckIfSlotIsFull();
-                    return;
+                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
+                        += item.GetComponent<UI_ItemData>().Amount;
+                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                 }
-                else Debug.Log("Chuj nie dzia³a");
             }
         }
+    }
+
+    public bool ItemAdd(GameObject item)
+    {
+        foreach (UI_InventorySlot slot in inventorySlots)
+        {
+            if (slot.IsFull)
+            {
+                FindSameItemInIventory(slot, item);
+                return true;
+            }
+        }
+        foreach (UI_InventorySlot slot in inventorySlots)
+        {
+            Instantiate(item, slot.Slot);
+            slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+            CheckIfSlotIsFull();
+            return true;
+        }
         Debug.Log("Full Inventory");
+        return false;
     }
 
     private void SetSlotsID()
@@ -105,11 +129,13 @@ public class UI_InventoryManager : MonoBehaviour
         {
             Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).gameObject, cursor);
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
+            isCursorWithItem = true;
         }
         else if (inventorySlots[currentSlot].Slot.childCount < 1 && cursor.childCount > 0)
         {
             Instantiate(cursor.GetChild(0).gameObject, inventorySlots[currentSlot].Slot);
             Destroy(cursor.GetChild(0).gameObject);
+            isCursorWithItem = false;
         }
         else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
         {
@@ -124,8 +150,9 @@ public class UI_InventoryManager : MonoBehaviour
                         += cursor.GetChild(0).GetComponent<UI_ItemData>().Amount;
                     inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                     Destroy(cursor.GetChild(0).gameObject);
-
+                    isCursorWithItem = false;
                 }
+
             }
         }
         CheckIfSlotIsFull();
