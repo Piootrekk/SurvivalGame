@@ -68,32 +68,32 @@ public class UI_InventoryManager : MonoBehaviour
         }
     }
 
-    private void FindSameItemInIventory(UI_InventorySlot slot, GameObject item)
+    private bool FindSameItemInIventory(UI_InventorySlot slot, GameObject item)
     {
         
-        if (slot.IsFull)
+        
+        if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == item.GetComponent<UI_ItemData>().ItemData.ItemId)
         {
-            if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == item.GetComponent<UI_ItemData>().ItemData.ItemId)
+            int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+            int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
+            if (amount <= maxStack - amount)
             {
-                int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
-                int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
-                if (amount <= maxStack - amount)
-                {
-                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
-                        += item.GetComponent<UI_ItemData>().Amount;
-                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
-                }
+                slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
+                    += item.GetComponent<UI_ItemData>().Amount;
+                slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                return true;
             }
+            else return false;
         }
+        return false;
     }
 
     public bool ItemAdd(GameObject item)
     {
         foreach (UI_InventorySlot slot in inventorySlots)
         {
-            if (slot.IsFull)
+            if (slot.IsFull && FindSameItemInIventory(slot, item))
             {
-                FindSameItemInIventory(slot, item);
                 return true;
             }
         }

@@ -8936,25 +8936,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706464751}
   m_CullTransparentMesh: 1
---- !u!1 &1716583245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8613884058611842807, guid: e1f4d2413ae9bfb4da43eac098761994,
-    type: 3}
-  m_PrefabInstance: {fileID: 6540679512313377473}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1716583254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716583245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bacf35430665b4fbc417a741013914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 1782541738}
 --- !u!1 &1778665237
 GameObject:
   m_ObjectHideFlags: 0
@@ -11709,6 +11690,10 @@ PrefabInstance:
       propertyPath: inventoryMenu
       value: 
       objectReference: {fileID: 1892024184}
+    - target: {fileID: 1716583254, guid: e1f4d2413ae9bfb4da43eac098761994, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1782541738}
     - target: {fileID: 5119097932477546146, guid: e1f4d2413ae9bfb4da43eac098761994,
         type: 3}
       propertyPath: StatsPanel
