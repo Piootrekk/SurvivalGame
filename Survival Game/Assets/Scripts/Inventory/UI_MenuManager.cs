@@ -33,7 +33,6 @@ public class UI_MenuManager : MonoBehaviour
 
     }
 
-
 }
 
 public interface IInventoryManager

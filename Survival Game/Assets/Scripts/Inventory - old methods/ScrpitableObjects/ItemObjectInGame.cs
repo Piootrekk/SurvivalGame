@@ -5,9 +5,10 @@ using UnityEngine;
 public class ItemObjectInGame : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject instanceInInventory;
+    [SerializeField] private int amount = 1;
 
     public GameObject InstanceInInventory => instanceInInventory;
-    public int amount = 1;
+    public int Amount { get => amount; set => amount = value; } 
 
     public void OnInteract()
     {

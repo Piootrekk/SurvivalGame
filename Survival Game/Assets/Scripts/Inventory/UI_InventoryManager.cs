@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-//Dodaæ kursor, wy³¹czyæ poruszanie siê myszk¹
 public class UI_InventoryManager : MonoBehaviour
 {
     [SerializeField] private Transform inventorySlotHolder;
@@ -71,7 +70,6 @@ public class UI_InventoryManager : MonoBehaviour
     private bool FindSameItemInIventory(UI_InventorySlot slot, GameObject item)
     {
         
-        
         if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == item.GetComponent<UI_ItemData>().ItemData.ItemId)
         {
             int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
@@ -90,6 +88,7 @@ public class UI_InventoryManager : MonoBehaviour
 
     public bool ItemAdd(GameObject item)
     {
+        CheckIfSlotIsFull();
         foreach (UI_InventorySlot slot in inventorySlots)
         {
             if (slot.IsFull && FindSameItemInIventory(slot, item))
@@ -165,6 +164,18 @@ public class UI_InventoryManager : MonoBehaviour
         }
         else cursor.gameObject.SetActive(false);
     }
+
+    public void DropCurrentItem()
+    {
+        if (inventorySlots[currentSlot].Slot.childCount > 0)
+        {
+            Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.Prefab,
+                Camera.main.transform.position, new Quaternion());
+            Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
+        }
+        CheckIfSlotIsFull();
+    }
+
 }
 
 
