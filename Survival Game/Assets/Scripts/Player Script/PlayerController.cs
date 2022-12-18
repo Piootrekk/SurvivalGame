@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IInventoryManager
 {
     [Header("Animation: ")]
     [SerializeField] private float animationSpeed = 8.9f;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     private int crouchAnimator;
     private PlayerColider coliderBase = new();
     private float speed = 5f;
-    
+    private Transform crosshair;
 
     private void Awake()
     {
@@ -60,18 +60,22 @@ public class PlayerController : MonoBehaviour
         jumpAnimator = Animator.StringToHash("Jump");
         fallAnimator = Animator.StringToHash("Falling");
         crouchAnimator = Animator.StringToHash("Crouch");
+        crosshair = GetComponent<CrosshairManager>().Crosshair;
     }
     private void Start()
     {
         totalSpeed = speed;
         GetCopyFromCharacter(coliderBase);
+        Cursor.visible = false;
     }
     private void Update()
     {
         Move();
-        CameraMovements();
+        if(!inputManager.Inventory)
+        {
+            CameraMovements();
+        }
         IsGrounded();
-        
     }
 
     private void Move()
@@ -117,8 +121,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool(fallAnimator, true);
         }
-        
-        
     }
 
     private void Jump()
@@ -193,6 +195,21 @@ public class PlayerController : MonoBehaviour
     public void AdjustColiderToBase()
     {
         AdjustmentColider(coliderBase);
+    }
+
+    public void SetGUIForInventory()
+    { 
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        crosshair.gameObject.SetActive(true);
+    }
+
+    public void SetGUIForGame()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        crosshair.gameObject.SetActive(false);
+
     }
 
 }

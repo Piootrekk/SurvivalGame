@@ -21,15 +21,23 @@ public class UI_MenuManager : MonoBehaviour
     private void OnInventoryHandler()
     {
         inventoryMenu.SetActive(inputManager.Inventory);
+        IInventoryManager inventoryManager = gameObject.GetComponent<IInventoryManager>();
+        if (!inputManager.Inventory)
+        {
+            inventoryManager?.SetGUIForInventory();
+        }
+        else
+        {
+            inventoryManager?.SetGUIForGame();
+        }
+
     }
 
 
 }
 
-
-// Zrobiæ Interfejs obs³uguj¹cy wy³¹czenie ruszaniem myszki
 public interface IInventoryManager
 {
-    public bool IsGUIOff { set; get; }
-    public void SetGUIOff();
+    public void SetGUIForInventory();
+    public void SetGUIForGame();
 }
