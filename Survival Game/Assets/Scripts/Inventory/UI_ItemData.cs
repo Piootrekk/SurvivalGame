@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UI_ItemData : MonoBehaviour
 {
     [SerializeField] private ItemData itemData;
-    [SerializeField] private int amount = 1;
+    [SerializeField] private int amount;
 
 
     public int Amount { get => amount; set => amount = value; }
