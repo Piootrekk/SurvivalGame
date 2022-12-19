@@ -75,6 +75,7 @@ public class UI_InventoryManager : MonoBehaviour
             int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             int amountInObject = itemObject.GetComponent<ItemObjectInGame>().Amount;
             int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
+
             if (amount + amountInObject <= maxStack)
             {
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
@@ -101,10 +102,15 @@ public class UI_InventoryManager : MonoBehaviour
         }
         foreach (UI_InventorySlot slot in inventorySlots)
         {
-            Instantiate(item, slot.Slot);
-            slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
             CheckIfSlotIsFull();
-            return true;
+            if(!(slot.Slot.childCount >= 1))
+            {
+                CheckIfSlotIsFull(); 
+                var prefabInstantiate = Instantiate(item, slot.Slot);
+                prefabInstantiate.GetComponent<UI_ItemData>().Amount = itemObject.GetComponent<ItemObjectInGame>().Amount;
+                slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                return true;
+            }
         }
         Debug.Log("Full Inventory");
         return false;
