@@ -12,9 +12,6 @@ public class ItemObjectInGame : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        InstanceInInventory.GetComponent<UI_ItemData>().Amount = amount;
         Destroy(this.gameObject);
     }
-
-
 }

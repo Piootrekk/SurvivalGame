@@ -129,3 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instanceInInventory: {fileID: 6072741492850664860, guid: 72f316e69e088194eab832caadf960d2,
     type: 3}
+  amount: 1

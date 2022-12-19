@@ -16,6 +16,10 @@ public class UI_ItemData : MonoBehaviour
     private void OnEnable()
     {
         gameObject.GetComponent<Image>().sprite = itemData.ItemSprite;
+        
+    }
+    private void Start()
+    {
         UpdateTextAmount();
     }
 

@@ -67,17 +67,18 @@ public class UI_InventoryManager : MonoBehaviour
         }
     }
 
-    private bool FindSameItemInIventory(UI_InventorySlot slot, GameObject item)
+    private bool FindSameItemInIventory(UI_InventorySlot slot, GameObject itemObject)
     {
-        
+        var item = itemObject.GetComponent<ItemObjectInGame>().InstanceInInventory;
         if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == item.GetComponent<UI_ItemData>().ItemData.ItemId)
         {
             int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+            int amountInObject = itemObject.GetComponent<ItemObjectInGame>().Amount;
             int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
-            if (amount <= maxStack - amount)
+            if (amount + amountInObject <= maxStack)
             {
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
-                    += item.GetComponent<UI_ItemData>().Amount;
+                    += amountInObject;
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                 return true;
             }
@@ -86,13 +87,15 @@ public class UI_InventoryManager : MonoBehaviour
         return false;
     }
 
-    public bool ItemAdd(GameObject item)
+    public bool ItemAdd(GameObject itemObject)
     {
         CheckIfSlotIsFull();
+        var item = itemObject.GetComponent<ItemObjectInGame>().InstanceInInventory;
         foreach (UI_InventorySlot slot in inventorySlots)
         {
-            if (slot.IsFull && FindSameItemInIventory(slot, item))
+            if (slot.IsFull && FindSameItemInIventory(slot, itemObject))
             {
+                CheckIfSlotIsFull();
                 return true;
             }
         }
@@ -169,8 +172,10 @@ public class UI_InventoryManager : MonoBehaviour
     {
         if (inventorySlots[currentSlot].Slot.childCount > 0)
         {
-            Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.Prefab,
-                Camera.main.transform.position, new Quaternion());
+            GameObject prefab = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.Prefab;
+            GameObject instantiateObject  = Instantiate(prefab, Camera.main.transform.position, Quaternion.identity);
+            instantiateObject.GetComponent<ItemObjectInGame>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+            instantiateObject.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
         }
         CheckIfSlotIsFull();

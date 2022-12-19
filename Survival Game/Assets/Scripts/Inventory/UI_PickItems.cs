@@ -32,13 +32,13 @@ public class UI_PickItems : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer))
         {
-            var item = hitInfo.collider.GetComponent<ItemObjectInGame>();
-            SetUpText(item.InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
+            var item = hitInfo.collider.gameObject;
+            SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
             if (inputManager.Interactive)
             {
 
                 if (!inventoryHandler) { return; }
-                if (inventoryHandler.ItemAdd(item.InstanceInInventory))
+                if (inventoryHandler.ItemAdd(item))
                 {
                     IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
                     interactable?.OnInteract();
