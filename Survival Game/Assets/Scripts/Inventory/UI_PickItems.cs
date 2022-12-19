@@ -36,7 +36,6 @@ public class UI_PickItems : MonoBehaviour
             SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
             if (inputManager.Interactive)
             {
-
                 if (!inventoryHandler) { return; }
                 if (inventoryHandler.ItemAdd(item))
                 {

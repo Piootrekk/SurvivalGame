@@ -183,6 +183,7 @@ public class UI_InventoryManager : MonoBehaviour
             instantiateObject.GetComponent<ItemObjectInGame>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             instantiateObject.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
+
         }
         CheckIfSlotIsFull();
     }

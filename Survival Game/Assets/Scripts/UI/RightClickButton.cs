@@ -14,7 +14,8 @@ public class RightClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     private bool isQpress;
     private bool isEnter;
     private float timer = 0f;
-    private readonly float delay = 0.5f;
+    private readonly float delay = 0.3f;
+    private bool actionPerformed = false;
     private void Start()
     {
         inventoryManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<UI_InventoryManager>();
@@ -23,7 +24,7 @@ public class RightClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     }
     private void Update()
     {
-        if(keyboard.qKey.wasPressedThisFrame)
+        if (keyboard.qKey.wasPressedThisFrame)
         {
             isQpress = true;
         }
@@ -31,10 +32,17 @@ public class RightClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
         {
             isQpress = false;
         }
-        if (isQpress && isEnter && timer >= delay)
+        if (isQpress && isEnter && timer >= delay && !actionPerformed)
         {
+            Time.timeScale = 0;
+            actionPerformed = true;
             timer = 0f;
             inventoryManager.DropCurrentItem();
+            Time.timeScale = 1;
+        }
+        else if (!isQpress && !isEnter)
+        {
+            actionPerformed = false;
         }
         timer += Time.deltaTime;
     }
