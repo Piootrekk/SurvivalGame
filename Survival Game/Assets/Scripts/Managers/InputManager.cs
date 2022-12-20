@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
     public bool Crouch { get; set; }
     public float Test { get; private set; }
     public bool Interactive { get; private set; }
-    public string HotBarKeyChange { get; private set; }
+    public float HotBarKey { get; private set; }
     public bool Inventory { get; set; }
 
 
@@ -76,7 +76,7 @@ public class InputManager : MonoBehaviour
         crouchAction.performed += OnCrouch;
         testAction.started += OnTest;
         interactive.started += OnInteractive;
-        hotbarkeys.started += OnChangeHotBarSlot;
+        hotbarkeys.performed += OnChangeHotBarSlot;
         inventoryAction.started += OnInventory;
     }
 
@@ -144,12 +144,12 @@ public class InputManager : MonoBehaviour
 
     public void OnChangeHotBarSlot(InputAction.CallbackContext callBack)
     {
-        HotBarKeyChange = GetPathFromInputAction(callBack);
-        //IChangeBar changeBar = GetComponent
-
-            //TU skoñczy³em nie dzia³a interface, robie kurwa event action
-        //changeBar.HotBarChange();
-
+        if (callBack.ReadValue<float>() > 0f)
+        {
+            HotBarKey = callBack.ReadValue<float>();
+            Debug.Log(HotBarKey);
+        }
+        
     }
 
 
