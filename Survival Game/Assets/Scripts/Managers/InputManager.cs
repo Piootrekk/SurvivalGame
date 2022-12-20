@@ -20,6 +20,7 @@ public class InputManager : MonoBehaviour
     public bool Interactive { get; private set; }
     public float HotBarKey { get; private set; }
     public bool Inventory { get; set; }
+    public float ValueFromScroll { get; set; }
 
 
     public string CurrentPathInput { get; private set; }
@@ -34,6 +35,7 @@ public class InputManager : MonoBehaviour
     private InputAction interactive;
     private InputAction hotbarkeys;
     private InputAction inventoryAction;
+    private InputAction mouseScroll;
 
 
 
@@ -50,6 +52,7 @@ public class InputManager : MonoBehaviour
         interactive = currentMap.FindAction("Interactive");
         hotbarkeys = currentMap.FindAction("HotBarKeys");
         inventoryAction = currentMap.FindAction("OpenInventory");
+        mouseScroll = currentMap.FindAction("MouseScroll");
         PerforAction();
         StopPerforAction();
 
@@ -78,6 +81,7 @@ public class InputManager : MonoBehaviour
         interactive.started += OnInteractive;
         hotbarkeys.performed += OnChangeHotBarSlot;
         inventoryAction.started += OnInventory;
+        mouseScroll.performed += OnChangeScroll;
     }
 
 
@@ -93,6 +97,8 @@ public class InputManager : MonoBehaviour
         interactive.canceled += OnInteractive;
         hotbarkeys.canceled += OnChangeHotBarSlot;
         inventoryAction.canceled += OnInventory;
+        mouseScroll.canceled += OnChangeScroll;
+
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -147,7 +153,6 @@ public class InputManager : MonoBehaviour
         if (callBack.ReadValue<float>() > 0f)
         {
             HotBarKey = callBack.ReadValue<float>();
-            Debug.Log(HotBarKey);
         }
         
     }
@@ -167,14 +172,21 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    private void OnChangeScroll(InputAction.CallbackContext callBack)
+    {
+        ValueFromScroll = callBack.ReadValue<float>();
+        if (ValueFromScroll == 120f)
+        {
+            if (HotBarKey == 10f) HotBarKey -= 9f;
+            else HotBarKey += 1f;
+        }
+        else if (ValueFromScroll == -120f)
+        {
+            if (HotBarKey == 1f) HotBarKey += 9f;
+            else HotBarKey -= 1f;
+        }
+    }
 
 }
 
 
-
-
-
-public interface IChangeBar
-{
-    void HotBarChange();
-}
