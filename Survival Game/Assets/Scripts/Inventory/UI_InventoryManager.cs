@@ -18,6 +18,10 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] bool isCursorWithItem;    
     private GameObject inventory;
 
+    private float timer = 0f;
+    float delay = 1f;
+    bool isExecuting = false;
+
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
     public bool IsCursorWithItem => isCursorWithItem;
 
@@ -133,6 +137,7 @@ public class UI_InventoryManager : MonoBehaviour
 
     public void GetItemToHandler()
     {
+        CheckIfSlotIsFull();
         if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount < 1)
         {
             Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).gameObject, cursor);
@@ -150,12 +155,12 @@ public class UI_InventoryManager : MonoBehaviour
             if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId
                 == cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId)
             {
-                int amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
-                int maxStack = cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit;
-                if (amount <= maxStack - amount)
+                if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount +
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit 
+                    <= inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit)
                 {
                     inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount 
-                        += cursor.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                        += inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
                     inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                     Destroy(cursor.GetChild(0).gameObject);
                     isCursorWithItem = false;
@@ -176,16 +181,21 @@ public class UI_InventoryManager : MonoBehaviour
 
     public void DropCurrentItem()
     {
-        if (inventorySlots[currentSlot].Slot.childCount > 0)
+        if (inventorySlots[currentSlot].Slot.childCount > 0 && !isExecuting)
         {
+            isExecuting = true;
             GameObject prefab = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.Prefab;
             GameObject instantiateObject  = Instantiate(prefab, Camera.main.transform.position, Quaternion.identity);
             instantiateObject.GetComponent<ItemObjectInGame>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             instantiateObject.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
-
+            timer = Time.time;
         }
-        CheckIfSlotIsFull();
+        else if (Time.time - timer > delay)
+        {
+            isExecuting = false;
+        }
+            CheckIfSlotIsFull();
     }
 
 }
