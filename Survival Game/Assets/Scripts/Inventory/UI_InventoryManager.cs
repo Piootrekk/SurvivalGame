@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Linq;
 
 public class UI_InventoryManager : MonoBehaviour
 {
@@ -18,8 +19,11 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] bool isCursorWithItem;    
     private GameObject inventory;
 
+    [Header("Test")]
+    [SerializeField] List<AllItemsInInventory> allItemsInInventory;
+
     private float timer = 0f;
-    float delay = 1f;
+    float delay = 0.5f;
     bool isExecuting = false;
 
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
@@ -38,6 +42,7 @@ public class UI_InventoryManager : MonoBehaviour
     {
         ItemHandler();
         ItemHandlerVisibility();
+        InspectAllItemInInventory();
     }
 
     private void SetSlotsForInventory()
@@ -69,6 +74,7 @@ public class UI_InventoryManager : MonoBehaviour
             }
             else slot.IsFull = false;
         }
+        
     }
 
     private bool FindSameItemInIventory(UI_InventorySlot slot, GameObject itemObject)
@@ -134,6 +140,27 @@ public class UI_InventoryManager : MonoBehaviour
         if (!inventory.activeSelf) return;
         cursor.position = Mouse.current.position.ReadValue() + offset;
     }
+    private void InspectAllItemInInventory()
+    {
+        allItemsInInventory.Clear();
+        foreach (UI_InventorySlot slot in inventorySlots)
+        {
+            if (slot.Slot.childCount != 0)
+            {
+                int ID = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId;
+                int AMOUNT = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                int INDEX = allItemsInInventory.FindIndex(item => ID == item.Id);
+                if (INDEX > -1)
+                {
+                    allItemsInInventory[INDEX].Amount += AMOUNT;
+                }
+                else allItemsInInventory.Add(new AllItemsInInventory(ID, AMOUNT));
+            }
+            
+        }
+
+    }
+
 
     public void GetItemToHandler()
     {
@@ -207,7 +234,7 @@ public class UI_InventorySlot
 {
     [SerializeField] private Transform slot;
     [SerializeField] private bool isFull;
-    
+
     public bool IsFull { get => isFull; set => isFull = value; }
     public Transform Slot { get => slot; set => slot = value; }
 
@@ -216,5 +243,22 @@ public class UI_InventorySlot
     {
         this.slot = slot;
         this.isFull = isFull;
+    }
+
+}
+
+
+[System.Serializable]
+public class AllItemsInInventory
+{
+    [SerializeField] private int id;
+    [SerializeField] private int amount;
+
+    public int Id { get => id; set => id = value; }
+    public int Amount { get => amount; set => amount = value; }
+    public AllItemsInInventory(int id, int amount)
+    {
+        this.Id = id;
+        this.Amount = amount;
     }
 }
