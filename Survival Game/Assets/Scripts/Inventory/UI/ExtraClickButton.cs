@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 
-//TODO Change name of this script, !!!fix item amount!!!
-public class RightClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private UI_InventoryManager inventoryManager;
     private Keyboard keyboard;
