@@ -17,10 +17,10 @@ public class CraftData : ScriptableObject
 [System.Serializable]
 public class Craft
 {
-    [SerializeField] int id;
+    [SerializeField] ItemData itemData;
     [SerializeField] int amount;
 
-    public int Id { get => id; set => id = value; }
+    public ItemData ItemData { get => itemData; set => itemData = value; }
     public int Amount { get => amount; set => amount = value; }
 }
 

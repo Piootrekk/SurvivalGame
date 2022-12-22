@@ -25,7 +25,15 @@ public class UI_ItemData : MonoBehaviour
 
     public void UpdateTextAmount()
     {
-        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = amount.ToString();
+        if (itemData.ItemType == ItemType.Equipable)
+        {
+            gameObject.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<TextMeshProUGUI>().text = amount.ToString();
+        }
+        
     }
 
 

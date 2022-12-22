@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idCraft: 0
   craft:
-  - id: 1
+  - itemData: {fileID: 11400000, guid: c2a6e7b3d5f37884ebd1463c0734eba8, type: 2}
     amount: 1
-  - id: 2
-    amount: 1
-  recive: {fileID: 0}
+  - itemData: {fileID: 11400000, guid: 4b5b25558472a784983ecbfa1fb24a11, type: 2}
+    amount: 2
+  recive: {fileID: 4255365068340410132, guid: 725bca6adf3835142b463f4f2b6b419f, type: 3}
