@@ -57,22 +57,51 @@ public class UI_CrafingManager : MonoBehaviour
 
     private void CheckItemsForCrafting()
     {
-        for(int i = 0; i < crafts.Count; i++)
+        for (int i = 0; i < crafts.Count; i++)
         {
-            List<bool> CheckIf = new();
-            foreach(var item in crafts[i].Craft)
+            List<bool> CheckIfCorrect = new();
+            foreach (var item in crafts[i].Craft)
             {
                 if (!inventoryManager.AllItemsInInventory.Any()) return;
-                var cos = inventoryManager.AllItemsInInventory.FirstOrDefault(s => s.Id == item.ItemData.ItemId);
-                if (cos != null) CheckIf.Add(true);
-                else CheckIf.Add(false);
+                var allItems = inventoryManager.AllItemsInInventory.FirstOrDefault(s => s.Id == item.ItemData.ItemId);
+                
+                if (allItems != null)
+                {
+                    bool CheckIfAmountCorrect = allItems.Amount >= item.Amount;
+                    if (CheckIfAmountCorrect) CheckIfCorrect.Add(true);
+                    else CheckIfCorrect.Add(false);
+                }
+                    
+                else CheckIfCorrect.Add(false);
             }
-            if (CheckIf != null && CheckIf.All(x => x == true)) transform.GetChild(0).GetChild(i).GetComponent<Button>().interactable = true;
+            if (CheckIfCorrect != null && CheckIfCorrect.All(x => x == true))
+            {
+                transform.GetChild(0).GetChild(i).GetComponent<Button>().interactable = true;
+            }
             else transform.GetChild(0).GetChild(i).GetComponent<Button>().interactable = false;
-            CheckIf.Clear();
+            CheckIfCorrect.Clear();
         }
+    }
 
+    private void OrderByInteractable()
+    {
+        if (transform.GetChild(0).childCount == 0) return;
+        foreach(Transform button in transform.GetChild(0))
+        {
+            if (button.GetSiblingIndex() == 0 && button.GetComponent<Button>().interactable)
+            {
+                button.SetSiblingIndex(0);
+            }
+        }
+    }
 
+    private void OrderByInteractable(Transform button)
+    {
+        if (button.GetSiblingIndex() == 0) return;
+        if (button.GetComponent<Button>().interactable)
+        {
+            button.SetAsFirstSibling();
+        }
     }
 
 }
