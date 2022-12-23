@@ -29,6 +29,8 @@ public class UI_InventoryManager : MonoBehaviour
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
     public bool IsCursorWithItem => isCursorWithItem;
 
+    public List<AllItemsInInventory> AllItemsInInventory => allItemsInInventory;
+
     private void Awake()
     {
         inventory = inventorySlotHolder.transform.parent.gameObject;
