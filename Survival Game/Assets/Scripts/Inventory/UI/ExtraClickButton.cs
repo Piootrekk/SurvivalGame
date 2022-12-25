@@ -12,9 +12,6 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     private UI_Slot currentSlotData;
     private bool isQpress;
     private bool isEnter;
-    private float timer = 0f;
-    private readonly float delay = 0.3f;
-    private bool actionPerformed = false;
     private void Start()
     {
         inventoryManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<UI_InventoryManager>();
@@ -31,19 +28,10 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
         {
             isQpress = false;
         }
-        if (isQpress && isEnter && timer >= delay && !actionPerformed)
-        {
-            Time.timeScale = 0;
-            actionPerformed = true;
-            timer = 0f;
+        if (isQpress && isEnter)
+        { 
             inventoryManager.DropCurrentItem();
-            Time.timeScale = 1;
         }
-        else if (!isQpress && !isEnter)
-        {
-            actionPerformed = false;
-        }
-        timer += Time.deltaTime;
     }
 
     public void OnPointerClick(PointerEventData eventData)

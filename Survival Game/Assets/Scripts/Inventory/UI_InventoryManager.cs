@@ -22,7 +22,7 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] List<AllItemsInInventory> allItemsInInventory;
 
     private float timer = 0f;
-    float delay = 0.5f;
+    float delay = 0.1f;
     bool isExecuting = false;
     private GameObject inventory;
 
@@ -117,14 +117,15 @@ public class UI_InventoryManager : MonoBehaviour
             CheckIfSlotIsFull();
             if(!(slot.Slot.childCount >= 1))
             {
-                CheckIfSlotIsFull(); 
                 var prefabInstantiate = Instantiate(item, slot.Slot);
                 prefabInstantiate.GetComponent<UI_ItemData>().Amount = itemObject.GetComponent<ItemObjectInGame>().Amount;
+                CheckIfSlotIsFull();
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                 return true;
             }
         }
         Debug.Log("Full Inventory");
+        CheckIfSlotIsFull();
         return false;
     }
 
@@ -165,18 +166,21 @@ public class UI_InventoryManager : MonoBehaviour
     public void GetItemToHandler()
     {
         CheckIfSlotIsFull();
+        // jeœli klikamy na przedmiot, nie trzymaj¹c nic
         if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount < 1)
         {
             Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).gameObject, cursor);
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
             isCursorWithItem = true;
         }
+        // jeœli odk³adamy przedmiot
         else if (inventorySlots[currentSlot].Slot.childCount < 1 && cursor.childCount > 0)
         {
             Instantiate(cursor.GetChild(0).gameObject, inventorySlots[currentSlot].Slot);
             Destroy(cursor.GetChild(0).gameObject);
             isCursorWithItem = false;
         }
+        // Jeœli odk³adamy przedmiot do istniej¹cego ju¿ tego samego przedmiotu
         else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
         {
             if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId
@@ -229,6 +233,8 @@ public class UI_InventoryManager : MonoBehaviour
 
     public void CraftItem(CraftData craft)
     {
+        var firstEmptySlot = inventorySlots.FirstOrDefault(x => x.IsFull == false);
+        if (firstEmptySlot == null) return;
         int AMOUNT;
         foreach (var _craft in craft.Craft)
         {
@@ -273,8 +279,23 @@ public class UI_InventoryManager : MonoBehaviour
 
     private void GenerateObjectFromCraft(CraftData craft)
     {
+        // For slot with the same item
+        foreach(UI_InventorySlot slot in inventorySlots)
+        {
+            if(slot.Slot.childCount != 0 && slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == craft.Recive.GetComponent<UI_ItemData>().ItemData.ItemId)
+            {
+                if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount + craft.ReciveAmount <= slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit)
+                {
+                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount += craft.ReciveAmount;
+                    slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                    return;
+                }
+            }   
+        }
+
+        // For new slot
         var firstEmptySlot = inventorySlots.FirstOrDefault(x => x.IsFull == false);
-        if (firstEmptySlot == null) { Debug.Log("Full inv :/"); return; }
+        if (firstEmptySlot == null)  return;
         else Instantiate(craft.Recive, firstEmptySlot.Slot);
     }
 }

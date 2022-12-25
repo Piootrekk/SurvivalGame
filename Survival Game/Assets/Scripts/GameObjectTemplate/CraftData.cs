@@ -8,10 +8,12 @@ public class CraftData : ScriptableObject
     [SerializeField] int idCraft;
     [SerializeField] List<Craft> craft;
     [SerializeField] GameObject recive;
+    [SerializeField] int reciveAmount;
 
     public int IdCraft => idCraft;
     public List<Craft> Craft => craft;
     public GameObject Recive => recive;
+    public int ReciveAmount => reciveAmount;
 }
 
 [System.Serializable]

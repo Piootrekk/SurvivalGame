@@ -17,3 +17,4 @@ MonoBehaviour:
   - itemData: {fileID: 11400000, guid: 9f9164d909aebb74582eef71154af670, type: 2}
     amount: 3
   recive: {fileID: 4255365068340410132, guid: c1fbc43b2f9b5224fa508ac91a66a390, type: 3}
+  reciveAmount: 2
