@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "InventoryData/Item")]
 public class ItemData : ScriptableObject
 {
+    [Header("Basic")]
     [SerializeField] private int itemId;
     [SerializeField] private string nameItem;
     [SerializeField] private string description;
@@ -14,9 +15,25 @@ public class ItemData : ScriptableObject
     [SerializeField] private bool isStackable;
     [SerializeField] private int stackLimit;
     [SerializeField] private ItemType itemType;
+    [SerializeField] private GameObject itemInUse;
+    [Header("Consunable")]
     [SerializeField] int staminaBonus;
     [SerializeField] int hungerBonus;
     [SerializeField] int thirstBonus;
+
+    [Header("Attack")]
+    [SerializeField] int enemyDamage;
+    [SerializeField] int woodDamage;
+    [SerializeField] int stoneDamage;
+
+    [Header("Equipable")]
+    [SerializeField] int durability;
+
+    [Header("Buildable")]
+    [SerializeField] int consturctionHP;
+
+    [Header("Wearable")]
+    [SerializeField] float damageAbsorbsion;
 
     public int ItemId => itemId;
     public string NameItem => nameItem;
@@ -26,9 +43,18 @@ public class ItemData : ScriptableObject
     public bool IsStackable => isStackable;
     public int StackLimit => stackLimit;
     public ItemType ItemType => itemType;
+    public GameObject ItemInUse => itemInUse;
     public int StaminaBonus => staminaBonus;
     public int HungerBonus => hungerBonus;
     public int ThirstBonus => thirstBonus;
+    public int EnemyDamage => enemyDamage;
+    public int WoodDamage => woodDamage;
+    public int StoneDamage => stoneDamage;
+    public int Durability => durability;
+    public int ConsturctionHP => consturctionHP;
+    public float DamageAbsorbsion => damageAbsorbsion;
+
+
 
 
     public void OnEnable()
@@ -52,6 +78,7 @@ public enum ItemType
     Resource,
     Consunable,
     Equipable,
-    Wearable
+    Wearable,
+    Buildable
 }
 

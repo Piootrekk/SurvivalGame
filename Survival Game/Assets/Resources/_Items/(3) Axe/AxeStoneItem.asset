@@ -20,6 +20,13 @@ MonoBehaviour:
   isStackable: 0
   stackLimit: 1
   itemType: 3
+  itemInUse: {fileID: 0}
   staminaBonus: 0
   hungerBonus: 0
   thirstBonus: 0
+  enemyDamage: 5
+  woodDamage: 20
+  stoneDamage: 1
+  durability: 0
+  consturctionHP: 0
+  damageAbsorbsion: 0

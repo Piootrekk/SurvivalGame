@@ -71,10 +71,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     private void Update()
     {
         Move();
-        if(!inputManager.Inventory)
-        {
-            CameraMovements();
-        }
+        CameraMovements();
         IsGrounded();
     }
 
@@ -98,10 +95,13 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     {
         if(!hasAnimator) { return; }
         Camera.position = CameraRoot.position;
-        xRotation -= inputManager.Look.y * Time.smoothDeltaTime * Sensitivity;
-        xRotation = Mathf.Clamp(xRotation, CameraAngle.x, CameraAngle.y);
-        Camera.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        transform.Rotate(Vector3.up, inputManager.Look.x * Sensitivity * Time.smoothDeltaTime);
+        if (!inputManager.Inventory)
+        {
+            xRotation -= inputManager.Look.y * Time.smoothDeltaTime * Sensitivity;
+            xRotation = Mathf.Clamp(xRotation, CameraAngle.x, CameraAngle.y);
+            Camera.localRotation = Quaternion.Euler(xRotation, 0, 0);
+            transform.Rotate(Vector3.up, inputManager.Look.x * Sensitivity * Time.smoothDeltaTime);
+        }
     }
 
     private void HorizontalMove()
