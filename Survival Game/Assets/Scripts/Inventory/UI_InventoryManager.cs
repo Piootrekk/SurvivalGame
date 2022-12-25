@@ -7,24 +7,24 @@ using System.Linq;
 
 public class UI_InventoryManager : MonoBehaviour
 {
+    [Header("Inventory")]
     [SerializeField] private Transform inventorySlotHolder;
     [SerializeField] private Transform inventoryHotBarSlotHolder;
-
     [SerializeField] private List<UI_InventorySlot> inventorySlots;
-
     [SerializeField] private int currentSlot;
+
+    [Header("Cursor - clicked item in inv")]
     [SerializeField] private Vector2 offset;
     [SerializeField] private Transform cursor;
-
     [SerializeField] bool isCursorWithItem;    
-    private GameObject inventory;
-
+    
     [Header("Test")]
     [SerializeField] List<AllItemsInInventory> allItemsInInventory;
 
     private float timer = 0f;
     float delay = 0.5f;
     bool isExecuting = false;
+    private GameObject inventory;
 
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
     public bool IsCursorWithItem => isCursorWithItem;
@@ -130,7 +130,7 @@ public class UI_InventoryManager : MonoBehaviour
 
     private void SetSlotsID()
     {
-        for(int i = 0; i < inventorySlots.Count; i++)
+        for (int i = 0; i < inventorySlots.Count; i++)
         {
             if (!inventorySlots[i].Slot.GetComponent<UI_Slot>()) return;
             inventorySlots[i].Slot.GetComponent<UI_Slot>().ID = i;
@@ -158,9 +158,7 @@ public class UI_InventoryManager : MonoBehaviour
                 }
                 else allItemsInInventory.Add(new AllItemsInInventory(ID, AMOUNT));
             }
-            
         }
-
     }
 
 
@@ -185,15 +183,16 @@ public class UI_InventoryManager : MonoBehaviour
                 == cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId)
             {
                 if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount +
-                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit 
+                    cursor.GetChild(0).GetComponent<UI_ItemData>().Amount
                     <= inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit)
                 {
-                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount 
-                        += inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
+                        += cursor.GetChild(0).GetComponent<UI_ItemData>().Amount;
                     inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                     Destroy(cursor.GetChild(0).gameObject);
                     isCursorWithItem = false;
                 }
+                else Debug.Log("FULL");
 
             }
         }
@@ -224,9 +223,60 @@ public class UI_InventoryManager : MonoBehaviour
         {
             isExecuting = false;
         }
-            CheckIfSlotIsFull();
+        CheckIfSlotIsFull();
     }
 
+
+    public void CraftItem(CraftData craft)
+    {
+        int AMOUNT;
+        foreach (var _craft in craft.Craft)
+        {
+            AMOUNT = _craft.Amount;
+            foreach(UI_InventorySlot slot in inventorySlots)
+            {
+                if (slot.Slot.childCount != 0 && AMOUNT > 0)
+                {
+                    if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId == _craft.ItemData.ItemId)
+                    {
+                        if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount >= AMOUNT)
+                        {
+                            slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount -= AMOUNT;
+                            AMOUNT = 0;
+                        }
+                        if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount < AMOUNT)
+                        {
+                            AMOUNT -= slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+                            slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount = 0;
+                        }
+                        CleanSlot(slot);
+                        slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                    }
+                }
+               
+            }
+            
+        }
+        GenerateObjectFromCraft(craft);
+        CheckIfSlotIsFull();
+    }
+
+
+    private void CleanSlot(UI_InventorySlot slot)
+    {
+        if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount == 0)
+        {
+            Destroy(slot.Slot.GetChild(0).gameObject);
+            slot.IsFull = false;
+        }
+    }
+
+    private void GenerateObjectFromCraft(CraftData craft)
+    {
+        var firstEmptySlot = inventorySlots.FirstOrDefault(x => x.IsFull == false);
+        if (firstEmptySlot == null) { Debug.Log("Full inv :/"); return; }
+        else Instantiate(craft.Recive, firstEmptySlot.Slot);
+    }
 }
 
 

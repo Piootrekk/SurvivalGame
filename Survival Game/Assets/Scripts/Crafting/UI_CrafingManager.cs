@@ -12,7 +12,13 @@ public class UI_CrafingManager : MonoBehaviour
     [SerializeField] Transform itemSpriteRecieved;
     [SerializeField] Transform itemSpriteNeeded;
 
+    [SerializeField] int currentCraftPanel;
+
     private UI_InventoryManager inventoryManager;
+
+
+    public int CurrentCraftPanel { get => currentCraftPanel; set => currentCraftPanel = value; }
+    public List<CraftData> Crafts => crafts;
 
     private void Awake()
     {
@@ -22,6 +28,7 @@ public class UI_CrafingManager : MonoBehaviour
 
     private void Start()
     {
+        SetCraftPanelID();
         ImplementContent();
     }
     private void Update()
@@ -37,6 +44,17 @@ public class UI_CrafingManager : MonoBehaviour
             button.GetComponent<Button>().interactable = false;
         }
     }
+
+    private void SetCraftPanelID()
+    {
+        for (int i = 0; i < transform.GetChild(0).childCount; i++)
+        {
+            if (!transform.GetChild(0).GetChild(i).GetComponent<UI_CraftingPanel>()) return;
+            transform.GetChild(0).GetChild(i).GetComponent<UI_CraftingPanel>().ID = i;
+            transform.GetChild(0).GetChild(i).GetComponent<UI_CraftingPanel>().Craft = crafts[i];
+        }
+    }
+
     private void ImplementContent()
     {
         if (transform.GetChild(0).childCount <= 0) return;
@@ -59,28 +77,36 @@ public class UI_CrafingManager : MonoBehaviour
     {
         for (int i = 0; i < crafts.Count; i++)
         {
-            List<bool> CheckIfCorrect = new();
-            foreach (var item in crafts[i].Craft)
-            {
-                if (!inventoryManager.AllItemsInInventory.Any()) return;
-                var allItems = inventoryManager.AllItemsInInventory.FirstOrDefault(s => s.Id == item.ItemData.ItemId);
-                
-                if (allItems != null)
-                {
-                    bool CheckIfAmountCorrect = allItems.Amount >= item.Amount;
-                    if (CheckIfAmountCorrect) CheckIfCorrect.Add(true);
-                    else CheckIfCorrect.Add(false);
-                }
-                    
-                else CheckIfCorrect.Add(false);
-            }
-            if (CheckIfCorrect != null && CheckIfCorrect.All(x => x == true))
+            if (CheckCraftingForSingleRecipe(crafts[i]))
             {
                 transform.GetChild(0).GetChild(i).GetComponent<Button>().interactable = true;
             }
             else transform.GetChild(0).GetChild(i).GetComponent<Button>().interactable = false;
-            CheckIfCorrect.Clear();
         }
+    }
+
+    private bool CheckCraftingForSingleRecipe(CraftData data)
+    {
+        List<bool> CheckIfCorrect = new();
+        foreach (var item in data.Craft)
+        {
+            if (!inventoryManager.AllItemsInInventory.Any()) return false;
+            var allItems = inventoryManager.AllItemsInInventory.FirstOrDefault(s => s.Id == item.ItemData.ItemId);
+
+            if (allItems != null)
+            {
+                bool CheckIfAmountCorrect = allItems.Amount >= item.Amount;
+                if (CheckIfAmountCorrect) CheckIfCorrect.Add(true);
+                else CheckIfCorrect.Add(false);
+            }
+
+            else CheckIfCorrect.Add(false);
+        }
+        if (CheckIfCorrect != null && CheckIfCorrect.All(x => x == true))
+        {
+            return true;
+        }
+        else return false;
     }
 
     private void OrderByInteractable()
