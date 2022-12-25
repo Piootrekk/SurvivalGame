@@ -17,9 +17,9 @@ TagManager:
   - Ground
   - Player
   - Interactable
-  - 
-  - 
-  - 
+  - Equipable
+  - Resoursable
+  - Buildable
   - 
   - 
   - 
