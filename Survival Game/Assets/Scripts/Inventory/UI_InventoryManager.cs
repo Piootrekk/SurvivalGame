@@ -31,6 +31,8 @@ public class UI_InventoryManager : MonoBehaviour
 
     public List<AllItemsInInventory> AllItemsInInventory => allItemsInInventory;
 
+    public List<UI_InventorySlot> InventorySlots => inventorySlots;
+
     private void Awake()
     {
         inventory = inventorySlotHolder.transform.parent.gameObject;
@@ -179,6 +181,7 @@ public class UI_InventoryManager : MonoBehaviour
             Instantiate(cursor.GetChild(0).gameObject, inventorySlots[currentSlot].Slot);
             Destroy(cursor.GetChild(0).gameObject);
             isCursorWithItem = false;
+            CheckIfSlotIsUsed();
         }
         // Jeœli odk³adamy przedmiot do istniej¹cego ju¿ tego samego przedmiotu
         else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
@@ -200,7 +203,7 @@ public class UI_InventoryManager : MonoBehaviour
 
             }
         }
-        CheckIfSlotIsFull();
+        CheckIfSlotIsUsed();
     }
     public void ItemHandlerVisibility()
     {
@@ -292,11 +295,16 @@ public class UI_InventoryManager : MonoBehaviour
                 }
             }   
         }
-
         // For new slot
         var firstEmptySlot = inventorySlots.FirstOrDefault(x => x.IsFull == false);
         if (firstEmptySlot == null)  return;
         else Instantiate(craft.Recive, firstEmptySlot.Slot);
+    }
+
+    private void CheckIfSlotIsUsed()
+    {
+        IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
+        iActiveSlot.ActivateHotBarKeys();
     }
 }
 

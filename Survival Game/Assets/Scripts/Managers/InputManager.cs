@@ -57,6 +57,10 @@ public class InputManager : MonoBehaviour
         StopPerforAction();
 
     }
+    private void Start()
+    {
+        HotBarKey = 1f;
+    }
 
     private void OnEnable()
     {
@@ -153,6 +157,7 @@ public class InputManager : MonoBehaviour
         if (callBack.ReadValue<float>() > 0f)
         {
             HotBarKey = callBack.ReadValue<float>();
+            InvokeAction();
         }
         
     }
@@ -187,6 +192,13 @@ public class InputManager : MonoBehaviour
             else if (HotBarKey == 0f) HotBarKey += 10f;
             else HotBarKey -= 1f;
         }
+        InvokeAction();
+    }
+
+    private void InvokeAction()
+    {
+        IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
+        iActiveSlot.ActivateHotBarKeys();
     }
 }
 
