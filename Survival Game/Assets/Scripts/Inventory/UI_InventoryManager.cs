@@ -66,7 +66,6 @@ public class UI_InventoryManager : MonoBehaviour
             inventorySlots.Add(new(slot, false));
         }
     }
-
     private void CheckIfSlotIsFull()
     {
         foreach(UI_InventorySlot slot in inventorySlots)
@@ -182,6 +181,7 @@ public class UI_InventoryManager : MonoBehaviour
             Destroy(cursor.GetChild(0).gameObject);
             isCursorWithItem = false;
             CheckIfSlotIsUsed();
+            CheckIfSlotIsFull();
         }
         // Jeœli odk³adamy przedmiot do istniej¹cego ju¿ tego samego przedmiotu
         else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
@@ -304,10 +304,6 @@ public class UI_InventoryManager : MonoBehaviour
     public void CheckIfSlotIsUsed()
     {
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
-        if (iActiveSlot.CameraEquip.childCount > 0)
-        {
-            Destroy(iActiveSlot.CameraEquip.GetChild(0).gameObject);
-        }
         iActiveSlot.ActivateHotBarKeys();
     }
 }

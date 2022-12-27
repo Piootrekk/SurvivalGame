@@ -56,11 +56,9 @@ public class UI_PickItems : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(ray);
     }
-
 }
-
 public interface IInteractable
-{
+    {
     void OnInteract();
 }
 

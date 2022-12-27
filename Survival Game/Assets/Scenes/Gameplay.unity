@@ -15718,7 +15718,7 @@ GameObject:
   - component: {fileID: 6540679512889986856}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19207,6 +19207,11 @@ PrefabInstance:
     - target: {fileID: 8053639772691532133, guid: 04692c39ef7cc2c4084436cb039ceaf5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053639772691532138, guid: 04692c39ef7cc2c4084436cb039ceaf5,
+        type: 3}
+      propertyPath: dayCycle
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
