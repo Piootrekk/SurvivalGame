@@ -41,7 +41,7 @@ public class MouseManager : MonoBehaviour
     {
         IAnimation iAnimate = GameObject.FindObjectOfType<OnAttackAnimations>();
         if (iAnimate == null) return;
-        iAnimate.Animate();
+        iAnimate?.Animate();
     }
     
 }

@@ -9,14 +9,12 @@ public class UI_PickItems : MonoBehaviour
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] TextMeshProUGUI pickUpText;
 
-    private UI_InventoryManager inventoryHandler;
     private Ray ray;
     private InputManager inputManager;
 
     private void Awake()
     {
         inputManager = GameObject.Find("Player").GetComponent<InputManager>();
-        inventoryHandler = gameObject.GetComponent<UI_InventoryManager>();
     }
 
     private void Update()
@@ -36,12 +34,8 @@ public class UI_PickItems : MonoBehaviour
             SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
             if (inputManager.Interactive)
             {
-                if (!inventoryHandler) { return; }
-                if (inventoryHandler.ItemAdd(item))
-                {
-                    IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
-                    interactable?.OnInteract();
-                }
+                IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
+                interactable?.OnInteract();
             }
         }
         else DistableText();
@@ -49,7 +43,7 @@ public class UI_PickItems : MonoBehaviour
     private void SetUpText(string name)
     {
         pickUpText.gameObject.SetActive(true);
-        pickUpText.text = string.Format($"<b> Press <F> to pick {name}  </b>");
+        pickUpText.text = string.Format($"<b> Press <F> to interact with {name} </b>");
     }
 
     private void DistableText()
