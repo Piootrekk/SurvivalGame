@@ -21,6 +21,8 @@ public class InputManager : MonoBehaviour
     public float HotBarKey { get; private set; }
     public bool Inventory { get; set; }
     public float ValueFromScroll { get; set; }
+    public bool Mouse1 { get; set; }
+    public bool Mouse2 { get; set; }
 
 
     public string CurrentPathInput { get; private set; }
@@ -36,6 +38,8 @@ public class InputManager : MonoBehaviour
     private InputAction hotbarkeys;
     private InputAction inventoryAction;
     private InputAction mouseScroll;
+    private InputAction mouse1;
+    private InputAction mouse2;
 
 
 
@@ -53,6 +57,8 @@ public class InputManager : MonoBehaviour
         hotbarkeys = currentMap.FindAction("HotBarKeys");
         inventoryAction = currentMap.FindAction("OpenInventory");
         mouseScroll = currentMap.FindAction("MouseScroll");
+        mouse1 = currentMap.FindAction("Attack");
+        mouse2 = currentMap.FindAction("AlternativeAttack");
         PerforAction();
         StopPerforAction();
 
@@ -72,8 +78,6 @@ public class InputManager : MonoBehaviour
         currentMap.Disable();
     }
 
-
-
     private void PerforAction()
     {
         moveAction.performed += OnMove;
@@ -86,9 +90,9 @@ public class InputManager : MonoBehaviour
         hotbarkeys.performed += OnChangeHotBarSlot;
         inventoryAction.started += OnInventory;
         mouseScroll.performed += OnChangeScroll;
+        mouse1.started += OnAttack;
+        mouse2.started += OnAttackAlternative;
     }
-
-
 
     private void StopPerforAction()
     {
@@ -102,7 +106,8 @@ public class InputManager : MonoBehaviour
         hotbarkeys.canceled += OnChangeHotBarSlot;
         inventoryAction.canceled += OnInventory;
         mouseScroll.canceled += OnChangeScroll;
-
+        mouse1.canceled += OnAttack;
+        mouse2.canceled += OnAttackAlternative;
     }
 
     private void OnLook(InputAction.CallbackContext callBack)
@@ -159,7 +164,6 @@ public class InputManager : MonoBehaviour
             HotBarKey = callBack.ReadValue<float>();
             InvokeAction();
         }
-        
     }
 
 
@@ -194,12 +198,28 @@ public class InputManager : MonoBehaviour
         }
         InvokeAction();
     }
-
     private void InvokeAction()
     {
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
         iActiveSlot.ActivateHotBarKeys();
     }
+
+    private void OnAttack(InputAction.CallbackContext callBack)
+    {
+        if (callBack.interaction is TapInteraction)
+        {
+            Mouse1 = callBack.ReadValueAsButton();
+        }
+    }
+
+    private void OnAttackAlternative(InputAction.CallbackContext callBack)
+    {
+        if (callBack.interaction is TapInteraction)
+        {
+            Mouse2 = callBack.ReadValueAsButton();
+        }
+    }
+
 }
 
 

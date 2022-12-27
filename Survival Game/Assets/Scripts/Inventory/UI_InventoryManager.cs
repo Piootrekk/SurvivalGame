@@ -22,8 +22,8 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] List<AllItemsInInventory> allItemsInInventory;
 
     private float timer = 0f;
-    float delay = 0.1f;
-    bool isExecuting = false;
+    private float delay = 0.1f;
+    private bool isExecuting = false;
     private GameObject inventory;
 
     public int CurrentSlot { get => currentSlot; set => currentSlot = value; }
