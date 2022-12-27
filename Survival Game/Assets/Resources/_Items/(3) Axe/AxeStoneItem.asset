@@ -20,7 +20,7 @@ MonoBehaviour:
   isStackable: 0
   stackLimit: 1
   itemType: 3
-  itemInUse: {fileID: 4117239317088090474, guid: 297f84f99660e9845bc91750ae211a31,
+  itemInUse: {fileID: 611146243122413671, guid: 3d3c3922702deea4eae7ce7a9ec0895b,
     type: 3}
   staminaBonus: 0
   hungerBonus: 0

@@ -301,9 +301,13 @@ public class UI_InventoryManager : MonoBehaviour
         else Instantiate(craft.Recive, firstEmptySlot.Slot);
     }
 
-    private void CheckIfSlotIsUsed()
+    public void CheckIfSlotIsUsed()
     {
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
+        if (iActiveSlot.CameraEquip.childCount > 0)
+        {
+            Destroy(iActiveSlot.CameraEquip.GetChild(0).gameObject);
+        }
         iActiveSlot.ActivateHotBarKeys();
     }
 }

@@ -9,11 +9,10 @@ public class MouseManager : MonoBehaviour
     private bool isExecuting;
     private float delay = 1f;
     private float timer = 0f;
-
     private void Awake()
     {
         hotBarSlots = GetComponent<HotBarSlots>();
-        inputManager = GetComponent<InputManager>();
+        inputManager = GetComponent<InputManager>(); 
     }
 
     private void Update()
@@ -27,6 +26,7 @@ public class MouseManager : MonoBehaviour
             && hotBarSlots.IsItemEquipable((int)inputManager.HotBarKey - 1) && !isExecuting && !inputManager.Inventory)
         {
             inputManager.Mouse1 = !inputManager.Mouse1;
+            AnimationGetter();
             Debug.Log("Click :>");
             isExecuting = true;
             timer = Time.time;
@@ -35,6 +35,13 @@ public class MouseManager : MonoBehaviour
         {
             isExecuting = false;
         }
+    }
+
+    private void AnimationGetter()
+    {
+        IAnimation iAnimate = GameObject.FindObjectOfType<OnAttackAnimations>();
+        if (iAnimate == null) return;
+        iAnimate.Animate();
     }
     
 }

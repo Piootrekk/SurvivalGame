@@ -29,7 +29,8 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
             isQpress = false;
         }
         if (isQpress && isEnter)
-        { 
+        {
+            inventoryManager.CheckIfSlotIsUsed();
             inventoryManager.DropCurrentItem();
         }
     }

@@ -11,6 +11,7 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
     private UI_InventoryManager inventoryManager;
     private InputManager inputManager;
 
+    public Transform CameraEquip { get => cameraEquip; set => cameraEquip = value; }
 
     public void Awake()
     {
@@ -54,5 +55,6 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
 public interface IActiveSlot
 {
+    public Transform CameraEquip { get; set; }
     void ActivateHotBarKeys();
 }
