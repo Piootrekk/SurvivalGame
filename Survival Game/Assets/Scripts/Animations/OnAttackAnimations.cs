@@ -18,6 +18,9 @@ public class OnAttackAnimations : MonoBehaviour, IAnimation
 
 }
 
+
+
+
 interface IAnimation
 {
     void Animate();

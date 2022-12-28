@@ -10,12 +10,17 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
     private UI_InventoryManager inventoryManager;
     private InputManager inputManager;
+    private GameObject itemInUse;
+    private static HotBarSlots instance;
 
     public Transform CameraEquip { get => cameraEquip; set => cameraEquip = value; }
+    public GameObject ItemInUse => itemInUse;
+    public static HotBarSlots Instance => instance;
 
     public void Awake()
     {
         inputManager = GetComponent<InputManager>();
+        instance = this;
     }
 
     public void ActivateHotBarKeys()
@@ -30,7 +35,7 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<Image>().color = new Color(0.18039216f, 0.145098f, 0.14901961f);
         if (IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && IsItemEquipable((int)inputManager.HotBarKey - 1) && cameraEquip.childCount == 0)
         {
-            Instantiate(hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemInUse, cameraEquip);
+            itemInUse = Instantiate(hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemInUse, cameraEquip);
             hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<ActiveSlot>().IsActive = true;
         }
         else if (cameraEquip.childCount > 0) Destroy(cameraEquip.GetChild(0).gameObject);

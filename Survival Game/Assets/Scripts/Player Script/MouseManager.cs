@@ -12,7 +12,7 @@ public class MouseManager : MonoBehaviour
     private void Awake()
     {
         hotBarSlots = GetComponent<HotBarSlots>();
-        inputManager = GetComponent<InputManager>(); 
+        inputManager = GetComponent<InputManager>();
     }
 
     private void Update()

@@ -28,6 +28,6 @@ MonoBehaviour:
   enemyDamage: 5
   woodDamage: 20
   stoneDamage: 1
-  durability: 100
+  durability: 50
   consturctionHP: 0
   damageAbsorbsion: 0

@@ -14,7 +14,25 @@ public class ResourcesScript : MonoBehaviour
         currentHP = startHP;
     }
 
+    public void OnAction(int damage, Vector3 hitpoint, Vector3 normal)
+    {
+        currentHP -= damage;
+        Instantiate(particlesDuringHit, hitpoint, Quaternion.LookRotation(normal, Vector3.up));
+        if (currentHP <= 0)
+        {
+            foreach (Drop drop in drops)
+            {
+                var item = Instantiate(drop.Item.Prefab, transform.position, Quaternion.identity);
+                item.GetComponent<ItemObjectInGame>().Amount = drop.Amount;
+            }
+            Destroy(gameObject);
+        }
+    }
+}
 
+public interface IAttack
+{
+    void OnAction(int damage, Vector3 hitpoint, Vector3 normal);
 }
 
 

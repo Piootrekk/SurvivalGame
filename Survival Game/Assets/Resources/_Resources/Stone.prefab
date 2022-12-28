@@ -116,4 +116,5 @@ MonoBehaviour:
   drops:
   - item: {fileID: 11400000, guid: 4b5b25558472a784983ecbfa1fb24a11, type: 2}
     amount: 5
-  particlesDuringHit: {fileID: 0}
+  particlesDuringHit: {fileID: 8653691354826667977, guid: b20792082a0546848acb33770a2c7489,
+    type: 3}
