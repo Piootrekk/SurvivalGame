@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourcesScript : MonoBehaviour
+public class ResourcesScript : MonoBehaviour, IAttack
 {
     [SerializeField] int currentHP;
     [SerializeField] int startHP;
@@ -17,7 +17,7 @@ public class ResourcesScript : MonoBehaviour
     public void OnAction(int damage, Vector3 hitpoint, Vector3 normal)
     {
         currentHP -= damage;
-        Instantiate(particlesDuringHit, hitpoint, Quaternion.LookRotation(normal, Vector3.up));
+        Destroy(Instantiate(particlesDuringHit, hitpoint, Quaternion.LookRotation(normal, Vector3.up)), 1);
         if (currentHP <= 0)
         {
             foreach (Drop drop in drops)

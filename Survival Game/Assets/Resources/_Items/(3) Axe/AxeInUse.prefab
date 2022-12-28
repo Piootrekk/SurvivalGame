@@ -130,3 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901fd026019310548ac8844e3d44164c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPickUpDistance: 3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
