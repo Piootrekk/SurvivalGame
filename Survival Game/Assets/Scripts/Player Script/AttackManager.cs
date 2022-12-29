@@ -29,6 +29,7 @@ public class AttackManager : MonoBehaviour
             Debug.Log(item.name);
             IAttack iAttack = item.GetComponent<IAttack>();
             iAttack?.OnAction(damage, hitInfo.point, hitInfo.normal);
+            HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ReduceDurability();
         }
 
     }

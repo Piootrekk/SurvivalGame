@@ -8,15 +8,17 @@ public class UI_ItemData : MonoBehaviour
 {
     [SerializeField] private ItemData itemData;
     [SerializeField] private int amount;
+    [SerializeField] private int durability;
 
     public int Amount { get => amount; set => amount = value; }
     public ItemData ItemData { get => itemData; set => itemData = value; }
+    public int Durability { get => durability; set => durability = value; }
 
     private void OnEnable()
     {
 
         gameObject.GetComponent<Image>().sprite = itemData.ItemSprite;
-        
+
     }
     private void Start()
     {
@@ -33,8 +35,18 @@ public class UI_ItemData : MonoBehaviour
         {
             gameObject.GetComponentInChildren<TextMeshProUGUI>().text = amount.ToString();
         }
-        
     }
 
+    public void ReduceDurability()
+    {
+        if(itemData.ItemType == ItemType.Equipable)
+        {
+            durability--;
+            if(durability <= -1)
+            {
+                Destroy(gameObject);
+            }
+        }
 
+    }
 }

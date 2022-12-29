@@ -120,6 +120,7 @@ public class UI_InventoryManager : MonoBehaviour
             {
                 var prefabInstantiate = Instantiate(item, slot.Slot);
                 prefabInstantiate.GetComponent<UI_ItemData>().Amount = itemObject.GetComponent<ItemObjectInGame>().Amount;
+                prefabInstantiate.GetComponent<UI_ItemData>().Durability = itemObject.GetComponent<ItemObjectInGame>().Durability;
                 CheckIfSlotIsFull();
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
                 return true;
@@ -222,9 +223,11 @@ public class UI_InventoryManager : MonoBehaviour
             GameObject prefab = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.Prefab;
             GameObject instantiateObject  = Instantiate(prefab, Camera.main.transform.position, Quaternion.identity);
             instantiateObject.GetComponent<ItemObjectInGame>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
+            instantiateObject.GetComponent<ItemObjectInGame>().Durability = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Durability;
             instantiateObject.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             Destroy(inventorySlots[currentSlot].Slot.GetChild(0).gameObject);
             timer = Time.time;
+            CheckIfSlotIsUsed();
         }
         else if (Time.time - timer > delay)
         {

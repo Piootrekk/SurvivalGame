@@ -189,14 +189,16 @@ public class InputManager : MonoBehaviour
             if (HotBarKey == 10f) HotBarKey -= 9f;
             else if (HotBarKey == 0f) HotBarKey -= 10f;
             else HotBarKey += 1f;
+            InvokeAction();
         }
         else if (ValueFromScroll == -120f)
         {
             if (HotBarKey == 1f) HotBarKey += 9f;
             else if (HotBarKey == 0f) HotBarKey += 10f;
             else HotBarKey -= 1f;
+            InvokeAction();
         }
-        InvokeAction();
+        
     }
     private void InvokeAction()
     {

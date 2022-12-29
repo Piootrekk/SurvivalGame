@@ -26,9 +26,6 @@ public class ItemData : ScriptableObject
     [SerializeField] int woodDamage;
     [SerializeField] int stoneDamage;
 
-    [Header("Equipable")]
-    [SerializeField] int durability;
-
     [Header("Buildable")]
     [SerializeField] int consturctionHP;
 
@@ -50,7 +47,6 @@ public class ItemData : ScriptableObject
     public int EnemyDamage => enemyDamage;
     public int WoodDamage => woodDamage;
     public int StoneDamage => stoneDamage;
-    public int Durability => durability;
     public int ConsturctionHP => consturctionHP;
     public float DamageAbsorbsion => damageAbsorbsion;
 

@@ -25,7 +25,11 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
     public void ActivateHotBarKeys()
     {
-
+        //if (cameraEquip.childCount > 0)
+        //{
+        //    Destroy(cameraEquip.GetChild(0).gameObject); 
+        //    itemInUse = null;
+        //}
         foreach (Transform slot in hotBarSlots)
         {
             slot.GetComponent<ActiveSlot>().IsActive = false;
@@ -39,7 +43,17 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
             Instantiate(itemInUse.GetComponent<UI_ItemData>().ItemData.ItemInUse, cameraEquip);
             hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<ActiveSlot>().IsActive = true;
         }
-        else if (cameraEquip.childCount > 0) { Destroy(cameraEquip.GetChild(0).gameObject); itemInUse = null; }
+        else if (!IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && cameraEquip.childCount > 0)
+        {
+            Destroy(cameraEquip.GetChild(0).gameObject);
+            itemInUse = null;
+        }
+        else if (IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && !IsItemEquipable((int)inputManager.HotBarKey - 1)
+            && cameraEquip.childCount > 0)
+        {
+            Destroy(cameraEquip.GetChild(0).gameObject);
+            itemInUse = null;
+        }
     }
 
     public bool IsItemInSlotHotBar(int i)
@@ -59,6 +73,5 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
 public interface IActiveSlot
 {
-    //public Transform CameraEquip { get; set; }
     void ActivateHotBarKeys();
 }

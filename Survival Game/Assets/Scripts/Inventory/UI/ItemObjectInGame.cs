@@ -6,9 +6,11 @@ public class ItemObjectInGame : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject instanceInInventory;
     [SerializeField] private int amount = 1;
+    [SerializeField] private int durability = 1;
     private UI_InventoryManager inventoryHandler;
 
     public GameObject InstanceInInventory => instanceInInventory;
+    public int Durability { get => durability; set => durability = value; }
     public int Amount { get => amount; set => amount = value; }
 
     private void Awake()
