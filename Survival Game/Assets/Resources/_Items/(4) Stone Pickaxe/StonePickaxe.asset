@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
+  m_Name: StonePickaxe
+  m_EditorClassIdentifier: 
+  itemId: 4
+  nameItem: Stone Pickaxe
+  description: Use it for get stone resources
+  itemSprite: {fileID: 21300000, guid: 3f6a80a278d96d24bb78361541a59e46, type: 3}
+  prefab: {fileID: 1055798471251428, guid: d8af630bfdb475741b590516d768e437, type: 3}
+  isStackable: 0
+  stackLimit: 1
+  itemType: 3
+  itemInUse: {fileID: 8582005409184547746, guid: a061a0738125547409492f35d8f34ca0,
+    type: 3}
+  staminaBonus: 0
+  hungerBonus: 0
+  thirstBonus: 0
+  enemyDamage: 5
+  woodDamage: 1
+  stoneDamage: 30
+  playerConstructionDamage: 25
+  damageAbsorbsion: 0
