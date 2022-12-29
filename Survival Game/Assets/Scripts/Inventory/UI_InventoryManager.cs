@@ -307,7 +307,7 @@ public class UI_InventoryManager : MonoBehaviour
     public void CheckIfSlotIsUsed()
     {
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
-        iActiveSlot.ActivateHotBarKeys();
+        iActiveSlot?.ActivateHotBarKeys();
     }
 }
 

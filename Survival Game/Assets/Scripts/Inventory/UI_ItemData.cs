@@ -44,7 +44,10 @@ public class UI_ItemData : MonoBehaviour
             durability--;
             if(durability <= -1)
             {
+                IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
+                iActiveSlot?.DestroyCameraChild();
                 Destroy(gameObject);
+
             }
         }
 

@@ -25,11 +25,6 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
     public void ActivateHotBarKeys()
     {
-        //if (cameraEquip.childCount > 0)
-        //{
-        //    Destroy(cameraEquip.GetChild(0).gameObject); 
-        //    itemInUse = null;
-        //}
         foreach (Transform slot in hotBarSlots)
         {
             slot.GetComponent<ActiveSlot>().IsActive = false;
@@ -56,6 +51,14 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         }
     }
 
+    public void DestroyCameraChild()
+    {
+        if (cameraEquip.childCount > 0)
+        {
+            Destroy(cameraEquip.GetChild(0).gameObject);
+        } 
+    }
+
     public bool IsItemInSlotHotBar(int i)
     {
         if (hotBarSlots.GetChild(i).childCount > 0) return true;
@@ -68,10 +71,12 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         else return false;
     }
   
+
 }
 
 
 public interface IActiveSlot
 {
     void ActivateHotBarKeys();
+    void DestroyCameraChild();
 }

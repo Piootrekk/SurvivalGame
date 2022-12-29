@@ -203,7 +203,7 @@ public class InputManager : MonoBehaviour
     private void InvokeAction()
     {
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
-        iActiveSlot.ActivateHotBarKeys();
+        iActiveSlot?.ActivateHotBarKeys();
     }
 
     private void OnAttack(InputAction.CallbackContext callBack)

@@ -27,7 +27,6 @@ public class MouseManager : MonoBehaviour
         {
             inputManager.Mouse1 = !inputManager.Mouse1;
             AnimationGetter();
-            Debug.Log("Click :>");
             isExecuting = true;
             timer = Time.time;
         }
