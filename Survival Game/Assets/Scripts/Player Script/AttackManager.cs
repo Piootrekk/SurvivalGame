@@ -26,7 +26,7 @@ public class AttackManager : MonoBehaviour
         }
         else if (typeofAttack == AttackType.PlayerConstructionDamage)
         {
-            damage = 25;
+            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.PlayerConstructionDamage;
         }
     }
 
