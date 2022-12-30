@@ -38,21 +38,18 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<Image>().color = new Color(0.18039216f, 0.145098f, 0.14901961f);
         if (IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && IsItemEquipable((int)inputManager.HotBarKey - 1) && cameraEquip.childCount == 0)
         {
-            Debug.Log("Test1");
             itemInUse = hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).gameObject;
             _item = Instantiate(itemInUse.GetComponent<UI_ItemData>().ItemData.ItemInUse, cameraEquip);
             hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<ActiveSlot>().IsActive = true;
         }
         else if (IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && IsItemEquipable((int)inputManager.HotBarKey - 1) && cameraEquip.childCount > 0)
         {
-            Debug.Log("Test2");
-            if(hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId != _item.GetComponent<ItemInUse>().Data.ItemId)
+            if (hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId != _item.GetComponent<ItemInUse>().Data.ItemId)
             {
                 Destroy(cameraEquip.GetChild(0).gameObject);
                 itemInUse = null;
                 _item = null;
 
-                Debug.Log("Test3");
                 itemInUse = hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetChild(0).gameObject;
                 _item = Instantiate(itemInUse.GetComponent<UI_ItemData>().ItemData.ItemInUse, cameraEquip);
                 hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<ActiveSlot>().IsActive = true;

@@ -130,3 +130,4 @@ MonoBehaviour:
   instanceInInventory: {fileID: 4255365068340410132, guid: c1fbc43b2f9b5224fa508ac91a66a390,
     type: 3}
   amount: 1
+  durability: 0

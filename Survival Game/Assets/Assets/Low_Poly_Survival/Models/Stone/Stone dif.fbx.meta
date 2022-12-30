@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78bb4f563e7e3fe45a4d68ebed4d4af0
+guid: ed08461dd95b04248bbcdef8cd176c64
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -20,7 +20,7 @@ ModelImporter:
     second: //RootNode
   - first:
       43: 4300000
-    second: Tree_2
+    second: Stone
   externalObjects: {}
   materials:
     materialImportMode: 1
