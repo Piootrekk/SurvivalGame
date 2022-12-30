@@ -12,6 +12,9 @@ public class UI_PickItems : MonoBehaviour
     private Ray ray;
     private InputManager inputManager;
 
+    private float pickUpTimer = 0f;
+    private float pickUpInterval = 0.15f;
+
     private void Awake()
     {
         inputManager = GameObject.Find("Player").GetComponent<InputManager>();
@@ -32,13 +35,15 @@ public class UI_PickItems : MonoBehaviour
         {
             var item = hitInfo.collider.gameObject;
             SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
-            if (inputManager.Interactive)
+            if (inputManager.Interactive && pickUpTimer >= pickUpInterval)
             {
                 IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
                 interactable?.OnInteract();
+                pickUpTimer = 0f;
             }
         }
         else DistableText();
+        pickUpTimer += Time.deltaTime;
     }
     private void SetUpText(string name)
     {
