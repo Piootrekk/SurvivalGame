@@ -7,28 +7,9 @@ public class AttackManager : MonoBehaviour
     [SerializeField] float maxPickUpDistance;
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] int damage;
-    [SerializeField] AttackType typeofAttack;
+
     private Ray ray;
 
-    private void Awake()
-    {
-        if(typeofAttack == AttackType.StoneDamage)
-        {
-            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.StoneDamage;
-        }
-        else if (typeofAttack == AttackType.WoodDamage)
-        {
-            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.WoodDamage;
-        }
-        else if (typeofAttack == AttackType.EnemyDamage)
-        {
-            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.EnemyDamage;
-        }
-        else if (typeofAttack == AttackType.PlayerConstructionDamage)
-        {
-            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.PlayerConstructionDamage;
-        }
-    }
 
     public void OnAttack()
     {
@@ -39,10 +20,32 @@ public class AttackManager : MonoBehaviour
         {
             var item = hitInfo.collider.gameObject;
             IAttack iAttack = item.GetComponent<IAttack>();
+            AddCurrentAttackToDamage(iAttack);
             iAttack?.OnAction(damage, hitInfo.point, hitInfo.normal);
             HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ReduceDurability();
         }
     }
+
+    public void AddCurrentAttackToDamage(IAttack iAttack)
+    {
+        if (iAttack?.AttackType == AttackType.StoneDamage)
+        {
+            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.StoneDamage;
+        }
+        else if (iAttack?.AttackType == AttackType.WoodDamage)
+        {
+            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.WoodDamage;
+        }
+        else if (iAttack?.AttackType == AttackType.EnemyDamage)
+        {
+            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.EnemyDamage;
+        }
+        else if (iAttack?.AttackType == AttackType.PlayerConstructionDamage)
+        {
+            damage = HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ItemData.PlayerConstructionDamage;
+        }
+    }
+
 }
 
 public enum AttackType

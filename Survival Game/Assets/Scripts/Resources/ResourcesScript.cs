@@ -8,6 +8,9 @@ public class ResourcesScript : MonoBehaviour, IAttack
     [SerializeField] int startHP;
     [SerializeField] List<Drop> drops;
     [SerializeField] GameObject particlesDuringHit;
+    [SerializeField] AttackType attackType;
+
+    public AttackType AttackType { get => attackType; set => attackType = value; }
 
     private void Awake()
     {
@@ -32,6 +35,7 @@ public class ResourcesScript : MonoBehaviour, IAttack
 
 public interface IAttack
 {
+    public AttackType AttackType { get; set; }
     void OnAction(int damage, Vector3 hitpoint, Vector3 normal);
 }
 
