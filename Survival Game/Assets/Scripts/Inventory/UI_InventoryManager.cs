@@ -187,9 +187,11 @@ public class UI_InventoryManager : MonoBehaviour
         // Jeœli odk³adamy przedmiot do istniej¹cego ju¿ tego samego przedmiotu
         else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
         {
+            //Jeœli ten sam przedmiot jest odk³adny do tego samego przedmiotu
             if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId
                 == cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId)
             {
+                //Jeœli iloœæ zsumowanych przedmiotów nie przekracza limitu
                 if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount +
                     cursor.GetChild(0).GetComponent<UI_ItemData>().Amount
                     <= inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit)
@@ -200,12 +202,36 @@ public class UI_InventoryManager : MonoBehaviour
                     Destroy(cursor.GetChild(0).gameObject);
                     isCursorWithItem = false;
                 }
-                else Debug.Log("FULL");
-
+                //Jeœli iloœæ zsumowanych przedmiotów PRZEKRACZA limit
+                else
+                {
+                    int AMOUNT = cursor.GetChild(0).GetComponent<UI_ItemData>().Amount + inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount - inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit;
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().Amount = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.StackLimit;
+                    inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                    Destroy(cursor.GetChild(0).gameObject);
+                    var _cursor = Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).gameObject, cursor);
+                    _cursor.GetComponent<UI_ItemData>().Amount = AMOUNT;
+                    isCursorWithItem = true;
+                }
+            }
+            else
+            {
+                ReplaceCursorWithSlot(inventorySlots[currentSlot].Slot, cursor);
             }
         }
         CheckIfSlotIsUsed();
     }
+
+    public void ReplaceCursorWithSlot(Transform currentSlot, Transform cursor)
+    {
+        Instantiate(currentSlot.GetChild(0).gameObject, cursor);
+        Instantiate(cursor.GetChild(0).gameObject, currentSlot);
+        Destroy(currentSlot.GetChild(0).gameObject);
+        Destroy(cursor.GetChild(0).gameObject);
+        currentSlot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+    }
+
+
     public void ItemHandlerVisibility()
     {
         if (cursor.childCount > 0)
