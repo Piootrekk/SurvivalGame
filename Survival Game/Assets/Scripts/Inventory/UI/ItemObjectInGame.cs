@@ -6,7 +6,7 @@ public class ItemObjectInGame : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject instanceInInventory;
     [SerializeField] private int amount = 1;
-    [SerializeField] private int durability = 1;
+    [SerializeField] private int durability = 0;
     private UI_InventoryManager inventoryHandler;
 
     public GameObject InstanceInInventory => instanceInInventory;

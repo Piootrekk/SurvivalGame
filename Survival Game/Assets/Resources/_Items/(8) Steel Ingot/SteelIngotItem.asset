@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
-  m_Name: Iron
+  m_Name: SteelIngotItem
   m_EditorClassIdentifier: 
-  itemId: 6
-  nameItem: Iron
-  description: Another useless item in my useless game
-  itemSprite: {fileID: 21300000, guid: fa7d0ea86a25a9a42b58e073a8401f1b, type: 3}
-  prefab: {fileID: 2000811356646783748, guid: 27e10194239ecc54a9deffbe2677db8b, type: 3}
+  itemId: 8
+  nameItem: Steel Ingot
+  description: Use it to craft advaced tools
+  itemSprite: {fileID: 21300000, guid: 4d2d8dad961e3994cbaac4bc367562bd, type: 3}
+  prefab: {fileID: 5242272478576830967, guid: 630e7f7d5cb0a9144b608b3e92584402, type: 3}
   isStackable: 1
   stackLimit: 99
   itemType: 1
