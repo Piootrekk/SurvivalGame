@@ -18,6 +18,9 @@ public class UI_InventoryManager : MonoBehaviour
     [SerializeField] private Transform cursor;
     [SerializeField] bool isCursorWithItem;    
     
+    [Header("Buildable")]
+    [SerializeField] private Transform buildInUse;
+
     [Header("Test")]
     [SerializeField] List<AllItemsInInventory> allItemsInInventory;
 
@@ -88,7 +91,6 @@ public class UI_InventoryManager : MonoBehaviour
             int amount = slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount;
             int amountInObject = itemObject.GetComponent<ItemObjectInGame>().Amount;
             int maxStack = item.GetComponent<UI_ItemData>().ItemData.StackLimit;
-
             if (amount + amountInObject <= maxStack)
             {
                 slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount
@@ -335,9 +337,35 @@ public class UI_InventoryManager : MonoBehaviour
         IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
         iActiveSlot?.ActivateHotBarKeys();
     }
+
+    public void UseCurrentItem()
+    {
+        if (inventorySlots[currentSlot].Slot.childCount == 0) return;
+        if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Buildable)
+        {
+            Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemInUse, buildInUse);
+            GetOneItem(inventorySlots[currentSlot]);
+        }
+    }
+
+    public void GetOneItem(UI_InventorySlot slot)
+    {
+        slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount -= 1;
+        DestroyIfZeroAmount();
+    }
+
+    private void DestroyIfZeroAmount()
+    {
+        foreach(UI_InventorySlot slot in inventorySlots)
+        {
+            if(slot.Slot.childCount != 0)
+            {
+                if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount <= 0) Destroy(slot.Slot.GetChild(0).gameObject);
+            }
+        }
+    }
+
 }
-
-
 
 [System.Serializable]
 public class UI_InventorySlot

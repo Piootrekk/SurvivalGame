@@ -20,6 +20,13 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     }
     private void Update()
     {
+        CheckQPressed();
+    if (!BuildingSystem.Instance.IsExecuting) CheckGPressed();
+    
+    }
+
+    private void CheckQPressed()
+    {
         if (keyboard.qKey.wasPressedThisFrame)
         {
             isQpress = true;
@@ -31,6 +38,22 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
         if (isQpress && isEnter)
         {
             inventoryManager.DropCurrentItem();
+        }
+    }
+
+    private void CheckGPressed()
+    {
+        if (keyboard.gKey.wasPressedThisFrame)
+        {
+            isQpress = true;
+        }
+        else
+        {
+            isQpress = false;
+        }
+        if (isQpress && isEnter)
+        {
+            inventoryManager.UseCurrentItem();
         }
     }
 

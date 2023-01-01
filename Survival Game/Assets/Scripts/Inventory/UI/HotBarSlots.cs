@@ -25,7 +25,7 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
     }
     private void Update()
     {
-        CameraRemover();
+        CheckCameraChild();
     }
     public void ActivateHotBarKeys()
     {
@@ -33,7 +33,6 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         {
             slot.GetComponent<ActiveSlot>().IsActive = false;
             slot.GetComponent<Image>().color = new Color(0.3098039f, 0.24313726f, 0.24313726f);
-
         }
         hotBarSlots.GetChild((int)inputManager.HotBarKey - 1).GetComponent<Image>().color = new Color(0.18039216f, 0.145098f, 0.14901961f);
         if (IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && IsItemEquipable((int)inputManager.HotBarKey - 1) && cameraEquip.childCount == 0)
@@ -65,7 +64,7 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
         } 
     }
 
-    private void CameraRemover()
+    private void CheckCameraChild()
     {
         if (!IsItemInSlotHotBar((int)inputManager.HotBarKey - 1) && cameraEquip.childCount > 0)
         {
@@ -89,6 +88,12 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
     public bool IsItemEquipable(int i)
     {
         if (hotBarSlots.GetChild(i).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Equipable) return true;
+        else return false;
+    }
+
+    public bool IsItemBuildable(int i)
+    {
+        if (hotBarSlots.GetChild(i).GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Buildable) return true;
         else return false;
     }
   
