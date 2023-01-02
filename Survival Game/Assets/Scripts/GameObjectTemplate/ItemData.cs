@@ -17,7 +17,8 @@ public class ItemData : ScriptableObject
     [SerializeField] private ItemType itemType;
     [SerializeField] private GameObject itemInUse;
     [Header("Consunable")]
-    [SerializeField] int staminaBonus;
+    [SerializeField] int healthBonus;
+    [SerializeField] int sleepBonus;
     [SerializeField] int hungerBonus;
     [SerializeField] int thirstBonus;
 
@@ -39,7 +40,8 @@ public class ItemData : ScriptableObject
     public int StackLimit => stackLimit;
     public ItemType ItemType => itemType;
     public GameObject ItemInUse => itemInUse;
-    public int StaminaBonus => staminaBonus;
+    public int SleepBonus => sleepBonus;
+    public int HealthBonus => healthBonus;
     public int HungerBonus => hungerBonus;
     public int ThirstBonus => thirstBonus;
     public int EnemyDamage => enemyDamage;

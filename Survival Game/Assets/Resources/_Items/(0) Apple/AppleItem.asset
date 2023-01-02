@@ -20,6 +20,13 @@ MonoBehaviour:
   isStackable: 1
   stackLimit: 99
   itemType: 2
-  staminaBonus: 10
+  itemInUse: {fileID: 0}
+  healthBonus: 10
+  sleepBonus: 5
   hungerBonus: 25
   thirstBonus: 15
+  enemyDamage: 0
+  woodDamage: 0
+  stoneDamage: 0
+  playerConstructionDamage: 0
+  damageAbsorbsion: 0

@@ -4,24 +4,30 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Linq;
+using TMPro;
 
 public class UI_InventoryManager : MonoBehaviour
 {
-    [Header("Inventory")]
+    [Header("Inventory:")]
     [SerializeField] private Transform inventorySlotHolder;
     [SerializeField] private Transform inventoryHotBarSlotHolder;
     [SerializeField] private List<UI_InventorySlot> inventorySlots;
     [SerializeField] private int currentSlot;
 
-    [Header("Cursor - clicked item in inv")]
+    [Header("Cursor - selected item in inv:")]
     [SerializeField] private Vector2 offset;
     [SerializeField] private Transform cursor;
     [SerializeField] bool isCursorWithItem;    
     
-    [Header("Buildable")]
+    [Header("Buildable:")]
     [SerializeField] private Transform buildInUse;
 
-    [Header("Test")]
+    [Header("Stats:")]
+    [SerializeField] private Transform itemName;
+    [SerializeField] private List<Transform> stats;
+    [SerializeField] private Transform desc;
+
+    [Header("Test:")]
     [SerializeField] List<AllItemsInInventory> allItemsInInventory;
 
     private float timer = 0f;
@@ -362,6 +368,35 @@ public class UI_InventoryManager : MonoBehaviour
             {
                 if (slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount <= 0) Destroy(slot.Slot.GetChild(0).gameObject);
             }
+        }
+    }
+
+
+    public void GetItemData()
+    {
+        if (inventorySlots[currentSlot].Slot.childCount == 0) return;
+        var DATA = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData;
+        List<TextMeshProUGUI> statsList = stats.Select(x => x.GetComponent<TextMeshProUGUI>()).ToList();
+
+        itemName.GetComponent<TextMeshProUGUI>().text = DATA.NameItem;
+        desc.GetComponent<TextMeshProUGUI>().text = DATA.Description;
+        if (DATA.SleepBonus > 0) { statsList[0].text = $"Sleep Bonus: {DATA.SleepBonus}"; statsList.RemoveAt(0); }
+        if (DATA.HungerBonus > 0) { statsList[0].text = $"Hunger Bonus: {DATA.HungerBonus}"; statsList.RemoveAt(0); }
+        if (DATA.ThirstBonus > 0) { statsList[0].text = $"Thirst Bonus: {DATA.ThirstBonus}"; statsList.RemoveAt(0); }
+        if (DATA.HealthBonus > 0) { statsList[0].text = $"Thirst Bonus: {DATA.HealthBonus}"; statsList.RemoveAt(0); }
+        if (DATA.EnemyDamage > 0) { statsList[0].text = $"Enemy damage: {DATA.EnemyDamage}"; statsList.RemoveAt(0); }
+        if (DATA.WoodDamage > 0) { statsList[0].text = $"Wood damage: {DATA.WoodDamage}"; statsList.RemoveAt(0); }
+        if (DATA.StoneDamage > 0) { statsList[0].text = $"Stone damage: {DATA.StoneDamage}"; statsList.RemoveAt(0); }
+        if (DATA.PlayerConstructionDamage > 0) { statsList[0].text = $"Buildings damage: {DATA.PlayerConstructionDamage}"; statsList.RemoveAt(0); }
+    }
+
+    public void EmptyDataPanel()
+    {
+        itemName.GetComponent<TextMeshProUGUI>().text = "";
+        desc.GetComponent<TextMeshProUGUI>().text = "";
+        foreach (var stat in stats)
+        {
+            stat.GetComponent<TextMeshProUGUI>().text = "";
         }
     }
 

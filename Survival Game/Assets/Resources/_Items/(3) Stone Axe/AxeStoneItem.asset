@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AxeStoneItem
   m_EditorClassIdentifier: 
   itemId: 3
-  nameItem: Axe
+  nameItem: Stone Axe
   description: Use it to cut tree
   itemSprite: {fileID: 21300000, guid: 34661243955f6ae48a7d82a3ceb0769f, type: 3}
   prefab: {fileID: 1713214988236272, guid: 0169672840b1dde468fe8324a76ce492, type: 3}
@@ -22,7 +22,7 @@ MonoBehaviour:
   itemType: 3
   itemInUse: {fileID: 611146243122413671, guid: 3d3c3922702deea4eae7ce7a9ec0895b,
     type: 3}
-  staminaBonus: 0
+  sleepBonus: 0
   hungerBonus: 0
   thirstBonus: 0
   enemyDamage: 10

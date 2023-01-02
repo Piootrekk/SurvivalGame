@@ -69,6 +69,7 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     public void OnPointerEnter(PointerEventData eventData)
     {
         SetID();
+        SetData();
         isEnter = true;
 
     }
@@ -76,11 +77,17 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     public void OnPointerExit(PointerEventData eventData)
     {
         isEnter = false;
+        inventoryManager.EmptyDataPanel();
     }
 
     public void SetID()
     {
         inventoryManager.CurrentSlot = currentSlotData.ID;
+    }
+
+    public void SetData()
+    {
+        inventoryManager.GetItemData();
     }
 
 }

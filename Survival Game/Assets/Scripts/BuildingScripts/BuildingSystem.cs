@@ -61,7 +61,7 @@ public class BuildingSystem : MonoBehaviour
             {
                 var _build = Instantiate(build, hitInfo.point, Quaternion.LookRotation(Vector3.right, hitInfo.normal));
                 _build.GetComponent<Renderer>().material = backup;
-                _build.layer = 11;
+                _build.layer = 11; //Buildable mask
                 Destroy(buildInUse.GetChild(0).gameObject);
                 DestroyAllChild(buildInUse);
                 IsExecuting = false;
