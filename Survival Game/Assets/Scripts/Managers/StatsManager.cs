@@ -5,32 +5,37 @@ using UnityEditor.UI;
 
 public class StatsManager : MonoBehaviour
 {
-    [SerializeField] private Transform StatsPanel;
+    [SerializeField] private Transform health;
+    [SerializeField] private Transform hunger;
+    [SerializeField] private Transform thirst;
+    [SerializeField] private Transform sleep;
 
-    private List<PlayerStats> Statslist = new();
+    public PlayerStats Health => health.GetComponent<PlayerStats>();
+    public PlayerStats Hunger => hunger.GetComponent<PlayerStats>();
+    public PlayerStats Thirst => thirst.GetComponent<PlayerStats>();
+    public PlayerStats Sleep => sleep.GetComponent<PlayerStats>();
+
+
     private InputManager inputManager;
+    private static StatsManager instance;
     
+    public static StatsManager Instance => instance;
+ 
+
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
-        GetAllChildren();
+        instance = this;
     }
     private void Update()
     {
         TEST_HealthManage();
-        ReducingStatistic(Statslist[1]);
-        ReducingStatistic(Statslist[2]);
-        ReducingStatistic(Statslist[3]);
+        ReducingStatistic(Hunger);
+        ReducingStatistic(Thirst);
+        ReducingStatistic(Sleep);
         ReducingHeal();
     }
 
-    private void GetAllChildren()
-    {
-        foreach (Transform stats in StatsPanel)
-        {
-            Statslist.Add(stats.GetComponent<PlayerStats>());
-        }
-    }
 
     private void TEST_HealthManage()
     {
@@ -38,12 +43,12 @@ public class StatsManager : MonoBehaviour
 
         if (inputManager.Test == -1)
         {
-            Statslist[0].TakePoints(10f);
+            Health.TakePoints(10f);
             Debug.Log("Zabrano ¿ycie");
         }
         else if (inputManager.Test == 1)
         {
-            Statslist[0].RenegeratePoints(10f);
+            Health.RenegeratePoints(10f);
             Debug.Log("Uleczono");
 
         }
@@ -57,10 +62,10 @@ public class StatsManager : MonoBehaviour
     private void ReducingHeal()
     {
         float reduceMultiply = 0f;
-        if (Statslist[1].CurrentPoints <= 0.01f) reduceMultiply += 2;
-        if (Statslist[2].CurrentPoints <= 0.01f) reduceMultiply += 3;
-        if (Statslist[2].CurrentPoints <= 0.01f) reduceMultiply += 2;
-        Statslist[0].TakePoints(reduceMultiply * Time.deltaTime);
+        if (Hunger.CurrentPoints <= 0.01f) reduceMultiply += 2;
+        if (Thirst.CurrentPoints <= 0.01f) reduceMultiply += 3;
+        if (Sleep.CurrentPoints <= 0.01f) reduceMultiply += 2;
+        Health.TakePoints(reduceMultiply * Time.deltaTime);
     }
 
 

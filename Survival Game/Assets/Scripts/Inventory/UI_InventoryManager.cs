@@ -172,7 +172,6 @@ public class UI_InventoryManager : MonoBehaviour
         }
     }
 
-
     public void GetItemToHandler()
     {
         CheckIfSlotIsFull();
@@ -239,7 +238,6 @@ public class UI_InventoryManager : MonoBehaviour
         currentSlot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
     }
 
-
     public void ItemHandlerVisibility()
     {
         if (cursor.childCount > 0)
@@ -269,7 +267,6 @@ public class UI_InventoryManager : MonoBehaviour
         }
         CheckIfSlotIsFull();
     }
-
 
     public void CraftItem(CraftData craft)
     {
@@ -306,7 +303,6 @@ public class UI_InventoryManager : MonoBehaviour
         GenerateObjectFromCraft(craft);
         CheckIfSlotIsFull();
     }
-
 
     private void CleanSlot(UI_InventorySlot slot)
     {
@@ -351,6 +347,16 @@ public class UI_InventoryManager : MonoBehaviour
         {
             Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemInUse, buildInUse);
             GetOneItem(inventorySlots[currentSlot]);
+        }
+        else if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Consunable)
+        {
+            var _data = inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData;
+            StatsManager.Instance.Health.AddPoints(_data.HealthBonus);
+            StatsManager.Instance.Hunger.AddPoints(_data.HungerBonus);
+            StatsManager.Instance.Thirst.AddPoints(_data.ThirstBonus);
+            StatsManager.Instance.Sleep.AddPoints(_data.SleepBonus);
+            GetOneItem(inventorySlots[currentSlot]);
+               
         }
     }
 

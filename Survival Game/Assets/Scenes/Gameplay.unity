@@ -16326,7 +16326,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9240080e5f2fe4c9e498f13a12923c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatsPanel: {fileID: 1014754744}
+  health: {fileID: 620336681}
+  hunger: {fileID: 902566509}
+  thirst: {fileID: 696112860}
+  sleep: {fileID: 46135485}
 --- !u!1 &2183486056618950967
 GameObject:
   m_ObjectHideFlags: 0
