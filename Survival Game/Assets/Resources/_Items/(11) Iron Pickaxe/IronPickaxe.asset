@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
+  m_Name: IronPickaxe
+  m_EditorClassIdentifier: 
+  itemId: 11
+  nameItem: Iron Pickaxe
+  description: Use to mine rocks
+  itemSprite: {fileID: 21300000, guid: 96dcb4b245c31854aab4e4c30a7e94d9, type: 3}
+  prefab: {fileID: 3719739728154069810, guid: 2ecf113b56394ce49b83d9a831325b02, type: 3}
+  isStackable: 0
+  stackLimit: 1
+  itemType: 3
+  itemInUse: {fileID: 899527509333689318, guid: cfffeb9ad54ebeb42ae34f40dae94929,
+    type: 3}
+  healthBonus: 0
+  sleepBonus: 0
+  hungerBonus: 0
+  thirstBonus: 0
+  enemyDamage: 10
+  woodDamage: 10
+  stoneDamage: 50
+  playerConstructionDamage: 50
+  damageAbsorbsion: 0
