@@ -10,7 +10,7 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     private UI_InventoryManager inventoryManager;
     private Keyboard keyboard;
     private UI_Slot currentSlotData;
-    private bool isQpress;
+    private bool isKeyButtonPressed;
     private bool isEnter;
     private void Start()
     {
@@ -29,13 +29,13 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     {
         if (keyboard.qKey.wasPressedThisFrame)
         {
-            isQpress = true;
+            isKeyButtonPressed = true;
         }
         else
         {
-            isQpress = false;
+            isKeyButtonPressed = false;
         }
-        if (isQpress && isEnter)
+        if (isKeyButtonPressed && isEnter)
         {
             inventoryManager.DropCurrentItem();
         }
@@ -45,13 +45,13 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     {
         if (keyboard.gKey.wasPressedThisFrame)
         {
-            isQpress = true;
+            isKeyButtonPressed = true;
         }
         else
         {
-            isQpress = false;
+            isKeyButtonPressed = false;
         }
-        if (isQpress && isEnter)
+        if (isKeyButtonPressed && isEnter)
         {
             inventoryManager.UseCurrentItem();
         }
@@ -61,8 +61,7 @@ public class ExtraClickButton : MonoBehaviour, IPointerClickHandler, IPointerEnt
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            Debug.Log("HEUEHEH");
-            //TODO add handle single item
+            inventoryManager.GetItemToHandlerRightClick();
         }
     }
 

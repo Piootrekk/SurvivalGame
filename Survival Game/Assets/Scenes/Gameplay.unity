@@ -338,14 +338,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ca0f8522c308264186ca27b4a043b59, type: 2}
   - {fileID: 11400000, guid: d72b747f14ec5fa48a251e2ff4eb6e1c, type: 2}
   - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
-  - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
   craftButton: {fileID: 2862941661307311450, guid: 31362ab771dbd1f4a9917f5961515217,
     type: 3}
   itemSpriteRecieved: {fileID: 5516927414230636728, guid: 33a7baee6b108a245b20b22203394bb2,

@@ -229,6 +229,29 @@ public class UI_InventoryManager : MonoBehaviour
         CheckIfSlotIsUsed();
     }
 
+    public void GetItemToHandlerRightClick()
+    {
+        if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount < 1)
+        {
+            var _item = Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).gameObject, cursor);
+            _item.GetComponent<UI_ItemData>().Amount = 1;
+            GetOneItem(inventorySlots[currentSlot]);
+            isCursorWithItem = true;
+        }
+        else if (inventorySlots[currentSlot].Slot.childCount > 0 && cursor.childCount > 0)
+        {
+            if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId
+                == cursor.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemId)
+            {
+                cursor.GetChild(0).GetComponent<UI_ItemData>().Amount += 1;
+                cursor.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
+                GetOneItem(inventorySlots[currentSlot]);
+                isCursorWithItem = true;
+            }
+        }
+    }
+
+
     public void ReplaceCursorWithSlot(Transform currentSlot, Transform cursor)
     {
         Instantiate(currentSlot.GetChild(0).gameObject, cursor);
@@ -345,8 +368,16 @@ public class UI_InventoryManager : MonoBehaviour
         if (inventorySlots[currentSlot].Slot.childCount == 0) return;
         if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Buildable)
         {
+
             Instantiate(inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemInUse, buildInUse);
             GetOneItem(inventorySlots[currentSlot]);
+            if(buildInUse.childCount > 1)
+            {
+                for(int i = 1; i < buildInUse.childCount; i++)
+                {
+                    Destroy(buildInUse.GetChild(i).gameObject);
+                }
+            }
         }
         else if (inventorySlots[currentSlot].Slot.GetChild(0).GetComponent<UI_ItemData>().ItemData.ItemType == ItemType.Consunable)
         {
@@ -356,13 +387,13 @@ public class UI_InventoryManager : MonoBehaviour
             StatsManager.Instance.Thirst.AddPoints(_data.ThirstBonus);
             StatsManager.Instance.Sleep.AddPoints(_data.SleepBonus);
             GetOneItem(inventorySlots[currentSlot]);
-               
         }
     }
 
     public void GetOneItem(UI_InventorySlot slot)
     {
         slot.Slot.GetChild(0).GetComponent<UI_ItemData>().Amount -= 1;
+        slot.Slot.GetChild(0).GetComponent<UI_ItemData>().UpdateTextAmount();
         DestroyIfZeroAmount();
     }
 
