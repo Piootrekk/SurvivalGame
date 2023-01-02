@@ -24,7 +24,6 @@ public class InputManager : MonoBehaviour
     public bool Mouse1 { get; set; }
     public bool Mouse2 { get; set; }
 
-
     public string CurrentPathInput { get; private set; }
 
     private InputActionMap currentMap;
@@ -40,7 +39,6 @@ public class InputManager : MonoBehaviour
     private InputAction mouseScroll;
     private InputAction mouse1;
     private InputAction mouse2;
-
 
 
 

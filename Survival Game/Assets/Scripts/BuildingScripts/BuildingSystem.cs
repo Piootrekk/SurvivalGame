@@ -15,10 +15,13 @@ public class BuildingSystem : MonoBehaviour
     private Material backup;
     private Camera cam;
     private bool originalMaterialStored = false;
+    private float _rotationY = 0;
+    
 
     private static BuildingSystem instance;
     public bool IsExecuting { get; set; }
     public static BuildingSystem Instance => instance;
+
     private void Awake()
     {
         cam = Camera.main;
@@ -49,17 +52,28 @@ public class BuildingSystem : MonoBehaviour
         }
         if (IsRayHitting(buildLayerMask, out RaycastHit hitInfo))
         {
-            build.transform.position = hitInfo.point;
+           
+            if (InputSystem.GetDevice<Keyboard>().rKey.wasPressedThisFrame)
+            {
+                _rotationY += 15;
+            }
+            else if (InputSystem.GetDevice<Keyboard>().tKey.wasPressedThisFrame)
+            {
+                _rotationY -= 15;
+            }
+
+                build.transform.position = hitInfo.point;
             build.transform.rotation = Quaternion.LookRotation(Vector3.right, hitInfo.normal);
+            build.transform.rotation = Quaternion.Euler(build.transform.rotation.eulerAngles + new Vector3(0, _rotationY, 0));
             build.GetComponent<Renderer>().material = possitiveBuild;
             if (Physics.CheckBox(hitInfo.point, build.GetComponent<MeshCollider>().bounds.size / 2, build.transform.rotation, cantBuildMask))
             {
                 build.GetComponent<Renderer>().material = negativeBuild;
                 return;
             }
-                if (Mouse.current.leftButton.wasPressedThisFrame)
+            if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                var _build = Instantiate(build, hitInfo.point, Quaternion.LookRotation(Vector3.right, hitInfo.normal));
+                var _build = Instantiate(build, hitInfo.point, build.transform.rotation);
                 _build.GetComponent<Renderer>().material = backup;
                 _build.layer = 11; //Buildable mask
                 Destroy(buildInUse.GetChild(0).gameObject);
@@ -67,10 +81,6 @@ public class BuildingSystem : MonoBehaviour
                 IsExecuting = false;
                 originalMaterialStored = false;
             }
-        }
-        else
-        {
-            build.GetComponent<Renderer>().material = negativeBuild;
         }
         if (Mouse.current.rightButton.wasPressedThisFrame)
         {
