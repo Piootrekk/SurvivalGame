@@ -134,9 +134,8 @@ MonoBehaviour:
   maxPickUpDistance: 3
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 11264
   damage: 0
-  typeofAttack: 0
 --- !u!114 &7002932998957187521
 MonoBehaviour:
   m_ObjectHideFlags: 0

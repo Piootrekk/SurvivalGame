@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1032181049202040130}
   - component: {fileID: 1908390718245471993}
   - component: {fileID: 9012830676562930622}
+  - component: {fileID: -7026635779150978158}
   m_Layer: 12
   m_Name: CraftingTableBuildingObject
   m_TagString: Untagged
@@ -112,3 +113,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2462114457430353783, guid: a98078f2fd9a09b47adbff5711682518, type: 3}
+--- !u!114 &-7026635779150978158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536843761697193111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63124eb24dec10d47a560c33c6482950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  startHP: 500
+  drops: []
+  particlesDuringHit: {fileID: 8653691354826667977, guid: b20792082a0546848acb33770a2c7489,
+    type: 3}
+  attackType: 0
