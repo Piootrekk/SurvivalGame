@@ -17,7 +17,7 @@ public class UI_PickItems : MonoBehaviour
 
     private void Awake()
     {
-        inputManager = GameObject.Find("Player").GetComponent<InputManager>();
+        inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
     }
 
     private void Update()

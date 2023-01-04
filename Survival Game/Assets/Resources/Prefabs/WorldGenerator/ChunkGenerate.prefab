@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7688679659872106645}
   - component: {fileID: 7688679659872106646}
-  m_Layer: 0
+  - component: {fileID: -7818278866073442377}
+  m_Layer: 6
   m_Name: ChunkGenerate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,3 +49,11 @@ MonoBehaviour:
   mapDepthInTiles: 5
   tilePrefab: {fileID: 1188602811658080878, guid: e12f91b909958c34c99d241e69eb1ae3,
     type: 3}
+--- !u!33 &-7818278866073442377
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688679659872106644}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
