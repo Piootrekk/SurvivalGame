@@ -8,7 +8,6 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
     [SerializeField] Transform hotBarSlots;
     [SerializeField] Transform cameraEquip;
 
-    private UI_InventoryManager inventoryManager;
     private InputManager inputManager;
     private GameObject itemInUse;
     private GameObject _item;

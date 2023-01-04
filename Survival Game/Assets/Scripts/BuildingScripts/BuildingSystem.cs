@@ -13,7 +13,6 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private Material negativeBuild;
 
     private Material backup;
-    private Camera cam;
     private bool originalMaterialStored = false;
     private float _rotationY = 0;
     
@@ -24,7 +23,6 @@ public class BuildingSystem : MonoBehaviour
 
     private void Awake()
     {
-        cam = Camera.main;
         instance = this;
     }
     private void Update()
@@ -62,7 +60,7 @@ public class BuildingSystem : MonoBehaviour
                 _rotationY -= 15;
             }
 
-                build.transform.position = hitInfo.point;
+            build.transform.position = hitInfo.point;
             build.transform.rotation = Quaternion.LookRotation(Vector3.right, hitInfo.normal);
             build.transform.rotation = Quaternion.Euler(build.transform.rotation.eulerAngles + new Vector3(0, _rotationY, 0));
             build.GetComponent<Renderer>().material = possitiveBuild;
