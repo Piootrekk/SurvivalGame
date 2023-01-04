@@ -10,7 +10,7 @@ public class GenerateLevel : MonoBehaviour
     {
         GenerateMap();
     }
-    void GenerateMap()
+    private void GenerateMap()
     {
         Vector3 tileSize = tilePrefab.GetComponent<MeshRenderer>().bounds.size;
         int tileWidth = (int)tileSize.x;
@@ -25,6 +25,5 @@ public class GenerateLevel : MonoBehaviour
             }
         }
     }
-
 
 }

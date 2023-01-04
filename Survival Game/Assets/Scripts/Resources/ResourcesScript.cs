@@ -26,7 +26,9 @@ public class ResourcesScript : MonoBehaviour, IAttack
             foreach (Drop drop in drops)
             {
                 var item = Instantiate(drop.Item.Prefab, transform.position, Quaternion.identity);
+                item.transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                 item.GetComponent<ItemObjectInGame>().Amount = drop.Amount;
+
             }
             Destroy(gameObject);
         }
