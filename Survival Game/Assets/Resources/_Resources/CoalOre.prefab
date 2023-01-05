@@ -100,7 +100,7 @@ MonoBehaviour:
   currentHP: 0
   startHP: 500
   drops:
-  - item: {fileID: 11400000, guid: bdb5f98496cfeff4a9a5ca2f486fd493, type: 2}
+  - item: {fileID: 11400000, guid: 0e78b34d13903aa42b436e5cc3902daf, type: 2}
     amount: 3
   particlesDuringHit: {fileID: 8653691354826667977, guid: 5a6c2a85eeb520549b96f558ec4703f6,
     type: 3}

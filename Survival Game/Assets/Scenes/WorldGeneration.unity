@@ -245,6 +245,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460870923, guid: da834a44517ab63448bed43f5fac961d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 788148213823245770, guid: c308d199e5c7ee3409f1393322278f7d,
+        type: 3}
     - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
         type: 3}
       propertyPath: objects.Array.size

@@ -31,7 +31,7 @@ public class UI_PickItems : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer))
+        if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer) && !inputManager.Inventory)
         {
             var item = hitInfo.collider.gameObject;
             SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
