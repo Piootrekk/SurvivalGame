@@ -14,6 +14,9 @@ public class GenerateLevel : MonoBehaviour
     void Awake()
     {
         GenerateMap();
+        Debug.Log(PlayerPrefs.GetInt("SEED0"));
+        Debug.Log(PlayerPrefs.GetInt("SEED1"));
+        Debug.Log(PlayerPrefs.GetInt("SEED2"));
     }
     private void GenerateMap()
     {

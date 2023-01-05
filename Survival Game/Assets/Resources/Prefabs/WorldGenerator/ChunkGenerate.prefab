@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7688679659872106645}
-  - component: {fileID: 7688679659872106646}
   - component: {fileID: -7818278866073442377}
+  - component: {fileID: 7688679659872106646}
   - component: {fileID: 558860862327149072}
   - component: {fileID: 460870923}
   m_Layer: 6
@@ -35,6 +35,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &-7818278866073442377
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688679659872106644}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &7688679659872106646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,14 +61,6 @@ MonoBehaviour:
     type: 3}
   SummarySizeX: 0
   SummarySizeZ: 0
---- !u!33 &-7818278866073442377
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688679659872106644}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &558860862327149072
 MonoBehaviour:
   m_ObjectHideFlags: 0

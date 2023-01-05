@@ -14,7 +14,13 @@ public class OnHoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        RestartSettingsForText();
+    }
+
+    public void RestartSettingsForText()
+    {
         gameObject.GetComponent<TextMeshProUGUI>().color = Color.white;
         gameObject.GetComponent<TextMeshProUGUI>().fontStyle = FontStyles.Normal;
     }
+
 }
