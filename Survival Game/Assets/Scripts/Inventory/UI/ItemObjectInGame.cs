@@ -13,7 +13,7 @@ public class ItemObjectInGame : MonoBehaviour, IInteractable
     public int Durability { get => durability; set => durability = value; }
     public int Amount { get => amount; set => amount = value; }
 
-    private void Awake()
+    private void Start()
     {
         inventoryHandler = GameObject.Find("Inventory").GetComponent<UI_InventoryManager>();
     }

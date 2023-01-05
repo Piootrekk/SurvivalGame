@@ -15,18 +15,17 @@ public class TileGeneration : MonoBehaviour
     private MeshFilter meshFilter;
     private MeshCollider meshCollider;
 
+    public float MapScale => mapScale;
+
     private void Awake()
     {
         noiseMapGeneration = GetComponent<NoiseMapGeneration>();
         tileRenderer = GetComponent<MeshRenderer>();
         meshFilter = GetComponent<MeshFilter>();
         meshCollider = GetComponent<MeshCollider>();
-    }
-
-    private void Start()
-    {
         GenerateTile();
     }
+
     void GenerateTile()
     {
         Vector3[] meshVertices = meshFilter.mesh.vertices;

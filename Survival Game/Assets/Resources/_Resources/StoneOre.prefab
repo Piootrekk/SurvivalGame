@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &843937464325769397
 Transform:
@@ -118,3 +118,4 @@ MonoBehaviour:
     amount: 5
   particlesDuringHit: {fileID: 8653691354826667977, guid: 814c7c9759d3dd54399997a67b5516c8,
     type: 3}
+  attackType: 0

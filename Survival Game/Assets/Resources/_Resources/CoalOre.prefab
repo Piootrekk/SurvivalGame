@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3743358894234750626
+--- !u!1 &5294878000163241234
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4087234057498858520}
-  - component: {fileID: 1087371014076505021}
-  - component: {fileID: 2950958800641126263}
-  - component: {fileID: 4505448475088336731}
-  - component: {fileID: 1199779635997816523}
+  - component: {fileID: 4769593275318462376}
+  - component: {fileID: 8475532902581266445}
+  - component: {fileID: 5943576185738697927}
+  - component: {fileID: 343895146387314794}
+  - component: {fileID: 3152027366601807877}
   m_Layer: 10
   m_Name: CoalOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4087234057498858520
+--- !u!4 &4769593275318462376
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743358894234750626}
-  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 1.6057723, y: 0.6663482, z: -3.2260532}
-  m_LocalScale: {x: 50, y: 50, z: 35}
+  m_GameObject: {fileID: 5294878000163241234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -743.16565, y: -304.497, z: -18.9}
+  m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
---- !u!33 &1087371014076505021
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8475532902581266445
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743358894234750626}
-  m_Mesh: {fileID: 4754326624646669934, guid: ee304fbe97a0a01408daeede626690fa, type: 3}
---- !u!23 &2950958800641126263
+  m_GameObject: {fileID: 5294878000163241234}
+  m_Mesh: {fileID: 5016175033396572999, guid: 781e87c3fdebf414fa25112fb53190a5, type: 3}
+--- !u!23 &5943576185738697927
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743358894234750626}
+  m_GameObject: {fileID: 5294878000163241234}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4505448475088336731
+--- !u!114 &343895146387314794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743358894234750626}
+  m_GameObject: {fileID: 5294878000163241234}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63124eb24dec10d47a560c33c6482950, type: 3}
@@ -100,22 +100,22 @@ MonoBehaviour:
   currentHP: 0
   startHP: 500
   drops:
-  - item: {fileID: 11400000, guid: 0e78b34d13903aa42b436e5cc3902daf, type: 2}
+  - item: {fileID: 11400000, guid: bdb5f98496cfeff4a9a5ca2f486fd493, type: 2}
     amount: 3
   particlesDuringHit: {fileID: 8653691354826667977, guid: 5a6c2a85eeb520549b96f558ec4703f6,
     type: 3}
   attackType: 0
---- !u!64 &1199779635997816523
+--- !u!64 &3152027366601807877
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743358894234750626}
+  m_GameObject: {fileID: 5294878000163241234}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4754326624646669934, guid: ee304fbe97a0a01408daeede626690fa, type: 3}
+  m_Mesh: {fileID: 5016175033396572999, guid: 781e87c3fdebf414fa25112fb53190a5, type: 3}

@@ -245,6 +245,39 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
+        type: 3}
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 4738874151613689730, guid: 6486f0af2b2dead44a029b39885387fe,
+        type: 3}
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.data[5].prefab
+      value: 
+      objectReference: {fileID: 7355544077212196147, guid: 77a5e15f206e3f848bdf5d94b37d9d4f,
+        type: 3}
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.data[4].destiny
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 558860862327149072, guid: da834a44517ab63448bed43f5fac961d,
+        type: 3}
+      propertyPath: objects.Array.data[5].destiny
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7688679659872106644, guid: da834a44517ab63448bed43f5fac961d,
         type: 3}
       propertyPath: m_Name
@@ -304,16 +337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688679659872106646, guid: da834a44517ab63448bed43f5fac961d,
-        type: 3}
-      propertyPath: mapDepthInTiles
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688679659872106646, guid: da834a44517ab63448bed43f5fac961d,
-        type: 3}
-      propertyPath: mapWidthInTiles
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da834a44517ab63448bed43f5fac961d, type: 3}
