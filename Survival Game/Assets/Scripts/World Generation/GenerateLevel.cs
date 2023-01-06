@@ -13,12 +13,12 @@ public class GenerateLevel : MonoBehaviour
 
     void Awake()
     {
+        InstantinateSeed();
+        mapWidthInTiles = PlayerPrefs.GetInt("SIZE0");
+        mapDepthInTiles = PlayerPrefs.GetInt("SIZE1");
         GenerateMap();
-        Debug.Log(PlayerPrefs.GetInt("SEED0"));
-        Debug.Log(PlayerPrefs.GetInt("SEED1"));
-        Debug.Log(PlayerPrefs.GetInt("SEED2"));
-        Debug.Log(PlayerPrefs.GetInt("SIZE0"));
-        Debug.Log(PlayerPrefs.GetInt("SIZE1"));
+        GetComponent<ObjectsGenerate>().XRange = new Vector2(0, SummarySizeX - 10);
+        GetComponent<ObjectsGenerate>().ZRange = new Vector2(0, SummarySizeZ - 10);
     }
     private void GenerateMap()
     {
@@ -38,4 +38,14 @@ public class GenerateLevel : MonoBehaviour
             }
         }
     }
+    private void InstantinateSeed()
+    {
+        int i = 0;
+        foreach(var wave in tilePrefab.GetComponent<TileGeneration>().Waves)
+        {
+            wave.Seed = PlayerPrefs.GetInt("SEED" + i);
+            i++;
+        }
+    }
+
 }

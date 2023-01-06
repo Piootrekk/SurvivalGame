@@ -20,6 +20,9 @@ public class ObjectsGenerate : MonoBehaviour
 
     private SpawnMyMan spawnPlayer;
 
+    public Vector2 XRange {get => xRange; set => xRange = value; }
+    public Vector2 ZRange {get => zRange; set => zRange = value; }
+
     public void Start()
     {
         Generate();
@@ -37,7 +40,7 @@ public class ObjectsGenerate : MonoBehaviour
             {
                 float sampleX = Random.Range(xRange.x, xRange.y);
                 float sampleY = Random.Range(zRange.x, zRange.y);
-                Vector3 rayStart = new Vector3(sampleX, maxHeight, sampleY);
+                Vector3 rayStart = new(sampleX, maxHeight, sampleY);
                 if (!Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, Mathf.Infinity, canSpawn))
                     continue;
                 if (hit.point.y < minHeight)

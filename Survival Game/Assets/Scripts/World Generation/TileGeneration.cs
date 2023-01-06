@@ -16,6 +16,7 @@ public class TileGeneration : MonoBehaviour
     private MeshCollider meshCollider;
 
     public float MapScale => mapScale;
+    public List<Wave> Waves { get => waves; set => waves = value; }
 
     private void Awake()
     {

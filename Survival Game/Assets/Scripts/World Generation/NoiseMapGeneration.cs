@@ -39,7 +39,7 @@ public class Wave
     [SerializeField] private float frequency;
     [SerializeField] private float amplitude;
 
-    public float Seed => seed;
+    public float Seed { get => seed; set => seed = value; }
     public float Frequency => frequency;
     public float Amplitude => amplitude;
 }
