@@ -80,6 +80,7 @@ public class BuildingSystem : MonoBehaviour
                 originalMaterialStored = false;
             }
         }
+        else build.GetComponent<Renderer>().material = negativeBuild;
         if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             Instantiate(build.GetComponent<ItemInUse>().Data.Prefab, Camera.main.transform.position, Quaternion.identity);

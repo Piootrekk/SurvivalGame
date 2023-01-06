@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PauseManager : MonoBehaviour
     private InputManager inputManager;
     private void Awake()
     {
-        inputManager = GetComponent<InputManager>();
+        inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
     }
 
 
@@ -21,7 +22,33 @@ public class PauseManager : MonoBehaviour
     private void CheckESC()
     {
         pausePanel.SetActive(inputManager.ESC);
-        Debug.Log(inputManager.ESC);
-        
+        ChangeTimeScale(inputManager.ESC);
     }
+
+    private void ChangeTimeScale(bool input)
+    {
+       if(input)
+       {
+            Time.timeScale = 0;
+       }
+       else
+       {
+            Time.timeScale = 1;
+       }
+    }
+
+    public void OnResume()
+    {
+        if (inputManager.ESC)
+        {
+            inputManager.ESC = !inputManager.ESC;
+        }
+    }
+
+
+    public void OnMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
