@@ -11,27 +11,31 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject MainMenu;
     [SerializeField] GameObject BackgroundMenu;
 
-    [SerializeField] List<TMP_InputField> inputValues;
+    [SerializeField] List<TMP_InputField> inputValuesSEED;
+    [SerializeField] List<TMP_InputField> inputValuesSIZE;
 
-    private List<int> inputInts = new();
+    private List<int> inputIntsSEED = new();
+    private List<int> inputIntsSIZE = new();
 
     private void Awake()
     {
         LoadBackground();
     }
 
-    public void GetValueFromInputs()
+    public List<int> GetValueFromInputs(List<TMP_InputField> list, int defalutValue)
     {
-        foreach (var input in inputValues)
+        List<int> intList = new();
+        foreach (var input in list)
         {
-            if (input.text == string.Empty) inputInts.Add(1);
+            if (input.text == string.Empty) intList.Add(defalutValue);
             else
             {
                 int value = int.Parse(input.text);
-                inputInts.Add(value);
+                intList.Add(value);
             }
             
         }
+        return intList;
     }
 
 
@@ -40,19 +44,21 @@ public class MainMenuManager : MonoBehaviour
         BackgroundMenu.GetComponent<Image>().sprite = sprites[new System.Random().Next(sprites.Count)];
     }
 
-    public void SaveValues()
+    public void SaveValues(List<int> intList, string name)
     {
-        for (int i = 0; i < inputInts.Count; i++)
+        for (int i = 0; i < intList.Count; i++)
         {
-            PlayerPrefs.SetInt("SEED" + i, inputInts[i]);
+            PlayerPrefs.SetInt(name + i, intList[i]);
         }
     }
 
 
     public void NewGame()
     {
-        GetValueFromInputs();
-        SaveValues();
+        inputIntsSEED = GetValueFromInputs(inputValuesSEED, 100);
+        SaveValues(inputIntsSEED, "SEED");
+        inputIntsSIZE = GetValueFromInputs(inputValuesSIZE, 30);
+        SaveValues(inputIntsSIZE, "SIZE");
         SceneManager.LoadScene("NewGame");
 
     }

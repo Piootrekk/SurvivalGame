@@ -80,7 +80,7 @@ public class HotBarSlots : MonoBehaviour, IActiveSlot
 
     public bool IsItemInSlotHotBar(int i)
     {
-        if (i < 0 && i > 10) return false;
+        if (i < 0 || i > 10) return false;
         if (hotBarSlots.GetChild(i).childCount > 0) return true;
         else return false;
     }
