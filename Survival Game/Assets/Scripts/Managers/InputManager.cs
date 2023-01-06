@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour
     public float ValueFromScroll { get; set; }
     public bool Mouse1 { get; set; }
     public bool Mouse2 { get; set; }
+    public bool ESC { get; set; }
 
     public string CurrentPathInput { get; private set; }
 
@@ -39,6 +40,7 @@ public class InputManager : MonoBehaviour
     private InputAction mouseScroll;
     private InputAction mouse1;
     private InputAction mouse2;
+    private InputAction esc;
 
 
 
@@ -57,6 +59,7 @@ public class InputManager : MonoBehaviour
         mouseScroll = currentMap.FindAction("MouseScroll");
         mouse1 = currentMap.FindAction("Attack");
         mouse2 = currentMap.FindAction("AlternativeAttack");
+        esc = currentMap.FindAction("ESC");
         PerforAction();
         StopPerforAction();
 
@@ -90,6 +93,7 @@ public class InputManager : MonoBehaviour
         mouseScroll.performed += OnChangeScroll;
         mouse1.started += OnAttack;
         mouse2.started += OnAttackAlternative;
+        esc.started += OnESC;
     }
 
     private void StopPerforAction()
@@ -106,6 +110,17 @@ public class InputManager : MonoBehaviour
         mouseScroll.canceled += OnChangeScroll;
         mouse1.canceled += OnAttack;
         mouse2.canceled += OnAttackAlternative;
+        esc.canceled += OnESC;
+
+    }
+
+    private void OnESC(InputAction.CallbackContext callBack)
+    {
+        if (callBack.control.IsPressed(0.5f))
+        {
+
+            ESC = !ESC;
+        }
     }
 
     private void OnLook(InputAction.CallbackContext callBack)

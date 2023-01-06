@@ -95,7 +95,9 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     {
         if(!hasAnimator) { return; }
         Camera.position = CameraRoot.position;
-        if (!inputManager.Inventory)
+        if (inputManager.Inventory) return;
+        else if (inputManager.ESC) return;
+        else
         {
             xRotation -= inputManager.Look.y * Time.smoothDeltaTime * Sensitivity;
             xRotation = Mathf.Clamp(xRotation, CameraAngle.x, CameraAngle.y);
