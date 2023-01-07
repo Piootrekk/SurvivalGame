@@ -6108,7 +6108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 566743227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2116484675}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &566743227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6436,7 +6448,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588393895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 614206564}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &588393895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6610,7 +6634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillLvl: 1
   maxSkillLvl: 10
-  startXPCost: 0
+  startXPCost: 100
   lvlPanel: {fileID: 836924907}
   maxLvlPanel: {fileID: 2002713846}
   xpCost: {fileID: 2114015368}
@@ -7909,7 +7933,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704466091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1711305089}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704466091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10257,6 +10293,7 @@ GameObject:
   - component: {fileID: 1002967584}
   - component: {fileID: 1002967586}
   - component: {fileID: 1002967585}
+  - component: {fileID: 1002967587}
   m_Layer: 5
   m_Name: SkillPanel
   m_TagString: Crafting
@@ -10326,6 +10363,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002967583}
   m_CullTransparentMesh: 1
+--- !u!114 &1002967587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002967583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31ad5b41afd9c449b954f6ca9acacc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factorSkillJump: {fileID: 769118703}
+  factorSkillRun: {fileID: 2116484675}
+  factorSkillForce: {fileID: 1055774796}
+  factorSkillHP: {fileID: 1382134258}
+  factorSkillHungry: {fileID: 614206564}
+  factorSkillThirsty: {fileID: 1711305089}
+  XpText: {fileID: 372551324}
+  playerExp: 0
 --- !u!114 &1003964356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14196,7 +14253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillLvl: 1
   maxSkillLvl: 10
-  startXPCost: 0
+  startXPCost: 100
   lvlPanel: {fileID: 1234073142}
   maxLvlPanel: {fileID: 268693792}
   xpCost: {fileID: 1597817116}
@@ -18414,7 +18471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillLvl: 1
   maxSkillLvl: 10
-  startXPCost: 0
+  startXPCost: 100
   lvlPanel: {fileID: 1441859575}
   maxLvlPanel: {fileID: 1496344591}
   xpCost: {fileID: 1117896322}
@@ -21076,7 +21133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1976397129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1055774796}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1976397129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22399,7 +22468,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2102638209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1382134258}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2102638209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31590,7 +31671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599475467379085632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 769118703}
+        m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &7881287189016495714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1566622630984546812, guid: 3d2be11584868c648a8901ebd2ca3fab,

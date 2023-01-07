@@ -17,13 +17,30 @@ public class CurrentSkill : MonoBehaviour
     [SerializeField] Transform xpCost;
     [SerializeField] Transform button;
 
-    private float skillFactor = 1f;
+    private float currentskillFactor = 1f;
+    private float skillFactorLvlUp = 0.1f;
     private int currentPriceXPCost;
+
+    public float CurrentskillFactor { get => currentskillFactor; set => currentskillFactor = value; }
 
     void Awake()
     {
-        startXPCost = currentPriceXPCost;
+        currentPriceXPCost = startXPCost;
         ChangeStartData();
+    }
+
+    private void Update()
+    {
+        DistableButton();
+    }
+
+    private void DistableButton()
+    {
+        if (skillLvl == maxSkillLvl || SkillManager.Instance.PlayerExp < currentPriceXPCost)
+        {
+            button.GetComponent<Button>().interactable = false;
+        }
+        else button.GetComponent<Button>().interactable = true;
     }
 
     private void ChangeStartData()
@@ -33,4 +50,12 @@ public class CurrentSkill : MonoBehaviour
         xpCost.GetComponent<TextMeshProUGUI>().text = currentPriceXPCost.ToString();
     }
 
+    public void OnClick()
+    {
+        skillLvl++;
+        currentskillFactor += skillFactorLvlUp;
+        SkillManager.Instance.PlayerExp -= currentPriceXPCost;
+        currentPriceXPCost += currentPriceXPCost;
+        ChangeStartData();
+    }
 }
