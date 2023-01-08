@@ -28,9 +28,9 @@ public class ResourcesScript : MonoBehaviour, IAttack
                 var item = Instantiate(drop.Item.Prefab, transform.position, Quaternion.identity);
                 item.transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                 item.GetComponent<ItemObjectInGame>().Amount = drop.Amount;
-                SkillManager.Instance.PlayerExp += 25;
             }
             Destroy(gameObject);
+            SkillManager.Instance.PlayerExp += 25;
         }
     }
 }

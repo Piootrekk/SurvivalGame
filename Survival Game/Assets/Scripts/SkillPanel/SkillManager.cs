@@ -56,5 +56,10 @@ public class SkillManager : MonoBehaviour
     {
         StatsManager.Instance.Hunger.ChangeCurrentMaxPoints(FactorSkillHungry);
     }
+
+    public void SpeedUpdate()
+    {
+        PlayerController.Instance.ChangeSpeed(FactorSkillRun);
+    }
 }
 

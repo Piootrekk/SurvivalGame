@@ -82,7 +82,7 @@ MonoBehaviour:
   - prefab: {fileID: 8217921764671092139, guid: acb7937ad838b5d448737c07bc8c76c4,
       type: 3}
     destiny: 100
-  - prefab: {fileID: 3743358894234750626, guid: 3e217da681630b54d8003abd4f50b92d,
+  - prefab: {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
       type: 3}
     destiny: 100
   canSpawn:
@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453d36f4d6b7c2f4a93f8dc5880f370e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 788148213823245770, guid: c308d199e5c7ee3409f1393322278f7d, type: 3}
+  player: {fileID: 5402538552438608068, guid: b3db46798118c884d9e5a13b26065032, type: 3}
   maxHeight: 30

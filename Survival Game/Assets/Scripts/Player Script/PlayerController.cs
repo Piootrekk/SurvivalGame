@@ -48,7 +48,10 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     private int crouchAnimator;
     private PlayerColider coliderBase = new();
     private float speed = 5f;
+    private float baseSpeed;
     private Transform crosshair;
+
+    public static PlayerController Instance { get; private set; }
 
     private void Awake()
     {
@@ -61,6 +64,8 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         fallAnimator = Animator.StringToHash("Falling");
         crouchAnimator = Animator.StringToHash("Crouch");
         crosshair = GetComponent<CrosshairManager>().Crosshair;
+        Instance = this;
+        baseSpeed = speed;
     }
     private void Start()
     {
@@ -81,7 +86,6 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         if (inputManager.Crouch) totalSpeed = speed * CrouchMultiplySpeed;
         else if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
         else totalSpeed = speed;
-        totalSpeed *= SkillManager.Instance.FactorSkillRun;
         HorizontalMove();
         Jump();
         CrouchHandle();
@@ -186,7 +190,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     public void AddVerticalVelocity()
     {
-        verticalVelocity.y = Mathf.Sqrt(-2 * (jumpHeight * SkillManager.Instance.FactorSkillJump) * gravity);
+        verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
     }
 
     public void AdjustColiderToCrouch()
@@ -213,4 +217,12 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         crosshair.gameObject.SetActive(false);
 
     }
+
+    public void ChangeSpeed(float arg)
+    {
+        speed = baseSpeed * arg;
+        totalSpeed = baseSpeed * arg;
+    }
+
+
 }
