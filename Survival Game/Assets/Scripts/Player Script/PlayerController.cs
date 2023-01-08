@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         if (inputManager.Crouch) totalSpeed = speed * CrouchMultiplySpeed;
         else if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
         else totalSpeed = speed;
+        totalSpeed *= SkillManager.Instance.FactorSkillRun;
         HorizontalMove();
         Jump();
         CrouchHandle();
@@ -112,7 +113,6 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         horizontalMove = totalSpeed * Time.deltaTime * horizontalMove.normalized;
         characterController.Move(horizontalMove);
     }
-
 
     private void GravityDrop()
     {
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     public void AddVerticalVelocity()
     {
-        verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
+        verticalVelocity.y = Mathf.Sqrt(-2 * (jumpHeight * SkillManager.Instance.FactorSkillJump) * gravity);
     }
 
     public void AdjustColiderToCrouch()
@@ -213,5 +213,4 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         crosshair.gameObject.SetActive(false);
 
     }
-
 }

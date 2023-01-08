@@ -11,15 +11,18 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float currentPoints;
     [SerializeField] private float decayRate;
     private float lerp = 2f;
+    private float basicMaxPoints;
 
     public float CurrentPoints { get { return currentPoints; } set { currentPoints = value; } }
     public float MaxPoints { get { return currentPoints; } set { currentPoints = value; } }
     public float DecayRate { get { return decayRate; } set { decayRate = value; } }
+    public float BasicMaxPoints { get { return basicMaxPoints; } set { basicMaxPoints = value; } }
 
 
     private void Start()
     {
         currentPoints = maxPoints;
+        basicMaxPoints = maxPoints;
     }
 
     private void Update()
@@ -61,6 +64,11 @@ public class PlayerStats : MonoBehaviour
     public void RenegeratePoints(float points)
     {
         currentPoints = Mathf.Lerp(currentPoints, currentPoints + points, lerp * Time.deltaTime);
+    }
+
+    public void ChangeCurrentMaxPoints(float arg)
+    {
+        maxPoints = arg * basicMaxPoints;
     }
 
 }

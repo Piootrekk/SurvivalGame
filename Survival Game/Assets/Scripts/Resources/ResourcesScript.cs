@@ -19,7 +19,7 @@ public class ResourcesScript : MonoBehaviour, IAttack
 
     public void OnAction(int damage, Vector3 hitpoint, Vector3 normal)
     {
-        currentHP -= damage;
+        currentHP -= (int)(damage * SkillManager.Instance.FactorSkillForce);
         Destroy(Instantiate(particlesDuringHit, hitpoint, Quaternion.LookRotation(normal, Vector3.up)), 1);
         if (currentHP <= 0)
         {
@@ -28,7 +28,7 @@ public class ResourcesScript : MonoBehaviour, IAttack
                 var item = Instantiate(drop.Item.Prefab, transform.position, Quaternion.identity);
                 item.transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                 item.GetComponent<ItemObjectInGame>().Amount = drop.Amount;
-
+                SkillManager.Instance.PlayerExp += 25;
             }
             Destroy(gameObject);
         }

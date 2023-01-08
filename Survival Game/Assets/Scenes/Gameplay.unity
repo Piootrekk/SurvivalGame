@@ -6461,6 +6461,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1002967587}
+        m_TargetAssemblyTypeName: SkillManager, Assembly-CSharp
+        m_MethodName: HungryUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &588393895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6635,6 +6647,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 836924907}
   maxLvlPanel: {fileID: 2002713846}
   xpCost: {fileID: 2114015368}
@@ -7946,6 +7960,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1002967587}
+        m_TargetAssemblyTypeName: SkillManager, Assembly-CSharp
+        m_MethodName: ThirstyUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704466091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8585,6 +8611,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 240435530}
   maxLvlPanel: {fileID: 1532940903}
   xpCost: {fileID: 1450820049}
@@ -10382,7 +10410,7 @@ MonoBehaviour:
   factorSkillHungry: {fileID: 614206564}
   factorSkillThirsty: {fileID: 1711305089}
   XpText: {fileID: 372551324}
-  playerExp: 0
+  playerExp: 999999
 --- !u!114 &1003964356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11354,6 +11382,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 690653056}
   maxLvlPanel: {fileID: 698154286}
   xpCost: {fileID: 293728781}
@@ -14254,6 +14284,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 1234073142}
   maxLvlPanel: {fileID: 268693792}
   xpCost: {fileID: 1597817116}
@@ -18472,6 +18504,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 1441859575}
   maxLvlPanel: {fileID: 1496344591}
   xpCost: {fileID: 1117896322}
@@ -22481,6 +22515,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1002967587}
+        m_TargetAssemblyTypeName: SkillManager, Assembly-CSharp
+        m_MethodName: HpUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2102638209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22710,6 +22756,8 @@ MonoBehaviour:
   skillLvl: 1
   maxSkillLvl: 10
   startXPCost: 100
+  currentskillFactor: 1
+  skillFactorLvlUp: 0.1
   lvlPanel: {fileID: 1406604818}
   maxLvlPanel: {fileID: 1299448425}
   xpCost: {fileID: 1554754177}

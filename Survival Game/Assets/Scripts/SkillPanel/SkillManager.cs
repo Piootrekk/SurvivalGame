@@ -43,5 +43,18 @@ public class SkillManager : MonoBehaviour
         XpText.GetComponent<TextMeshProUGUI>().text = playerExp.ToString();
     }
 
+    public void HpUpdate()
+    {
+        StatsManager.Instance.Health.ChangeCurrentMaxPoints(FactorSkillHP);
+    }
 
+    public void ThirstyUpdate()
+    {
+        StatsManager.Instance.Thirst.ChangeCurrentMaxPoints(FactorSkillThirsty);
+    }
+    public void HungryUpdate()
+    {
+        StatsManager.Instance.Hunger.ChangeCurrentMaxPoints(FactorSkillHungry);
+    }
 }
+
