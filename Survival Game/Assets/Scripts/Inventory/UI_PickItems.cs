@@ -34,7 +34,14 @@ public class UI_PickItems : MonoBehaviour
         if (Physics.Raycast(ray, out hitInfo, maxPickUpDistance, interactableLayer) && !inputManager.Inventory)
         {
             var item = hitInfo.collider.gameObject;
-            SetUpText(item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
+            if (item.GetComponent<ItemObjectInGame>() != null)
+            {
+                SetUpText("with "+item.GetComponent<ItemObjectInGame>().InstanceInInventory.GetComponent<UI_ItemData>().ItemData.NameItem);
+            }
+            else if (item.GetComponent<BuildInteractable>() != null)
+            {
+                SetUpText("");
+            }
             if (inputManager.Interactive && pickUpTimer >= pickUpInterval)
             {
                 IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
@@ -48,7 +55,7 @@ public class UI_PickItems : MonoBehaviour
     private void SetUpText(string name)
     {
         pickUpText.gameObject.SetActive(true);
-        pickUpText.text = string.Format($"<b> Press <F> to interact with {name} </b>");
+        pickUpText.text = string.Format($"<b> Press <F> to interact {name} </b>");
     }
 
     private void DistableText()

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
+  m_Name: Bucket
+  m_EditorClassIdentifier: 
+  itemId: 19
+  nameItem: Bucket with water
+  description: 
+  itemSprite: {fileID: 21300000, guid: 8d34a005bc98fd445bba1aab7ce65dd5, type: 3}
+  prefab: {fileID: 7519767985584953476, guid: b8ebcc71b0bb43848b17f6ca6a8e6647, type: 3}
+  isStackable: 1
+  stackLimit: 99
+  itemType: 2
+  itemInUse: {fileID: 6072741492850664860, guid: 534d263b6c4a06e43a7e1484903d3950,
+    type: 3}
+  healthBonus: 0
+  sleepBonus: 0
+  hungerBonus: 0
+  thirstBonus: 60
+  enemyDamage: 0
+  woodDamage: 0
+  stoneDamage: 0
+  playerConstructionDamage: 0
+  damageAbsorbsion: 0

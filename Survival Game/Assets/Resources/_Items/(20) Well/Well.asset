@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
+  m_Name: Well
+  m_EditorClassIdentifier: 
+  itemId: 20
+  nameItem: Well
+  description: 
+  itemSprite: {fileID: 21300000, guid: 6cb422c09498bed40963f015f7b9231d, type: 3}
+  prefab: {fileID: 7579715405047585152, guid: 6bd32d822adfb0c4dab5debacd110e96, type: 3}
+  isStackable: 0
+  stackLimit: 1
+  itemType: 5
+  itemInUse: {fileID: 1484667264084220224, guid: 1bcfb581137ff82408e5bf3162eedffb,
+    type: 3}
+  healthBonus: 0
+  sleepBonus: 0
+  hungerBonus: 0
+  thirstBonus: 0
+  enemyDamage: 0
+  woodDamage: 0
+  stoneDamage: 0
+  playerConstructionDamage: 0
+  damageAbsorbsion: 0
