@@ -16483,7 +16483,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 15
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -16510,6 +16510,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ca0f8522c308264186ca27b4a043b59, type: 2}
   - {fileID: 11400000, guid: d72b747f14ec5fa48a251e2ff4eb6e1c, type: 2}
   - {fileID: 11400000, guid: bbb858033d5fdbe428dfce3f0bde5d38, type: 2}
+  - {fileID: 11400000, guid: 66e9be8777b52e944a76d4d6fb1393e4, type: 2}
+  - {fileID: 11400000, guid: 793e6857544406a4c8c325e228529c5c, type: 2}
+  - {fileID: 11400000, guid: 17de44b319ff3654d984c41ed632dbf5, type: 2}
+  - {fileID: 11400000, guid: 3cda3090f7dbc4b439e759a4dde660d5, type: 2}
+  - {fileID: 11400000, guid: d611103e20b065744b4364a0012201da, type: 2}
+  - {fileID: 11400000, guid: 77577db4667a2ae4e9fffe20c39b2b30, type: 2}
+  - {fileID: 11400000, guid: 5d884bf03fd8d7348aebb0c5e7266060, type: 2}
+  - {fileID: 11400000, guid: fdf42fa9dbfb2d941abcaab3bcda48ed, type: 2}
+  - {fileID: 11400000, guid: 76355beb7fd7b7a4192f114671e75d07, type: 2}
   craftButton: {fileID: 2862941661307311450, guid: 31362ab771dbd1f4a9917f5961515217,
     type: 3}
   itemSpriteRecieved: {fileID: 5516927414230636728, guid: 33a7baee6b108a245b20b22203394bb2,

@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a936bb51dc202c347a8658d1e28081b8, type: 3}
-  m_Name: 5SteelPickAxeRecipe 1
+  m_Name: 10Table
   m_EditorClassIdentifier: 
-  idCraft: 5
+  idCraft: 0
   craft:
   - itemData: {fileID: 11400000, guid: c2a6e7b3d5f37884ebd1463c0734eba8, type: 2}
-    amount: 2
-  - itemData: {fileID: 11400000, guid: 823891edf6d05334897a6b181e5a36bf, type: 2}
-    amount: 5
-  recive: {fileID: 4255365068340410132, guid: 75dddb49e64710249b1cd52f89396872, type: 3}
+    amount: 10
+  recive: {fileID: 6072741492850664860, guid: f1c7c8c055d93cd4089f4c1baca4e485, type: 3}
   reciveAmount: 1

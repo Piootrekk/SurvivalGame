@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a936bb51dc202c347a8658d1e28081b8, type: 3}
   m_Name: 6SteelAxeRecipe
   m_EditorClassIdentifier: 
-  idCraft: 4
+  idCraft: 6
   craft:
   - itemData: {fileID: 11400000, guid: c2a6e7b3d5f37884ebd1463c0734eba8, type: 2}
     amount: 2
