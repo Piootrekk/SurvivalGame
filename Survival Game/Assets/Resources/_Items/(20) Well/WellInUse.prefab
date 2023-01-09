@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -5356703180268980587}
   - component: {fileID: -717987456926218640}
   - component: {fileID: 6576514169934064806}
+  - component: {fileID: -3938252003181721358}
+  - component: {fileID: 6696279012537883184}
   m_Layer: 12
   m_Name: WellInUse
   m_TagString: Untagged
@@ -131,3 +133,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 33e0772307e380b42a320749be17a2c3, type: 2}
+--- !u!114 &-3938252003181721358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484667264084220224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f3ae097f32f354c851f0c4dbfb5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usage: 5
+  methodName: UseAsWell
+--- !u!114 &6696279012537883184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484667264084220224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07044f9c6cf039448306a6f0813a9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLimit: 5
+  prefabDrop: {fileID: 7138281862695551550, guid: b8ebcc71b0bb43848b17f6ca6a8e6647,
+    type: 3}

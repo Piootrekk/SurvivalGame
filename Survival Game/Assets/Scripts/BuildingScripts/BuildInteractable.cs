@@ -21,7 +21,7 @@ public class BuildInteractable : MonoBehaviour, IInteractable
         Well well = GetComponent<Well>();
         if (well.Amount <= 0) return;
         var prefab = Instantiate(well.PrefabDrop, transform.position, Quaternion.identity);
-        prefab.position += new Vector3(0f, 3f, 0f);
+        prefab.GetComponent<ItemObjectInGame>().Amount = well.Amount;
         usage--;
         well.Amount = 0;
     }

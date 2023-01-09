@@ -16519,6 +16519,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d884bf03fd8d7348aebb0c5e7266060, type: 2}
   - {fileID: 11400000, guid: fdf42fa9dbfb2d941abcaab3bcda48ed, type: 2}
   - {fileID: 11400000, guid: 76355beb7fd7b7a4192f114671e75d07, type: 2}
+  - {fileID: 11400000, guid: fefaf27c92b8ab64f8e31590a92ce495, type: 2}
   craftButton: {fileID: 2862941661307311450, guid: 31362ab771dbd1f4a9917f5961515217,
     type: 3}
   itemSpriteRecieved: {fileID: 5516927414230636728, guid: 33a7baee6b108a245b20b22203394bb2,
@@ -21282,6 +21283,11 @@ PrefabInstance:
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 7473209585299370864}
+    - target: {fileID: 3267056113313770682, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
+        type: 3}
+      propertyPath: interactableLayer.m_Bits
+      value: 2304
+      objectReference: {fileID: 0}
     - target: {fileID: 4271772261929882544, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
         type: 3}
       propertyPath: m_Name

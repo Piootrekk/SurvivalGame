@@ -20,7 +20,7 @@ public class Well : MonoBehaviour
         while (amount <= 5)
         {
             amount++;
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(600);
         }
     }
 }
