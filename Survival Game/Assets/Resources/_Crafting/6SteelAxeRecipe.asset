@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a936bb51dc202c347a8658d1e28081b8, type: 3}
+  m_Name: 6SteelAxeRecipe
+  m_EditorClassIdentifier: 
+  idCraft: 4
+  craft:
+  - itemData: {fileID: 11400000, guid: c2a6e7b3d5f37884ebd1463c0734eba8, type: 2}
+    amount: 2
+  - itemData: {fileID: 11400000, guid: 823891edf6d05334897a6b181e5a36bf, type: 2}
+    amount: 5
+  recive: {fileID: 4255365068340410132, guid: 122c85312bb88d54e86fd9d201ec27fd, type: 3}
+  reciveAmount: 1

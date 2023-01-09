@@ -78,13 +78,19 @@ MonoBehaviour:
       type: 3}
     destiny: 200
   - prefab: {fileID: 838651735941853193, guid: 70bb884f2c243ff42b41e6185dafc9ab, type: 3}
-    destiny: 100
+    destiny: 125
   - prefab: {fileID: 8217921764671092139, guid: acb7937ad838b5d448737c07bc8c76c4,
       type: 3}
-    destiny: 100
+    destiny: 50
   - prefab: {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
       type: 3}
-    destiny: 100
+    destiny: 50
+  - prefab: {fileID: 4738874151613689730, guid: 6486f0af2b2dead44a029b39885387fe,
+      type: 3}
+    destiny: 50
+  - prefab: {fileID: 7355544077212196147, guid: 77a5e15f206e3f848bdf5d94b37d9d4f,
+      type: 3}
+    destiny: 50
   canSpawn:
     serializedVersion: 2
     m_Bits: 64
@@ -111,3 +117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5402538552438608068, guid: b3db46798118c884d9e5a13b26065032, type: 3}
   maxHeight: 30
+  mask:
+    serializedVersion: 2
+    m_Bits: 1344

@@ -17,8 +17,8 @@ public class GenerateLevel : MonoBehaviour
         mapWidthInTiles = PlayerPrefs.GetInt("SIZE0");
         mapDepthInTiles = PlayerPrefs.GetInt("SIZE1");
         GenerateMap();
-        GetComponent<ObjectsGenerate>().XRange = new Vector2(0, SummarySizeX - 10);
-        GetComponent<ObjectsGenerate>().ZRange = new Vector2(0, SummarySizeZ - 10);
+        GetComponent<ObjectsGenerate>().XRange = new Vector2(0, SummarySizeX);
+        GetComponent<ObjectsGenerate>().ZRange = new Vector2(0, SummarySizeZ);
     }
     private void GenerateMap()
     {

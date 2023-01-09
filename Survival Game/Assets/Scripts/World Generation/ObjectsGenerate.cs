@@ -49,7 +49,7 @@ public class ObjectsGenerate : MonoBehaviour
                 GameObject instantiatedPrefab = Instantiate(prefab.Prefab, emptyObject.transform);
                 if(instantiatedPrefab.GetComponent<MeshCollider>() != null)
                 {
-                    if (Physics.CheckBox(hit.point, instantiatedPrefab.GetComponent<MeshCollider>().bounds.size, instantiatedPrefab.transform.rotation, cannotSpawn))
+                    if (Physics.CheckBox(hit.point, instantiatedPrefab.GetComponent<MeshCollider>().bounds.size * 3, instantiatedPrefab.transform.rotation, cannotSpawn))
                     {
                         Destroy(instantiatedPrefab);
                         Debug.Log("Object in the object");

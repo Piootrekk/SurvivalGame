@@ -68,6 +68,4 @@ public class StatsManager : MonoBehaviour
         Health.TakePoints(reduceMultiply * Time.deltaTime);
     }
 
-
-
 }
