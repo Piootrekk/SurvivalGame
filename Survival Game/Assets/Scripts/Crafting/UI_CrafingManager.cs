@@ -18,7 +18,7 @@ public class UI_CrafingManager : MonoBehaviour
 
 
     public int CurrentCraftPanel { get => currentCraftPanel; set => currentCraftPanel = value; }
-    public List<CraftData> Crafts => crafts;
+    public List<CraftData> Crafts { get => crafts; set => crafts = value; }
 
     private void Awake()
     {

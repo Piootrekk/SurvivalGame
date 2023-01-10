@@ -8,7 +8,6 @@ public class BuildInteractable : MonoBehaviour, IInteractable
     [SerializeField] string methodName;
     public void OnInteract()
     {
-        UseAsWell();
         if (usage < 0)
         {
             Destroy(gameObject);
@@ -28,6 +27,11 @@ public class BuildInteractable : MonoBehaviour, IInteractable
 
     public void UseAsTent()
     {
-
+        if (StatsManager.Instance.Sleep.CurrentPoints > 90f) return;
+        Tent tent = GetComponent<Tent>();
+        tent.Used = true;
+        StatsManager.Instance.Sleep.AddPoints(50f);
+        DayNightCycleManager.Instance.DayCycle += 0.4f;
+        usage--;
     }
 }

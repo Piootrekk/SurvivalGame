@@ -27,11 +27,15 @@ public class DayNightCycleManager : MonoBehaviour
     [SerializeField] private AnimationCurve lightingMulitpler;
     [SerializeField] private AnimationCurve reflectionMultiply;
 
+    private static DayNightCycleManager instance;
+    public static DayNightCycleManager Instance => instance;
+    public float DayCycle { get => dayCycle; set => dayCycle = value; }
 
     private void Start()
     {
         timeRate = 1.0f / fullDayLenght;
         dayCycle = startTime;
+        instance = this;
     }
 
 

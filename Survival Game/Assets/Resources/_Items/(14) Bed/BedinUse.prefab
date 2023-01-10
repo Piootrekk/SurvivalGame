@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 64034028844269984}
   - component: {fileID: 6166559627595475746}
   - component: {fileID: -5906579924595213693}
+  - component: {fileID: -8481177891950905147}
+  - component: {fileID: -6769178810103977743}
   m_Layer: 12
   m_Name: BedinUse
   m_TagString: Untagged
@@ -131,3 +133,29 @@ MonoBehaviour:
   particlesDuringHit: {fileID: 8653691354826667977, guid: b20792082a0546848acb33770a2c7489,
     type: 3}
   attackType: 3
+--- !u!114 &-8481177891950905147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262579493655216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b2a016f5adb514ea9020163f832a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6769178810103977743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262579493655216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f3ae097f32f354c851f0c4dbfb5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usage: 5
+  methodName: UseAsTent
