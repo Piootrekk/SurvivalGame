@@ -1651,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 8737050216002989841, guid: acb7937ad838b5d448737c07bc8c76c4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.11
+      value: -28.97
       objectReference: {fileID: 0}
     - target: {fileID: 8737050216002989841, guid: acb7937ad838b5d448737c07bc8c76c4,
         type: 3}
@@ -2633,7 +2633,7 @@ PrefabInstance:
     - target: {fileID: 843937464325769397, guid: 70bb884f2c243ff42b41e6185dafc9ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.143597
+      value: -32.64
       objectReference: {fileID: 0}
     - target: {fileID: 843937464325769397, guid: 70bb884f2c243ff42b41e6185dafc9ab,
         type: 3}
@@ -2840,6 +2840,16 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1360086404}
+    - target: {fileID: 1206939318049538685, guid: 16dd58bfa0871c44290a870875084682,
+        type: 3}
+      propertyPath: layer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206939318049538685, guid: 16dd58bfa0871c44290a870875084682,
+        type: 3}
+      propertyPath: craftingManager
+      value: 
+      objectReference: {fileID: 1360086404}
     - target: {fileID: 1536843761697193111, guid: 16dd58bfa0871c44290a870875084682,
         type: 3}
       propertyPath: m_Name
@@ -2932,7 +2942,7 @@ PrefabInstance:
     - target: {fileID: 4769593275318462376, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.5
+      value: -25.39
       objectReference: {fileID: 0}
     - target: {fileID: 4769593275318462376, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
         type: 3}

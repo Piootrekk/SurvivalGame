@@ -15,6 +15,7 @@ public class UI_CrafingManager : MonoBehaviour
     [SerializeField] int currentCraftPanel;
 
     private UI_InventoryManager inventoryManager;
+    private List<CraftData> defaultCrafts;
 
 
     public int CurrentCraftPanel { get => currentCraftPanel; set => currentCraftPanel = value; }
@@ -23,6 +24,7 @@ public class UI_CrafingManager : MonoBehaviour
     private void Awake()
     {
         inventoryManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<UI_InventoryManager>();
+        defaultCrafts = new(crafts);
         ImplementButtons();
     }
 
@@ -34,6 +36,7 @@ public class UI_CrafingManager : MonoBehaviour
     private void Update()
     {
         CheckItemsForCrafting();
+        CraftChecker();
     }
 
     private void ImplementButtons()
@@ -42,6 +45,14 @@ public class UI_CrafingManager : MonoBehaviour
         {
             var button = Instantiate(craftButton, transform.GetChild(0));
             button.GetComponent<Button>().interactable = false;
+        }
+    }
+
+    private void DestroyButtons()
+    {
+        foreach (Transform child in transform.GetChild(0))
+        {
+            Destroy(child.gameObject);
         }
     }
 
@@ -127,6 +138,36 @@ public class UI_CrafingManager : MonoBehaviour
         if (button.GetComponent<Button>().interactable)
         {
             button.SetAsFirstSibling();
+        }
+    }
+
+
+    public void SetDefalutCrafts()
+    {
+        crafts.Clear();
+        crafts.AddRange(defaultCrafts);
+        DestroyButtons();
+        ImplementButtons();
+        SetCraftPanelID();
+        ImplementContent();
+    }
+
+    public void AddCrafts(List<CraftData> list)
+    {
+        crafts.AddRange(list);
+        DestroyButtons();
+        ImplementButtons();
+        SetCraftPanelID();
+        ImplementContent();
+    }
+
+    private void CraftChecker()
+    {
+        ICraftInUse iCraftiInUse = FindObjectOfType<Crafting>();
+        if (iCraftiInUse.CraftingInUse)
+        {
+            SetDefalutCrafts();
+            iCraftiInUse.CraftingInUse = false;
         }
     }
 

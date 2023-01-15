@@ -2,31 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crafting : MonoBehaviour
+public class Crafting : MonoBehaviour, ICraftInUse
 {
-    [SerializeField] float radious;
-    [SerializeField] LayerMask layer;
-    [SerializeField] UI_CrafingManager manager;
-
     [SerializeField] List<CraftData> listCraftsInCrafting;
+    [SerializeField] UI_CrafingManager craftingManager;
 
-    private void Start()
+    //private UI_CrafingManager craftingManager;
+    private InputManager inputManager;
+    public bool CraftingInUse { get; set; } = false;
+
+    private void Awake()
     {
+        inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
+        
     }
 
-    private void FixedUpdate()
+    public void OnInteract()
     {
-        CheckIfPlayerIn();
+        inputManager.Inventory = !inputManager.Inventory;
+        PlayerController.Instance.CanWalk = false;
+        craftingManager.AddCrafts(listCraftsInCrafting);
+        CraftingInUse = true;
     }
 
-    private void CheckIfPlayerIn()
-    {
-        RaycastHit hitInfo;
-        if (Physics.SphereCast(transform.position, radious, transform.forward, out hitInfo, radious, layer))
-        {
-            Debug.Log("Player in sphere");
-           // manager.Crafts.AddRange(listCraftsInCrafting);
-        }
-    }
+}
 
+public interface ICraftInUse
+{
+    bool CraftingInUse { get; set; }
 }

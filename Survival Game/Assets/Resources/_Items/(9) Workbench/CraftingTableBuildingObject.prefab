@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9012830676562930622}
   - component: {fileID: -7026635779150978158}
   - component: {fileID: 1206939318049538685}
+  - component: {fileID: -5907166026528641574}
   m_Layer: 12
   m_Name: CraftingTableBuildingObject
   m_TagString: Untagged
@@ -144,8 +145,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9ca1aafa75edf4c852935903178c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radious: 2
-  layer:
-    serializedVersion: 2
-    m_Bits: 128
   listCraftsInCrafting: []
+--- !u!114 &-5907166026528641574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536843761697193111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f3ae097f32f354c851f0c4dbfb5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usage: 1
+  methodName: UseAsCrafting

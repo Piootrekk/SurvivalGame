@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     private float baseSpeed;
     private Transform crosshair;
 
+    public bool CanWalk { get; set; } = true;
+
     public static PlayerController Instance { get; private set; }
 
     private void Awake()
@@ -82,7 +84,8 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     private void Move()
     {
-        if(!hasAnimator) { return; }
+        if(!hasAnimator) return;
+        if (CanWalk == false) return;
         if (inputManager.Crouch) totalSpeed = speed * CrouchMultiplySpeed;
         else if (inputManager.Run) totalSpeed = speed * RunMultiplySpeed;
         else totalSpeed = speed;
@@ -98,7 +101,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     private void CameraMovements()
     {
-        if(!hasAnimator) { return; }
+        if(!hasAnimator) return;
         Camera.position = CameraRoot.position;
         if (inputManager.Inventory) return;
         else if (inputManager.ESC) return;
@@ -208,6 +211,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         crosshair.gameObject.SetActive(true);
+        CanWalk = true;
     }
 
     public void SetGUIForGame()
@@ -215,7 +219,6 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         crosshair.gameObject.SetActive(false);
-
     }
 
     public void ChangeSpeed(float arg)
