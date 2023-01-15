@@ -5,7 +5,6 @@ using UnityEngine;
 public class Crafting : MonoBehaviour, ICraftInUse
 {
     [SerializeField] List<CraftData> listCraftsInCrafting;
-    [SerializeField] UI_CrafingManager craftingManager;
 
     private InputManager inputManager;
     public bool CraftingInUse { get; set; } = false;
@@ -24,9 +23,11 @@ public class Crafting : MonoBehaviour, ICraftInUse
 
     public void OnInteract()
     {
+        Debug.Log("Tesat3");
+
         inputManager.Inventory = !inputManager.Inventory;
         PlayerController.Instance.CanWalk = false;
-        craftingManager.AddCrafts(listCraftsInCrafting);
+        UI_CrafingManager.Instance.AddCrafts(listCraftsInCrafting);
         CraftingInUse = true;
     }
 

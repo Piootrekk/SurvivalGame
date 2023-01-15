@@ -21,9 +21,11 @@ public class UI_CrafingManager : MonoBehaviour
     public int CurrentCraftPanel { get => currentCraftPanel; set => currentCraftPanel = value; }
     public List<CraftData> Crafts { get => crafts; set => crafts = value; }
 
+    public static UI_CrafingManager Instance { get; private set; }
+
     private void Awake()
     {
-        iCraftiInUse = FindObjectOfType<Crafting>();
+        Instance = this;
         inventoryManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<UI_InventoryManager>();
         defaultCrafts = new(crafts.ToArray());
         ImplementButtons();
@@ -153,24 +155,28 @@ public class UI_CrafingManager : MonoBehaviour
         crafts.AddRange(defaultCrafts);
         DestroyButtons();
         ImplementButtons();
-        Invoke(nameof(SetCraftPanelID), 0.1f);
-        Invoke(nameof(ImplementContent), 0.15f);
+        Invoke(nameof(SetCraftPanelID), 0f);
+        Invoke(nameof(ImplementContent), 0f);
     }
 
     public void AddCrafts(List<CraftData> list)
     {
+        Debug.Log("Tesat1");
         crafts = new List<CraftData>();
         crafts.AddRange(list);
         DestroyButtons();
         ImplementButtons();
-        Invoke(nameof(SetCraftPanelID), 0.1f);
-        Invoke(nameof(ImplementContent), 0.15f);
+        Invoke(nameof(SetCraftPanelID), 0f);
+        Invoke(nameof(ImplementContent), 0f);
     }
 
     private void CraftChecker()
     {
+        ICraftInUse iCraftiInUse = FindObjectOfType<Crafting>();
         if (!iCraftiInUse.CraftingInUse)
         {
+            Debug.Log("Tesat2");
+
             SetDefalutCrafts();
         }
     }

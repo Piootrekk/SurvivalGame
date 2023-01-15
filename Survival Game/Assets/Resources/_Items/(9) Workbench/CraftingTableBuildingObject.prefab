@@ -132,7 +132,7 @@ MonoBehaviour:
   drops: []
   particlesDuringHit: {fileID: 8653691354826667977, guid: b20792082a0546848acb33770a2c7489,
     type: 3}
-  attackType: 0
+  attackType: 3
 --- !u!114 &1206939318049538685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 793e6857544406a4c8c325e228529c5c, type: 2}
   - {fileID: 11400000, guid: 17de44b319ff3654d984c41ed632dbf5, type: 2}
   - {fileID: 11400000, guid: 3cda3090f7dbc4b439e759a4dde660d5, type: 2}
-  craftingManager: {fileID: 7042037475867904501, guid: f87320083c6a76741974bf954628ecbd,
-    type: 3}
 --- !u!114 &-5907166026528641574
 MonoBehaviour:
   m_ObjectHideFlags: 0
