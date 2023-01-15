@@ -145,7 +145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9ca1aafa75edf4c852935903178c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listCraftsInCrafting: []
+  listCraftsInCrafting:
+  - {fileID: 11400000, guid: 66e9be8777b52e944a76d4d6fb1393e4, type: 2}
+  - {fileID: 11400000, guid: 793e6857544406a4c8c325e228529c5c, type: 2}
+  - {fileID: 11400000, guid: 17de44b319ff3654d984c41ed632dbf5, type: 2}
+  - {fileID: 11400000, guid: 3cda3090f7dbc4b439e759a4dde660d5, type: 2}
+  craftingManager: {fileID: 7042037475867904501, guid: f87320083c6a76741974bf954628ecbd,
+    type: 3}
 --- !u!114 &-5907166026528641574
 MonoBehaviour:
   m_ObjectHideFlags: 0

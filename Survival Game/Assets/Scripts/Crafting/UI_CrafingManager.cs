@@ -16,15 +16,16 @@ public class UI_CrafingManager : MonoBehaviour
 
     private UI_InventoryManager inventoryManager;
     private List<CraftData> defaultCrafts;
-
+    private ICraftInUse iCraftiInUse;
 
     public int CurrentCraftPanel { get => currentCraftPanel; set => currentCraftPanel = value; }
     public List<CraftData> Crafts { get => crafts; set => crafts = value; }
 
     private void Awake()
     {
+        iCraftiInUse = FindObjectOfType<Crafting>();
         inventoryManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<UI_InventoryManager>();
-        defaultCrafts = new(crafts);
+        defaultCrafts = new(crafts.ToArray());
         ImplementButtons();
     }
 
@@ -36,8 +37,12 @@ public class UI_CrafingManager : MonoBehaviour
     private void Update()
     {
         CheckItemsForCrafting();
-        CraftChecker();
+        if (!Enumerable.SequenceEqual(crafts, defaultCrafts))
+        {
+            CraftChecker();
+        }
     }
+
 
     private void ImplementButtons()
     {
@@ -144,30 +149,29 @@ public class UI_CrafingManager : MonoBehaviour
 
     public void SetDefalutCrafts()
     {
-        crafts.Clear();
+        crafts = new List<CraftData>();
         crafts.AddRange(defaultCrafts);
         DestroyButtons();
         ImplementButtons();
-        SetCraftPanelID();
-        ImplementContent();
+        Invoke(nameof(SetCraftPanelID), 0.1f);
+        Invoke(nameof(ImplementContent), 0.15f);
     }
 
     public void AddCrafts(List<CraftData> list)
     {
+        crafts = new List<CraftData>();
         crafts.AddRange(list);
         DestroyButtons();
         ImplementButtons();
-        SetCraftPanelID();
-        ImplementContent();
+        Invoke(nameof(SetCraftPanelID), 0.1f);
+        Invoke(nameof(ImplementContent), 0.15f);
     }
 
     private void CraftChecker()
     {
-        ICraftInUse iCraftiInUse = FindObjectOfType<Crafting>();
-        if (iCraftiInUse.CraftingInUse)
+        if (!iCraftiInUse.CraftingInUse)
         {
             SetDefalutCrafts();
-            iCraftiInUse.CraftingInUse = false;
         }
     }
 

@@ -7,7 +7,6 @@ public class Crafting : MonoBehaviour, ICraftInUse
     [SerializeField] List<CraftData> listCraftsInCrafting;
     [SerializeField] UI_CrafingManager craftingManager;
 
-    //private UI_CrafingManager craftingManager;
     private InputManager inputManager;
     public bool CraftingInUse { get; set; } = false;
 
@@ -15,6 +14,12 @@ public class Crafting : MonoBehaviour, ICraftInUse
     {
         inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
         
+    }
+
+    private void Update()
+    {
+        if (!inputManager.Inventory) CraftingInUse = false;
+
     }
 
     public void OnInteract()
