@@ -23,8 +23,6 @@ public class Crafting : MonoBehaviour, ICraftInUse
 
     public void OnInteract()
     {
-        Debug.Log("Tesat3");
-
         inputManager.Inventory = !inputManager.Inventory;
         PlayerController.Instance.CanWalk = false;
         UI_CrafingManager.Instance.AddCrafts(listCraftsInCrafting);

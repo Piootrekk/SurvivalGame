@@ -161,7 +161,6 @@ public class UI_CrafingManager : MonoBehaviour
 
     public void AddCrafts(List<CraftData> list)
     {
-        Debug.Log("Tesat1");
         crafts = new List<CraftData>();
         crafts.AddRange(list);
         DestroyButtons();
@@ -175,8 +174,6 @@ public class UI_CrafingManager : MonoBehaviour
         ICraftInUse iCraftiInUse = FindObjectOfType<Crafting>();
         if (!iCraftiInUse.CraftingInUse)
         {
-            Debug.Log("Tesat2");
-
             SetDefalutCrafts();
         }
     }

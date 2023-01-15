@@ -40,4 +40,13 @@ public class BuildInteractable : MonoBehaviour, IInteractable
         Crafting crafting = GetComponent<Crafting>();
         crafting.OnInteract();
     }
+
+    public void UseAsCraftingWithParticles()
+    {
+        Crafting crafting = GetComponent<Crafting>();
+        crafting.OnInteract();
+        EnableParticles particles = GetComponent<EnableParticles>();
+        particles.EnableParticle();
+        Debug.Log(crafting.CraftingInUse);
+    }
 }

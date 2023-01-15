@@ -14,8 +14,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &4445660936238212
 Transform:
   m_ObjectHideFlags: 0
@@ -43,13 +43,13 @@ GameObject:
   - component: {fileID: 4446219532819486}
   - component: {fileID: 198613835509712646}
   - component: {fileID: 199319582939749116}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4446219532819486
 Transform:
   m_ObjectHideFlags: 0
@@ -4879,8 +4879,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &4005119049551646
 Transform:
   m_ObjectHideFlags: 0
@@ -4911,12 +4911,15 @@ GameObject:
   - component: {fileID: 64030933115533016}
   - component: {fileID: 351338490973828914}
   - component: {fileID: 4767020482260354465}
+  - component: {fileID: 73510654427582853}
+  - component: {fileID: 6118878105462269751}
+  - component: {fileID: -5893998242083186492}
   m_Layer: 12
   m_Name: BakeinUse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4841702076204278
 Transform:
@@ -5030,6 +5033,51 @@ MonoBehaviour:
   particlesDuringHit: {fileID: 8653691354826667977, guid: 814c7c9759d3dd54399997a67b5516c8,
     type: 3}
   attackType: 3
+--- !u!114 &73510654427582853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701385238162528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ca1aafa75edf4c852935903178c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listCraftsInCrafting:
+  - {fileID: 11400000, guid: 26be4f195aa4b9844a886bb24b20cd2c, type: 2}
+  - {fileID: 11400000, guid: 025087b0f11810c40b92f4c331fe6544, type: 2}
+  - {fileID: 11400000, guid: 31f60b2555ac504458b30da82e1ad984, type: 2}
+--- !u!114 &6118878105462269751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701385238162528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f3ae097f32f354c851f0c4dbfb5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usage: 1
+  methodName: UseAsCraftingWithParticles
+--- !u!114 &-5893998242083186492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701385238162528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1d32f1e4bfca140938908bf892bfa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles:
+  - {fileID: 4005119049551646}
+  - {fileID: 4445660936238212}
 --- !u!1 &1847953162247206
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,13 +5089,13 @@ GameObject:
   - component: {fileID: 4466291133588956}
   - component: {fileID: 198764118944548814}
   - component: {fileID: 199423931612389056}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4466291133588956
 Transform:
   m_ObjectHideFlags: 0

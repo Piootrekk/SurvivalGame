@@ -14,12 +14,15 @@ GameObject:
   - component: {fileID: 4861529818646757007}
   - component: {fileID: -8375004900791284102}
   - component: {fileID: 7119210648585049179}
+  - component: {fileID: 5658124016784022067}
+  - component: {fileID: 6801987157840556613}
+  - component: {fileID: 5554302449648819890}
   m_Layer: 12
   m_Name: CampfireInUse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4349553000075248
 Transform:
@@ -132,6 +135,47 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c9b8f1f6cbefe9a42ab5b51b37ad5781, type: 3}
+--- !u!114 &5658124016784022067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179792248266456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1d32f1e4bfca140938908bf892bfa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles:
+  - {fileID: 4813442185639548}
+--- !u!114 &6801987157840556613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179792248266456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ca1aafa75edf4c852935903178c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listCraftsInCrafting: []
+--- !u!114 &5554302449648819890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179792248266456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f3ae097f32f354c851f0c4dbfb5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usage: 1
+  methodName: UseAsCraftingWithParticles
 --- !u!1 &1270760519101792
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,13 +187,13 @@ GameObject:
   - component: {fileID: 4235133470490198}
   - component: {fileID: 198304065892459496}
   - component: {fileID: 199417583104129650}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4235133470490198
 Transform:
   m_ObjectHideFlags: 0
@@ -4979,8 +5023,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &4813442185639548
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a936bb51dc202c347a8658d1e28081b8, type: 3}
+  m_Name: 15IronIngot
+  m_EditorClassIdentifier: 
+  idCraft: 0
+  craft:
+  - itemData: {fileID: 11400000, guid: bdb5f98496cfeff4a9a5ca2f486fd493, type: 2}
+    amount: 3
+  - itemData: {fileID: 11400000, guid: 0e78b34d13903aa42b436e5cc3902daf, type: 2}
+    amount: 1
+  recive: {fileID: 6072741492850664860, guid: 1409079a3537ba64cb4a2650f6781fb4, type: 3}
+  reciveAmount: 1
