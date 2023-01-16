@@ -22,6 +22,6 @@ public class SpawnMyMan : MonoBehaviour
         {
             var pleja = Instantiate(player, hit.point, Quaternion.identity);
         }
-        else { Debug.Log("Nie dzia³a :( "); SpawnMyDude(); }
+        else SpawnMyDude();
     }
 }
