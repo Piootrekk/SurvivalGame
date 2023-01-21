@@ -51,7 +51,6 @@ public class AIManager : MonoBehaviour
 
     private void Walk()
     {
-        Debug.Log("Walk");
         if (!isPointSet) Invoke(nameof(GenerateWalkPoint), 5f);
         animator.SetBool("IsWalk", true);
         if (isPointSet) agent.SetDestination(walkPoint);
@@ -73,7 +72,6 @@ public class AIManager : MonoBehaviour
     {
         if (!isPointSet && isPlayerInAttackRange && isPlayerInSightRange) GenerateWalkPoint();
         if(isPointSet) animator.SetBool("IsRun", true);
-        Debug.Log("Run");
         if (isPointSet) agent.SetDestination(walkPoint);
         var distance = transform.position - walkPoint;
         if (distance.magnitude < 1f)
@@ -110,8 +108,6 @@ public class AIManager : MonoBehaviour
 
     private void CheckPasiveRanges()
     {
-        Debug.Log("2");
-
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
         if (!isPlayerInSightRange) { Debug.Log("3"); Walk(); }
         else if (isPlayerInSightRange) Walk();

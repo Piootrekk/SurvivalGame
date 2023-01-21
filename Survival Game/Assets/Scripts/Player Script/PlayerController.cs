@@ -102,8 +102,10 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     private void CameraMovements()
     {
         if(!hasAnimator) return;
+        
         Camera.position = CameraRoot.position;
         if (inputManager.Inventory) return;
+        else if (GameOverScript.Instance.GameOver) return;
         else if (inputManager.ESC) return;
         else
         {

@@ -22,7 +22,7 @@ public class UI_MenuManager : MonoBehaviour
     {
         inventoryMenu.SetActive(inputManager.Inventory);
         IInventoryManager inventoryManager = gameObject.GetComponent<IInventoryManager>();
-        if (inputManager.Inventory || inputManager.ESC)
+        if (inputManager.Inventory || inputManager.ESC || GameOverScript.Instance.GameOver)
         {
             inventoryManager?.SetGUIForGame();
             

@@ -30,6 +30,7 @@ public class DayNightCycleManager : MonoBehaviour
     private static DayNightCycleManager instance;
     public static DayNightCycleManager Instance => instance;
     public float DayCycle { get => dayCycle; set => dayCycle = value; }
+    public float DayCount => dayCount;
 
     private void Start()
     {
