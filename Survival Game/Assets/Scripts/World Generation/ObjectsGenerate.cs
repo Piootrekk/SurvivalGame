@@ -45,7 +45,6 @@ public class ObjectsGenerate : MonoBehaviour
                     continue;
                 if (hit.point.y < minHeight)
                     continue;
-
                 GameObject instantiatedPrefab = Instantiate(prefab.Prefab, emptyObject.transform);
                 if(instantiatedPrefab.GetComponent<MeshCollider>() != null)
                 {
@@ -63,7 +62,6 @@ public class ObjectsGenerate : MonoBehaviour
                 
             }
         }
-
     }
 }
 

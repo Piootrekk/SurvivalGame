@@ -47,9 +47,7 @@ public class UI_ItemData : MonoBehaviour
                 IActiveSlot iActiveSlot = GameObject.FindObjectOfType<HotBarSlots>();
                 iActiveSlot?.DestroyCameraChild();
                 Destroy(gameObject);
-
             }
         }
-
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
   prefab: {fileID: 7579715405047585152, guid: 570c5d29344e00b4981eb9e236d16505, type: 3}
   isStackable: 0
   stackLimit: 1
-  itemType: 5
+  itemType: 4
   itemInUse: {fileID: 1701385238162528, guid: d8a3982d045f8e74d9df34be3e13c13b, type: 3}
   healthBonus: 0
   sleepBonus: 0
@@ -29,4 +29,3 @@ MonoBehaviour:
   woodDamage: 0
   stoneDamage: 0
   playerConstructionDamage: 0
-  damageAbsorbsion: 0

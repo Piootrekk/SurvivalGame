@@ -21,15 +21,12 @@ public class ItemData : ScriptableObject
     [SerializeField] int sleepBonus;
     [SerializeField] int hungerBonus;
     [SerializeField] int thirstBonus;
-
     [Header("Attack")]
     [SerializeField] int enemyDamage;
     [SerializeField] int woodDamage;
     [SerializeField] int stoneDamage;
     [SerializeField] int playerConstructionDamage;
 
-    [Header("Wearable")]
-    [SerializeField] float damageAbsorbsion;
 
     public int ItemId => itemId;
     public string NameItem => nameItem;
@@ -48,7 +45,7 @@ public class ItemData : ScriptableObject
     public int WoodDamage => woodDamage;
     public int StoneDamage => stoneDamage;
     public int PlayerConstructionDamage => playerConstructionDamage;
-    public float DamageAbsorbsion => damageAbsorbsion;
+
 
 
 
@@ -74,7 +71,6 @@ public enum ItemType
     Resource,
     Consunable,
     Equipable,
-    Wearable,
     Buildable
 }
 

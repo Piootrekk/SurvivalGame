@@ -14,7 +14,6 @@ public class Well : MonoBehaviour
     {
         StartCoroutine(IncrementValue());
     }
-
     public IEnumerator IncrementValue()
     {
         while (amount <= 5)

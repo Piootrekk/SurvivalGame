@@ -19,7 +19,7 @@ public class AIManager : MonoBehaviour
     [Header("Attack")]
     [SerializeField] float timeBetweenAttack;
 
-
+    private float rotationSpeed = 2f;
     private bool isPlayerInAttackRange;
     private bool isPlayerInSightRange;
     private bool getDamage;
@@ -51,9 +51,13 @@ public class AIManager : MonoBehaviour
 
     private void Walk()
     {
-        if (!isPointSet) Invoke(nameof(GenerateWalkPoint), 5f);
-        animator.SetBool("IsWalk", true);
-        if (isPointSet) agent.SetDestination(walkPoint);
+        if (!isPointSet) Invoke(nameof(GenerateWalkPoint), 0f);
+        if (isPointSet)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(walkPoint - transform.position), Time.deltaTime * rotationSpeed);
+            agent.SetDestination(walkPoint);
+            animator.SetBool("IsWalk", true);
+        } 
         var distance = transform.position - walkPoint;
         if (distance.magnitude < 1f)
         {
@@ -109,11 +113,10 @@ public class AIManager : MonoBehaviour
     private void CheckPasiveRanges()
     {
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
-        if (!isPlayerInSightRange) { Debug.Log("3"); Walk(); }
+        if (!isPlayerInSightRange)  Walk(); 
         else if (isPlayerInSightRange) Walk();
         else if (getDamage) Run();
     }
-
 
     private void GenerateWalkPoint()
     {

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IInventoryManager
 {
-    [Header("Animation: ")]
-    [SerializeField] private float animationSpeed = 8.9f;
+    private float animationSpeed = 8.9f;
 
     [Header("Camera: ")]
     [SerializeField] private Transform CameraRoot;
@@ -18,7 +17,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     [Header("Jump:")]
     [SerializeField] private float gravity = -10f;
-    [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private float jumpHeight;
     [SerializeField] private Transform ground;
     [SerializeField] private float groundDistance = 0.1f;
     [SerializeField] private LayerMask groundmask;
@@ -31,11 +30,9 @@ public class PlayerController : MonoBehaviour, IInventoryManager
     [SerializeField] private PlayerColider coliderCrouch;
     [SerializeField] private Vector2 currentVelocity;
 
-
-    [Header("Test:")]
-    [SerializeField] bool isGrounded;
-    [SerializeField] private Vector3 verticalVelocity = Vector3.zero;
-    [SerializeField] private float totalSpeed;
+    bool isGrounded;
+    private Vector3 verticalVelocity = Vector3.zero;
+    private float totalSpeed;
     private CharacterController characterController;
     private InputManager inputManager;
     private Animator animator;
@@ -62,8 +59,6 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         inputManager = GetComponent<InputManager>();
         xVelAnimator = Animator.StringToHash("X_Velocity");
         yVelAnimator = Animator.StringToHash("Y_Velocity");
-        jumpAnimator = Animator.StringToHash("Jump");
-        fallAnimator = Animator.StringToHash("Falling");
         crouchAnimator = Animator.StringToHash("Crouch");
         crosshair = GetComponent<CrosshairManager>().Crosshair;
         Instance = this;
@@ -125,27 +120,19 @@ public class PlayerController : MonoBehaviour, IInventoryManager
 
     private void GravityDrop()
     {
-        if (inputManager.Crouch) inputManager.Crouch = false;
+        
         verticalVelocity.y += gravity * Time.deltaTime;
         characterController.Move(verticalVelocity * Time.deltaTime);
-        if (verticalVelocity.y <= -5.0f)
-        {
-            animator.SetBool(fallAnimator, true);
-        }
     }
 
     private void Jump()
     {
         if (inputManager.Jump && isGrounded)
         {
-            if (inputManager.Crouch) inputManager.Crouch = false;
-            animator.SetTrigger(jumpAnimator);
+            
+            verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             inputManager.Jump = false;
-
-            if (verticalVelocity.y <= -5.0f)
-            {
-                animator.SetBool(fallAnimator, true);
-            }
+            characterController.Move(verticalVelocity * Time.deltaTime);
         }
     }
 
@@ -158,11 +145,7 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         }
         else
         {
-            verticalVelocity.y = 0f;
-            if(animator.GetBool(fallAnimator))
-            {
-                animator.SetBool(fallAnimator, false);
-            }
+            verticalVelocity.y = -2f;
         }
             
     }
@@ -192,12 +175,6 @@ public class PlayerController : MonoBehaviour, IInventoryManager
         characterController.height = playerColider.Height;
         characterController.radius = playerColider.Radius;
     }
-
-    public void AddVerticalVelocity()
-    {
-        verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
-    }
-
     public void AdjustColiderToCrouch()
     {
         AdjustmentColider(coliderCrouch);

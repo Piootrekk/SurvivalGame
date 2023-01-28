@@ -20,12 +20,10 @@ public class ItemObjectInGame : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-
             if (!inventoryHandler) { return; }
             if (inventoryHandler.ItemAdd(gameObject))
             {
                 Destroy(this.gameObject);
-            }
-                
+            }      
     }
 }

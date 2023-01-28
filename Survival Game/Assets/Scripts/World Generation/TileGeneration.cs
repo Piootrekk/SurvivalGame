@@ -27,7 +27,7 @@ public class TileGeneration : MonoBehaviour
         GenerateTile();
     }
 
-    void GenerateTile()
+    private void GenerateTile()
     {
         Vector3[] meshVertices = meshFilter.mesh.vertices;
         int tileDepth = (int)Mathf.Sqrt(meshVertices.Length);

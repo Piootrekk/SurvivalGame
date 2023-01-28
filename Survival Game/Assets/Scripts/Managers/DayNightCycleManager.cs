@@ -28,9 +28,11 @@ public class DayNightCycleManager : MonoBehaviour
     [SerializeField] private AnimationCurve reflectionMultiply;
 
     private static DayNightCycleManager instance;
+    private float damageMultiplyer;
     public static DayNightCycleManager Instance => instance;
     public float DayCycle { get => dayCycle; set => dayCycle = value; }
     public float DayCount => dayCount;
+    public float DamageMultiplayer => damageMultiplyer;
 
     private void Start()
     {
@@ -45,6 +47,7 @@ public class DayNightCycleManager : MonoBehaviour
         dayCycle += timeRate * Time.deltaTime;
         DayCounter();
         SetLightRotate();
+        CheckForDamage();
     }
 
     private void DayCounter()
@@ -55,7 +58,11 @@ public class DayNightCycleManager : MonoBehaviour
             dayCount++;
         }
     }
-
+    private void CheckForDamage()
+    {
+        if (sun.intensity == 0) damageMultiplyer = 1.5f;
+        else damageMultiplyer = 1.0f;
+    }
     private void SetLightRotate()
     {
         sun.transform.eulerAngles = (dayCycle - 0.25f) * 4.0f * noon;
@@ -64,37 +71,33 @@ public class DayNightCycleManager : MonoBehaviour
         ChangeColors();
         ActiveAndDisactiveLightSoon();
         ActiveAndDisactiveLightMoon();
+        SetRenderSetting();
 
     }
-
     private void SetLightIntensity()
     {
-        sun.intensity = sunCurve.Evaluate(timeRate);
-        moon.intensity = moonCurve.Evaluate(timeRate);
+        sun.intensity = sunCurve.Evaluate(dayCycle);
+        moon.intensity = moonCurve.Evaluate(dayCycle);
     }
-
     private void ChangeColors()
     {
-        sun.color = sunColor.Evaluate(timeRate);
-        moon.color = moonColor.Evaluate(timeRate);
+        sun.color = sunColor.Evaluate(dayCycle);
+        moon.color = moonColor.Evaluate(dayCycle);
     }
-
     private void ActiveAndDisactiveLightSoon()
     {
         if (sun.intensity == 0 && sun.gameObject.activeInHierarchy) sun.gameObject.SetActive(false);
         else if (sun.intensity > 0 && !sun.gameObject.activeInHierarchy) sun.gameObject.SetActive(true);
     }
-
     private void ActiveAndDisactiveLightMoon()
     {
         if (moon.intensity == 0 && moon.gameObject.activeInHierarchy) moon.gameObject.SetActive(false);
         else if (moon.intensity > 0 && !moon.gameObject.activeInHierarchy) moon.gameObject.SetActive(true);
     }
-
     private void SetRenderSetting()
     {
-        RenderSettings.ambientIntensity = lightingMulitpler.Evaluate(timeRate);
-        RenderSettings.reflectionIntensity = reflectionMultiply.Evaluate(timeRate);
+        RenderSettings.ambientIntensity = lightingMulitpler.Evaluate(dayCycle);
+        RenderSettings.reflectionIntensity = reflectionMultiply.Evaluate(dayCycle);
     }
 
 }
