@@ -4,5 +4,14 @@ using UnityEngine;
 
 public class HitBoxManager : MonoBehaviour
 {
-    [SerializeField] List<Transform> hitBoxes = new List<Transform>();
+    [SerializeField] List<HitBox> hitBoxes = new List<HitBox>();
+}
+
+[System.Serializable]
+public class HitBox
+{
+    [SerializeField] CapsuleCollider capsuleCollider;
+    [SerializeField] float damageMultipler;
+    public CapsuleCollider CapsuleCollider => capsuleCollider;
+    public float DamageMultipler => damageMultipler;
 }

@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 8958237839479678718}
   - component: {fileID: 668172612910709090}
   - component: {fileID: 8958237840619102273}
+  - component: {fileID: 2739402545584150167}
   m_Layer: 7
   m_Name: GAMER
   m_TagString: Player
@@ -427,7 +428,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853612672430875487}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.71, y: 17.877, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -624,6 +625,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad6479962a3e3148b91c14e92369f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2739402545584150167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853612672430875487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808072178eed5fe42b1aacc0c0af63b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitBoxes:
+  - capsuleCollider: {fileID: 2780731455157667937}
+    damageMultipler: 0.75
+  - capsuleCollider: {fileID: 2780731455411528005}
+    damageMultipler: 0.75
+  - capsuleCollider: {fileID: 2780731456302851225}
+    damageMultipler: 0.75
+  - capsuleCollider: {fileID: 2780731456935295210}
+    damageMultipler: 0.75
+  - capsuleCollider: {fileID: 2780731457147233242}
+    damageMultipler: 0.9
+  - capsuleCollider: {fileID: 2780731456745240573}
+    damageMultipler: 0.9
+  - capsuleCollider: {fileID: 2780731455222736405}
+    damageMultipler: 0.9
+  - capsuleCollider: {fileID: 2780731455581405823}
+    damageMultipler: 0.9
+  - capsuleCollider: {fileID: 2780731456445567030}
+    damageMultipler: 1
+  - capsuleCollider: {fileID: 2780731456915124649}
+    damageMultipler: 2
 --- !u!1 &964669346021975391
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,16 +9401,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBoxes:
-  - {fileID: 2780731456915124648}
-  - {fileID: 2780731456445567025}
-  - {fileID: 2780731455581405822}
-  - {fileID: 2780731455411528004}
-  - {fileID: 2780731455222736404}
-  - {fileID: 2780731455157667936}
-  - {fileID: 2780731456745240572}
-  - {fileID: 2780731456935295205}
-  - {fileID: 2780731457147233237}
-  - {fileID: 2780731456302851224}
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
+  - capsuleCollider: {fileID: 0}
+    damageMultipler: 0
 --- !u!1 &2780731456114683870
 GameObject:
   m_ObjectHideFlags: 0

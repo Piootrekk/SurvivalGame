@@ -64,12 +64,12 @@ public class AIManager : MonoBehaviour
             isPointSet = false;
             animator.SetBool("IsWalk", false);
         }
-
     }
 
     private void Chase()
     {
         agent.SetDestination(player.position);
+        animator.SetBool("IsChase", true);
     }
 
     private void Run()
@@ -104,7 +104,7 @@ public class AIManager : MonoBehaviour
     private void CheckAgresivesRanges()
     {
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
-        isPlayerInAttackRange = Physics.CheckSphere(transform.position, attackRange, groundMask);
+        isPlayerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
         if (!isPlayerInAttackRange && !isPlayerInSightRange) Walk();
         else if (!isPlayerInAttackRange && isPlayerInSightRange) Chase();
         else if (isPlayerInAttackRange && isPlayerInSightRange) Attack();
