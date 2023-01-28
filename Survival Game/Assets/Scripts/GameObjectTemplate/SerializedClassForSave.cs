@@ -13,7 +13,6 @@ public class PostitionAndRotation
     [SerializeField] float rotY;
     [SerializeField] float rotZ;
 
-
     public PostitionAndRotation(float posX, float posY, float posZ, float rotX, float rotY, float rotZ)
     {
         this.posX = posX;

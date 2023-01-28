@@ -1,0 +1,1083 @@
+fileFormatVersion: 2
+guid: 1c487cf2015fb7b4b9996cc6b7ea6bc1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Head Orc (Bald)
+    100002: Head Orc (Metal Helmet Horns 2)
+    100004: Legs Orc (Skull Belt)
+    100006: LowManHead
+    100008: LowManHead_end
+    100010: LowManHips
+    100012: LowManLeftArm
+    100014: LowManLeftFoot
+    100016: LowManLeftForeArm
+    100018: LowManLeftHand
+    100020: LowManLeftHandIndex1
+    100022: LowManLeftHandIndex2
+    100024: LowManLeftHandIndex2_end
+    100026: LowManLeftHandMiddle1
+    100028: LowManLeftHandMiddle2
+    100030: LowManLeftHandMiddle2_end
+    100032: LowManLeftHandPinky1
+    100034: LowManLeftHandPinky2
+    100036: LowManLeftHandPinky2_end
+    100038: LowManLeftHandRing1
+    100040: LowManLeftHandRing2
+    100042: LowManLeftHandRing2_end
+    100044: LowManLeftHandThumb1
+    100046: LowManLeftHandThumb1_end
+    100048: LowManLeftLeg
+    100050: LowManLeftShoulder
+    100052: LowManLeftToeBase
+    100054: LowManLeftToeBase_end
+    100056: LowManLeftUpLeg
+    100058: LowManNeck
+    100060: LowManRightArm
+    100062: LowManRightFoot
+    100064: LowManRightForeArm
+    100066: LowManRightHand
+    100068: LowManRightHandIndex1
+    100070: LowManRightHandIndex2
+    100072: LowManRightHandIndex2_end
+    100074: LowManRightHandMiddle1
+    100076: LowManRightHandMiddle2
+    100078: LowManRightHandMiddle2_end
+    100080: LowManRightHandPinky1
+    100082: LowManRightHandPinky2
+    100084: LowManRightHandPinky2_end
+    100086: LowManRightHandRing1
+    100088: LowManRightHandRing2
+    100090: LowManRightHandRing2_end
+    100092: LowManRightHandThumb1
+    100094: LowManRightHandThumb1_end
+    100096: LowManRightLeg
+    100098: LowManRightShoulder
+    100100: LowManRightToeBase
+    100102: LowManRightToeBase_end
+    100104: LowManRightUpLeg
+    100106: LowManSpine
+    100108: LowManSpine1
+    100110: LowManSpine2
+    100112: Orc
+    100114: Torso Orc (Heavy Armor Pads)
+    100116: //RootNode
+    100118: Head Troll (Plain)
+    100120: Legs Troll (Plain)
+    100122: Shoes Troll (Plain)
+    100124: Torso Troll (Fat)
+    100126: Head Troll (Hair 1)
+    100128: Head Troll (Hair 2)
+    100130: Head Troll (Helmet)
+    100132: Legs Troll (Kneepads)
+    100134: Legs Troll (Leather Pants)
+    100136: Legs Troll (Loincloth)
+    100138: Shoes Troll (Shackles)
+    100140: Torso Troll (Fat Armor)
+    100142: Torso Troll (Fat Hairy)
+    100144: Torso Troll (Muscular)
+    100146: Head Troll (Helmet 1 Horns)
+    100148: Head Troll (Helmet 1)
+    100150: Head Troll (Helmet 2 Horns)
+    100152: Head Troll (Helmet 2)
+    100154: Torso Troll (Armor)
+    100156: Torso Troll (Pauldrons)
+    100158: Troll
+    100160: Torso Troll (Flag)
+    400000: Head Orc (Bald)
+    400002: Head Orc (Metal Helmet Horns 2)
+    400004: Legs Orc (Skull Belt)
+    400006: LowManHead
+    400008: LowManHead_end
+    400010: LowManHips
+    400012: LowManLeftArm
+    400014: LowManLeftFoot
+    400016: LowManLeftForeArm
+    400018: LowManLeftHand
+    400020: LowManLeftHandIndex1
+    400022: LowManLeftHandIndex2
+    400024: LowManLeftHandIndex2_end
+    400026: LowManLeftHandMiddle1
+    400028: LowManLeftHandMiddle2
+    400030: LowManLeftHandMiddle2_end
+    400032: LowManLeftHandPinky1
+    400034: LowManLeftHandPinky2
+    400036: LowManLeftHandPinky2_end
+    400038: LowManLeftHandRing1
+    400040: LowManLeftHandRing2
+    400042: LowManLeftHandRing2_end
+    400044: LowManLeftHandThumb1
+    400046: LowManLeftHandThumb1_end
+    400048: LowManLeftLeg
+    400050: LowManLeftShoulder
+    400052: LowManLeftToeBase
+    400054: LowManLeftToeBase_end
+    400056: LowManLeftUpLeg
+    400058: LowManNeck
+    400060: LowManRightArm
+    400062: LowManRightFoot
+    400064: LowManRightForeArm
+    400066: LowManRightHand
+    400068: LowManRightHandIndex1
+    400070: LowManRightHandIndex2
+    400072: LowManRightHandIndex2_end
+    400074: LowManRightHandMiddle1
+    400076: LowManRightHandMiddle2
+    400078: LowManRightHandMiddle2_end
+    400080: LowManRightHandPinky1
+    400082: LowManRightHandPinky2
+    400084: LowManRightHandPinky2_end
+    400086: LowManRightHandRing1
+    400088: LowManRightHandRing2
+    400090: LowManRightHandRing2_end
+    400092: LowManRightHandThumb1
+    400094: LowManRightHandThumb1_end
+    400096: LowManRightLeg
+    400098: LowManRightShoulder
+    400100: LowManRightToeBase
+    400102: LowManRightToeBase_end
+    400104: LowManRightUpLeg
+    400106: LowManSpine
+    400108: LowManSpine1
+    400110: LowManSpine2
+    400112: Orc
+    400114: Torso Orc (Heavy Armor Pads)
+    400116: //RootNode
+    400118: Head Troll (Plain)
+    400120: Legs Troll (Plain)
+    400122: Shoes Troll (Plain)
+    400124: Torso Troll (Fat)
+    400126: Head Troll (Hair 1)
+    400128: Head Troll (Hair 2)
+    400130: Head Troll (Helmet)
+    400132: Legs Troll (Kneepads)
+    400134: Legs Troll (Leather Pants)
+    400136: Legs Troll (Loincloth)
+    400138: Shoes Troll (Shackles)
+    400140: Torso Troll (Fat Armor)
+    400142: Torso Troll (Fat Hairy)
+    400144: Torso Troll (Muscular)
+    400146: Head Troll (Helmet 1 Horns)
+    400148: Head Troll (Helmet 1)
+    400150: Head Troll (Helmet 2 Horns)
+    400152: Head Troll (Helmet 2)
+    400154: Torso Troll (Armor)
+    400156: Torso Troll (Pauldrons)
+    400158: Troll
+    400160: Torso Troll (Flag)
+    2100000: Orc Skin
+    2100002: Skull
+    2100004: Leather
+    2100006: Fabric 1
+    2100008: Metal
+    2100010: Troll Skin 2
+    2100012: Troll Skin 1
+    2100014: Tooth
+    2100016: Troll Skin 2.001
+    2100018: Troll Skin 1.001
+    2100020: Hair
+    2100022: Tooth.001
+    2100024: Metal.002
+    2100026: Leather.002
+    2100028: Banner
+    2300000: Head Troll (Hair 1)
+    2300002: Head Troll (Hair 2)
+    2300004: Head Troll (Helmet 1 Horns)
+    2300006: Head Troll (Helmet 1)
+    2300008: Head Troll (Helmet 2 Horns)
+    2300010: Head Troll (Helmet 2)
+    2300012: Head Troll (Plain)
+    2300014: Legs Troll (Kneepads)
+    2300016: Legs Troll (Leather Pants)
+    2300018: Legs Troll (Loincloth)
+    2300020: Shoes Troll (Plain)
+    2300022: Shoes Troll (Shackles)
+    2300024: Torso Troll (Armor)
+    2300026: Torso Troll (Fat Armor)
+    2300028: Torso Troll (Fat Hairy)
+    2300030: Torso Troll (Fat)
+    2300032: Torso Troll (Muscular)
+    2300034: Torso Troll (Pauldrons)
+    3300000: Head Troll (Hair 1)
+    3300002: Head Troll (Hair 2)
+    3300004: Head Troll (Helmet 1 Horns)
+    3300006: Head Troll (Helmet 1)
+    3300008: Head Troll (Helmet 2 Horns)
+    3300010: Head Troll (Helmet 2)
+    3300012: Head Troll (Plain)
+    3300014: Legs Troll (Kneepads)
+    3300016: Legs Troll (Leather Pants)
+    3300018: Legs Troll (Loincloth)
+    3300020: Shoes Troll (Plain)
+    3300022: Shoes Troll (Shackles)
+    3300024: Torso Troll (Armor)
+    3300026: Torso Troll (Fat Armor)
+    3300028: Torso Troll (Fat Hairy)
+    3300030: Torso Troll (Fat)
+    3300032: Torso Troll (Muscular)
+    3300034: Torso Troll (Pauldrons)
+    4300000: Head Orc (Bald)
+    4300002: Legs Orc (Skull Belt)
+    4300004: Torso Orc (Heavy Armor Pads)
+    4300006: Head Orc (Metal Helmet Horns 2)
+    4300008: Head Troll (Plain)
+    4300010: Legs Troll (Plain)
+    4300012: Shoes Troll (Plain)
+    4300014: Torso Troll (Fat)
+    4300016: Head Troll (Hair 1)
+    4300018: Head Troll (Hair 2)
+    4300020: Head Troll (Helmet)
+    4300022: Legs Troll (Kneepads)
+    4300024: Legs Troll (Leather Pants)
+    4300026: Legs Troll (Loincloth)
+    4300028: Shoes Troll (Shackles)
+    4300030: Torso Troll (Fat Armor)
+    4300032: Torso Troll (Fat Hairy)
+    4300034: Torso Troll (Muscular)
+    4300036: Head Troll (Helmet 1)
+    4300038: Torso Troll (Pauldrons)
+    4300040: Torso Troll (Armor)
+    4300042: Head Troll (Helmet 1 Horns)
+    4300044: Head Troll (Helmet 2)
+    4300046: Head Troll (Helmet 2 Horns)
+    4300048: Torso Troll (Flag)
+    9500000: //RootNode
+    13700000: Head Orc (Bald)
+    13700002: Head Orc (Metal Helmet Horns 2)
+    13700004: Legs Orc (Skull Belt)
+    13700006: Torso Orc (Heavy Armor Pads)
+    13700008: Head Troll (Plain)
+    13700010: Legs Troll (Plain)
+    13700012: Shoes Troll (Plain)
+    13700014: Torso Troll (Fat)
+    13700016: Head Troll (Hair 1)
+    13700018: Head Troll (Hair 2)
+    13700020: Head Troll (Helmet)
+    13700022: Legs Troll (Kneepads)
+    13700024: Legs Troll (Leather Pants)
+    13700026: Legs Troll (Loincloth)
+    13700028: Shoes Troll (Shackles)
+    13700030: Torso Troll (Fat Armor)
+    13700032: Torso Troll (Fat Hairy)
+    13700034: Torso Troll (Muscular)
+    13700036: Head Troll (Helmet 1 Horns)
+    13700038: Head Troll (Helmet 1)
+    13700040: Head Troll (Helmet 2 Horns)
+    13700042: Head Troll (Helmet 2)
+    13700044: Torso Troll (Armor)
+    13700046: Torso Troll (Pauldrons)
+    13700048: Torso Troll (Flag)
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banner
+    second: {fileID: 2100000, guid: ef1d012b9e90041499dc0b2536ce3637, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric 1
+    second: {fileID: 2100000, guid: 7fc8ac38b3ea4ce4f8efd4a3b99acbbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 8997bec5f89b30149940fc93a194415a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather
+    second: {fileID: 2100000, guid: e75f9eb4eb8fde648b2caad461de3c95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 6f71c9ac81b255a4191ed478e6ae8c1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orc Skin
+    second: {fileID: 2100000, guid: f290615619d6214439bee178f22c944d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skull
+    second: {fileID: 2100000, guid: ef31982eacf726c4d83f1f6601daf844, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tooth
+    second: {fileID: 2100000, guid: 49d18207707f6174e8b9e678c178e8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Troll Skin 1
+    second: {fileID: 2100000, guid: 4452c385bf58c5a41996275ba17cbf7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Troll Skin 2
+    second: {fileID: 2100000, guid: 213b4fc456e336042b71125de6dd8695, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: LowManHips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManNeck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Troll Test 2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Troll
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: LowManHips
+      parentName: Troll
+      position: {x: -0, y: 1.0782722, z: 0.000000024719222}
+      rotation: {x: 0.000000011462418, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftUpLeg
+      parentName: LowManHips
+      position: {x: -0.17230302, y: -0.009107894, z: 0.0000000024054703}
+      rotation: {x: 0.68991786, y: -0.056023665, z: -0.053704172, w: 0.7197156}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: LowManLeftLeg
+      parentName: LowManLeftUpLeg
+      position: {x: -0.01407379, y: -0.0024722717, z: 0.5457007}
+      rotation: {x: 0.06093695, y: 0.02512553, z: -0.007978741, w: 0.99779344}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: LowManLeftFoot
+      parentName: LowManLeftLeg
+      position: {x: -0.011636047, y: -0.00000015933334, z: 0.41729578}
+      rotation: {x: -0.52928203, y: 0.0039445725, z: 0.053297568, w: 0.8467611}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftToeBase
+      parentName: LowManLeftFoot
+      position: {x: 0.000000078231096, y: 0.00000007978006, z: 0.21464382}
+      rotation: {x: -0.26146147, y: 0.046164513, z: 0.012520741, w: 0.964028}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftToeBase_end
+      parentName: LowManLeftToeBase
+      position: {x: -0, y: 0.21464372, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightUpLeg
+      parentName: LowManHips
+      position: {x: 0.17230302, y: -0.009107894, z: -0.0000000133946205}
+      rotation: {x: 0.6899179, y: 0.056023676, z: 0.053704184, w: 0.71971554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightLeg
+      parentName: LowManRightUpLeg
+      position: {x: 0.014073752, y: -0.0024721134, z: 0.54570055}
+      rotation: {x: 0.060937006, y: -0.025125535, z: 0.007978741, w: 0.99779344}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: LowManRightFoot
+      parentName: LowManRightLeg
+      position: {x: 0.0116359675, y: 0.000000039450207, z: 0.41729575}
+      rotation: {x: -0.5292823, y: -0.0039445586, z: -0.053297587, w: 0.846761}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: LowManRightToeBase
+      parentName: LowManRightFoot
+      position: {x: -0.000000086016954, y: 0.00000006517057, z: 0.21464382}
+      rotation: {x: -0.26146147, y: -0.046164528, z: -0.012520748, w: 0.964028}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: LowManRightToeBase_end
+      parentName: LowManRightToeBase
+      position: {x: -0, y: 0.21464375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManSpine
+      parentName: LowManHips
+      position: {x: -0, y: 0.20833556, z: 0.0000000082181435}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManSpine1
+      parentName: LowManSpine
+      position: {x: -0, y: -0.000000038146982, z: 0.1549379}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManSpine2
+      parentName: LowManSpine1
+      position: {x: 0.00000006229166, y: -0.02078348, z: 0.23369445}
+      rotation: {x: -0.01622492, y: -0.35288566, z: 0.0061202645, w: 0.9355058}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftShoulder
+      parentName: LowManSpine2
+      position: {x: -0.28032586, y: 0.022740621, z: 0.24966928}
+      rotation: {x: -0.4120305, y: -0.000000018010427, z: 0.91117007, w: -0.00000003982851}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: LowManLeftArm
+      parentName: LowManLeftShoulder
+      position: {x: 0.018299477, y: 0.025673894, z: 0.16579406}
+      rotation: {x: -1.751997e-10, y: 0.014864372, z: 0.000000011785252, w: 0.99988955}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: LowManLeftForeArm
+      parentName: LowManLeftArm
+      position: {x: 0.0010187268, y: 0.000000020142375, z: 0.30290052}
+      rotation: {x: -0.015774433, y: -0.018469011, z: -0.00017737705, w: 0.999705}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: LowManLeftHand
+      parentName: LowManLeftForeArm
+      position: {x: -0.017642165, y: 0.014415464, z: 0.43952373}
+      rotation: {x: -0.26860505, y: 0.057731472, z: -0.014181586, w: 0.9614142}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: LowManLeftHandThumb1
+      parentName: LowManLeftHand
+      position: {x: -0.0050679124, y: 0.05612532, z: 0.14524855}
+      rotation: {x: -0.06829387, y: 0.86032856, z: 0.50133437, w: -0.06192501}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1}
+    - name: LowManLeftHandThumb1_end
+      parentName: LowManLeftHandThumb1
+      position: {x: -0, y: 0.15965039, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandIndex1
+      parentName: LowManLeftHand
+      position: {x: -0.037654262, y: -0.0313668, z: 0.16020356}
+      rotation: {x: 0.9495336, y: 0.074638404, z: -0.20561692, w: -0.22480403}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.999999}
+    - name: LowManLeftHandIndex2
+      parentName: LowManLeftHandIndex1
+      position: {x: -0.02604301, y: 0.002058921, z: -0.04028036}
+      rotation: {x: -0.1520638, y: -0.48953664, z: 0.70466274, w: 0.49059248}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: LowManLeftHandIndex2_end
+      parentName: LowManLeftHandIndex2
+      position: {x: -0, y: 0.13328452, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandMiddle1
+      parentName: LowManLeftHand
+      position: {x: -0.035657924, y: -0.05867991, z: 0.14256878}
+      rotation: {x: 0.9495339, y: 0.07463785, z: -0.20561613, w: -0.2248034}
+      scale: {x: 1, y: 0.99999994, z: 0.9999994}
+    - name: LowManLeftHandMiddle2
+      parentName: LowManLeftHandMiddle1
+      position: {x: -0.026042908, y: 0.00205897, z: -0.040280394}
+      rotation: {x: -0.15337831, y: -0.48491883, z: 0.71075135, w: 0.48596445}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: LowManLeftHandMiddle2_end
+      parentName: LowManLeftHandMiddle2
+      position: {x: -0, y: 0.13328452, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandRing1
+      parentName: LowManLeftHand
+      position: {x: -0.0338916, y: -0.08284574, z: 0.12696585}
+      rotation: {x: 0.9495347, y: 0.07463722, z: -0.2056145, w: -0.22480194}
+      scale: {x: 1, y: 1, z: 1.0000008}
+    - name: LowManLeftHandRing2
+      parentName: LowManLeftHandRing1
+      position: {x: -0.02604262, y: 0.0020590124, z: -0.040280413}
+      rotation: {x: -0.15206411, y: -0.48953724, z: 0.70466197, w: 0.49059296}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: LowManLeftHandRing2_end
+      parentName: LowManLeftHandRing2
+      position: {x: -0, y: 0.13328452, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManLeftHandPinky1
+      parentName: LowManLeftHand
+      position: {x: -0.031706326, y: -0.11274416, z: 0.10766205}
+      rotation: {x: 0.9495348, y: 0.07463715, z: -0.20561443, w: -0.22480169}
+      scale: {x: 1, y: 1, z: 1.0000008}
+    - name: LowManLeftHandPinky2
+      parentName: LowManLeftHandPinky1
+      position: {x: -0.026042523, y: 0.0020589954, z: -0.04028029}
+      rotation: {x: -0.15206432, y: -0.4895372, z: 0.7046621, w: 0.49059266}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: LowManLeftHandPinky2_end
+      parentName: LowManLeftHandPinky2
+      position: {x: -0, y: 0.13328452, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightShoulder
+      parentName: LowManSpine2
+      position: {x: 0.2827254, y: 0.02274064, z: -0.24558143}
+      rotation: {x: -2.9225877e-18, y: 0.91116464, z: 1.1723214e-15, w: 0.41204244}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: LowManRightArm
+      parentName: LowManRightShoulder
+      position: {x: 0.018299136, y: -0.025673885, z: 0.16579352}
+      rotation: {x: 1.7520167e-10, y: 0.014864546, z: -0.000000011785246, w: 0.99988955}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightForeArm
+      parentName: LowManRightArm
+      position: {x: 0.0009857845, y: 0.000000018004604, z: 0.30399948}
+      rotation: {x: 0.015774306, y: -0.018468572, z: 0.00017739367, w: 0.999705}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: LowManRightHand
+      parentName: LowManRightForeArm
+      position: {x: -0.017827425, y: -0.0105942935, z: 0.4139228}
+      rotation: {x: 0.3663808, y: 0.055759676, z: 0.019344123, w: 0.92859125}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandThumb1
+      parentName: LowManRightHand
+      position: {x: 0.00000047206876, y: 0.00000047294446, z: 0.10047804}
+      rotation: {x: 0.76226723, y: -0.081866674, z: -0.057513624, w: 0.6394832}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: LowManRightHandThumb1_end
+      parentName: LowManRightHandThumb1
+      position: {x: -0, y: 0.11548424, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandIndex1
+      parentName: LowManRightHand
+      position: {x: -0.034103293, y: 0.056882545, z: 0.12883884}
+      rotation: {x: -0.49393064, y: 0.31790617, z: 0.7951109, w: -0.15088734}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: LowManRightHandIndex2
+      parentName: LowManRightHandIndex1
+      position: {x: -0.04033986, y: 0.0019658117, z: 0.025958104}
+      rotation: {x: 0.70523995, y: -0.49015734, z: 0.15218906, w: 0.48910215}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: LowManRightHandIndex2_end
+      parentName: LowManRightHandIndex2
+      position: {x: -0, y: 0.13334917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandMiddle1
+      parentName: LowManRightHand
+      position: {x: -0.031496283, y: 0.08564636, z: 0.10580953}
+      rotation: {x: -0.49393094, y: 0.31790602, z: 0.7951107, w: -0.15088734}
+      scale: {x: 0.99999994, y: 1, z: 0.9999997}
+    - name: LowManRightHandMiddle2
+      parentName: LowManRightHandMiddle1
+      position: {x: -0.040339723, y: 0.0019658436, z: 0.025958197}
+      rotation: {x: 0.70523995, y: -0.4901573, z: 0.15218906, w: 0.4891021}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: LowManRightHandMiddle2_end
+      parentName: LowManRightHandMiddle2
+      position: {x: -0, y: 0.13334917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandRing1
+      parentName: LowManRightHand
+      position: {x: -0.029418448, y: 0.10857177, z: 0.08745481}
+      rotation: {x: -0.4939308, y: 0.3179061, z: 0.7951109, w: -0.15088704}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: LowManRightHandRing2
+      parentName: LowManRightHandRing1
+      position: {x: -0.040339645, y: 0.0019658378, z: 0.025957916}
+      rotation: {x: 0.70524013, y: -0.49015743, z: 0.15218833, w: 0.4891021}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: LowManRightHandRing2_end
+      parentName: LowManRightHandRing2
+      position: {x: -0, y: 0.13334917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManRightHandPinky1
+      parentName: LowManRightHand
+      position: {x: -0.027036197, y: 0.13485572, z: 0.06641101}
+      rotation: {x: -0.49393085, y: 0.3179061, z: 0.7951108, w: -0.1508871}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: LowManRightHandPinky2
+      parentName: LowManRightHandPinky1
+      position: {x: -0.04033963, y: 0.0019658876, z: 0.025958063}
+      rotation: {x: 0.7052398, y: -0.490158, z: 0.15218897, w: 0.4891019}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: LowManRightHandPinky2_end
+      parentName: LowManRightHandPinky2
+      position: {x: -0, y: 0.13334917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowManNeck
+      parentName: LowManSpine2
+      position: {x: 0.08930222, y: -0.079590656, z: 0.10152785}
+      rotation: {x: 9.492674e-16, y: 0.35293874, z: -7.301988e-17, w: 0.9356464}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: LowManHead
+      parentName: LowManNeck
+      position: {x: 0.000000009232407, y: -0.05179183, z: 0.15426284}
+      rotation: {x: 0.8530197, y: -0.0000000016537519, z: 0.000000016456907, w: 0.52187866}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: LowManHead_end
+      parentName: LowManHead
+      position: {x: -0, y: 0.1209691, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Plain)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoes Troll (Plain)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Fat)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Hair 1)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Hair 2)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Helmet 1)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs Troll (Kneepads)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs Troll (Leather Pants)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs Troll (Loincloth)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoes Troll (Shackles)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Fat Armor)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Fat Hairy)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Muscular)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Pauldrons)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso Troll (Armor)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Helmet 1 Horns)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Helmet 2)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Troll (Helmet 2 Horns)
+      parentName: Troll Test 2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735358, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

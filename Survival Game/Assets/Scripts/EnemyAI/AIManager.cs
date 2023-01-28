@@ -11,6 +11,7 @@ public class AIManager : MonoBehaviour
     [Header("Basic settings")]
     [SerializeField] Transform player;
     [SerializeField] LayerMask playerMask, groundMask;
+    [SerializeField] float speed;
     [Space]
     [Header("Range")]
     [SerializeField] float walkPointRange;
@@ -27,8 +28,11 @@ public class AIManager : MonoBehaviour
     private Vector3 walkPoint;
     private bool isPointSet;
     private Animator animator;
-
+    private bool invokeMethod = true;
     private NavMeshAgent agent;
+
+    float timer;
+    float delay = 3f;
 
     private void Awake()
     {
@@ -36,7 +40,7 @@ public class AIManager : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (typeOfAI == TypeOfAI.Agresive)
         {
@@ -51,23 +55,36 @@ public class AIManager : MonoBehaviour
 
     private void Walk()
     {
-        if (!isPointSet) Invoke(nameof(GenerateWalkPoint), 0f);
+        if (!isPointSet && !invokeMethod)
+        {
+            GenerateWalkPoint();
+            invokeMethod = true;
+
+        }
         if (isPointSet)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(walkPoint - transform.position), Time.deltaTime * rotationSpeed);
+            agent.speed = 1f;
             agent.SetDestination(walkPoint);
             animator.SetBool("IsWalk", true);
+            timer = Time.time;
         } 
         var distance = transform.position - walkPoint;
         if (distance.magnitude < 1f)
         {
             isPointSet = false;
             animator.SetBool("IsWalk", false);
+            timer = 0f;
+        }
+        if (Time.time - timer > delay)
+        {
+            invokeMethod = false;
         }
     }
 
     private void Chase()
     {
+        agent.speed = speed;
         agent.SetDestination(player.position);
         animator.SetBool("IsChase", true);
     }
@@ -76,7 +93,11 @@ public class AIManager : MonoBehaviour
     {
         if (!isPointSet && isPlayerInAttackRange && isPlayerInSightRange) GenerateWalkPoint();
         if(isPointSet) animator.SetBool("IsRun", true);
-        if (isPointSet) agent.SetDestination(walkPoint);
+        if (isPointSet)
+        {
+            agent.speed = 1f;
+            agent.SetDestination(walkPoint);
+        }
         var distance = transform.position - walkPoint;
         if (distance.magnitude < 1f)
         {
@@ -105,7 +126,7 @@ public class AIManager : MonoBehaviour
     {
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
         isPlayerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
-        if (!isPlayerInAttackRange && !isPlayerInSightRange) Walk();
+        if (!isPlayerInAttackRange && !isPlayerInSightRange) { Walk(); animator.SetBool("IsChase", false); }
         else if (!isPlayerInAttackRange && isPlayerInSightRange) Chase();
         else if (isPlayerInAttackRange && isPlayerInSightRange) Attack();
     }
@@ -123,12 +144,13 @@ public class AIManager : MonoBehaviour
         float randomX = Random.Range(-walkPointRange, walkPointRange);
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         walkPoint = new(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
         if (Physics.Raycast(walkPoint, -transform.up, Mathf.Infinity, groundMask))
         {
             isPointSet = true;
+            Debug.Log("2");
+
         }
-        else GenerateWalkPoint();
+        else GenerateWalkPoint();   
     }
 
 }
