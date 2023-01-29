@@ -147,7 +147,6 @@ public class AIManager : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, Mathf.Infinity, groundMask))
         {
             isPointSet = true;
-            Debug.Log("2");
 
         }
         else GenerateWalkPoint();   
