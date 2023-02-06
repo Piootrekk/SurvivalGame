@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 668172612910709090}
   - component: {fileID: 8958237840619102273}
   - component: {fileID: 2739402545584150167}
+  - component: {fileID: 1132911083}
   m_Layer: 7
   m_Name: GAMER
   m_TagString: Player
@@ -437,7 +438,6 @@ Transform:
   - {fileID: 3683122698088259290}
   - {fileID: 1397745675542685011}
   - {fileID: 2780731455145035802}
-  - {fileID: 2780731456077211820}
   - {fileID: 2780731455213159112}
   - {fileID: 2780731456229558867}
   - {fileID: 2780731455246642641}
@@ -510,7 +510,7 @@ CharacterController:
   m_Height: 1.9
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.05
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.97, z: 0.15}
@@ -658,6 +658,18 @@ MonoBehaviour:
     damageMultipler: 1
   - capsuleCollider: {fileID: 2780731456915124649}
     damageMultipler: 2
+--- !u!114 &1132911083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853612672430875487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cde296374d6c943a265be862530b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &964669346021975391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,6 +3192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731455157667936}
   - component: {fileID: 2780731455157667937}
+  - component: {fileID: 539818610}
   m_Layer: 7
   m_Name: HitBoxArm_L
   m_TagString: Untagged
@@ -3210,12 +3223,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731455157667939}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.06
   m_Height: 0.51
   m_Direction: 0
   m_Center: {x: 0.27, y: 0, z: 0}
+--- !u!114 &539818610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731455157667939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.75
 --- !u!1 &2780731455159466010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,7 +3678,7 @@ Transform:
   m_Children:
   - {fileID: 2780731456324738709}
   m_Father: {fileID: 41505049682377189}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &2780731455213159115
 Camera:
@@ -3678,14 +3704,14 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.04
-  far clip plane: 1000
+  far clip plane: 60
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 19831
+    m_Bits: 28023
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3749,6 +3775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731455222736404}
   - component: {fileID: 2780731455222736405}
+  - component: {fileID: 768259494}
   m_Layer: 7
   m_Name: HitboxShoulder_L
   m_TagString: Untagged
@@ -3779,12 +3806,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731455222736407}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.09
   m_Height: 0.47
   m_Direction: 0
   m_Center: {x: 0.2, y: 0.03, z: -0.03}
+--- !u!114 &768259494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731455222736407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.9
 --- !u!1 &2780731455225269565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4040,7 +4080,7 @@ RectTransform:
   - {fileID: 2780731457135794301}
   - {fileID: 2007304868270927576}
   m_Father: {fileID: 41505049682377189}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5129,6 +5169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731455411528004}
   - component: {fileID: 2780731455411528005}
+  - component: {fileID: 550549180}
   m_Layer: 7
   m_Name: HitBoxArm_R
   m_TagString: Untagged
@@ -5159,12 +5200,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731455411528007}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.06
   m_Height: 0.51
   m_Direction: 0
   m_Center: {x: -0.26, y: 0, z: 0}
+--- !u!114 &550549180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731455411528007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.75
 --- !u!1 &2780731455415199335
 GameObject:
   m_ObjectHideFlags: 0
@@ -6312,7 +6366,7 @@ MonoBehaviour:
   maxPoints: 100
   frontBar: {fileID: 2780731457036177988}
   backBar: {fileID: 2780731455239961723}
-  currentPoints: 0
+  currentPoints: 100
   decayRate: 5
 --- !u!1 &2780731455558257214
 GameObject:
@@ -6595,6 +6649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731455581405822}
   - component: {fileID: 2780731455581405823}
+  - component: {fileID: 539799384}
   m_Layer: 7
   m_Name: HitBoxShoulder_R
   m_TagString: Untagged
@@ -6625,12 +6680,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731455581405817}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.09
   m_Height: 0.47
   m_Direction: 0
   m_Center: {x: -0.2, y: -0.03, z: 0.03}
+--- !u!114 &539799384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731455581405817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.9
 --- !u!1 &2780731455599862559
 GameObject:
   m_ObjectHideFlags: 0
@@ -9356,71 +9424,6 @@ MonoBehaviour:
   factorSkillThirsty: {fileID: 2780731456675880680}
   XpText: {fileID: 2780731455332893173}
   playerExp: 999999
---- !u!1 &2780731456077211823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2780731456077211820}
-  - component: {fileID: 2780731456077211821}
-  m_Layer: 7
-  m_Name: HitBoxRefereces
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2780731456077211820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780731456077211823}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 41505049682377189}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2780731456077211821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780731456077211823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 808072178eed5fe42b1aacc0c0af63b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitBoxes:
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
-  - capsuleCollider: {fileID: 0}
-    damageMultipler: 0
 --- !u!1 &2780731456114683870
 GameObject:
   m_ObjectHideFlags: 0
@@ -9589,7 +9592,7 @@ Transform:
   - {fileID: 2780731455496159720}
   - {fileID: 2780731455777949443}
   m_Father: {fileID: 41505049682377189}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2780731456122047121
 MonoBehaviour:
@@ -10349,6 +10352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731456302851224}
   - component: {fileID: 2780731456302851225}
+  - component: {fileID: 1318570005}
   m_Layer: 7
   m_Name: HitBoxKnee_L
   m_TagString: Untagged
@@ -10379,12 +10383,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731456302851227}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.08
   m_Height: 0.48
   m_Direction: 0
   m_Center: {x: 0.24, y: 0, z: 0}
+--- !u!114 &1318570005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731456302851227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.75
 --- !u!1 &2780731456314775900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10579,7 +10596,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.04
-  far clip plane: 1000
+  far clip plane: 60
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -11380,6 +11397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731456445567025}
   - component: {fileID: 2780731456445567030}
+  - component: {fileID: 1719587114}
   m_Layer: 7
   m_Name: HitBoxChest
   m_TagString: Untagged
@@ -11410,12 +11428,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731456445567024}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.17
   m_Height: 0.52
   m_Direction: 0
   m_Center: {x: 0.06, y: -0.06, z: 0.03}
+--- !u!114 &1719587114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731456445567024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 1
 --- !u!1 &2780731456463480327
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,7 +12116,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2780731456511238753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1132911083}
+        m_TargetAssemblyTypeName: Save, Assembly-CSharp
+        m_MethodName: SavePlayerData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2780731456518801187
 GameObject:
   m_ObjectHideFlags: 0
@@ -12991,6 +13034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731456745240572}
   - component: {fileID: 2780731456745240573}
+  - component: {fileID: 1598099028}
   m_Layer: 7
   m_Name: HitBoxLeg_R
   m_TagString: Untagged
@@ -13021,12 +13065,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731456745240575}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.11
   m_Height: 0.58
   m_Direction: 0
   m_Center: {x: -0.18, y: 0, z: 0}
+--- !u!114 &1598099028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731456745240575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.9
 --- !u!1 &2780731456757498514
 GameObject:
   m_ObjectHideFlags: 0
@@ -14185,6 +14242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731456915124648}
   - component: {fileID: 2780731456915124649}
+  - component: {fileID: 1282670713}
   m_Layer: 7
   m_Name: HitBoxHead
   m_TagString: Untagged
@@ -14215,12 +14273,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731456915124651}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.13
   m_Height: 0.33
   m_Direction: 0
   m_Center: {x: -0.09, y: 0.06, z: 0}
+--- !u!114 &1282670713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731456915124651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 2
 --- !u!1 &2780731456935295204
 GameObject:
   m_ObjectHideFlags: 0
@@ -14231,6 +14302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731456935295205}
   - component: {fileID: 2780731456935295210}
+  - component: {fileID: 1827711076}
   m_Layer: 7
   m_Name: HitBoxKnee_R
   m_TagString: Untagged
@@ -14261,12 +14333,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731456935295204}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.08
   m_Height: 0.48
   m_Direction: 0
   m_Center: {x: -0.24, y: 0, z: 0}
+--- !u!114 &1827711076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731456935295204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.75
 --- !u!1 &2780731456957518748
 GameObject:
   m_ObjectHideFlags: 0
@@ -15460,6 +15545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2780731457147233237}
   - component: {fileID: 2780731457147233242}
+  - component: {fileID: 724786597}
   m_Layer: 7
   m_Name: HitBoxLeg_L
   m_TagString: Untagged
@@ -15490,12 +15576,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780731457147233236}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.11
   m_Height: 0.58
   m_Direction: 0
   m_Center: {x: 0.18, y: 0, z: 0}
+--- !u!114 &724786597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780731457147233236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf5812c9ce27d429bdc383a87862c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiply: 0.9
 --- !u!1 &2949191004230569089
 GameObject:
   m_ObjectHideFlags: 0
@@ -22222,7 +22321,7 @@ PrefabInstance:
     - target: {fileID: 4271772261929882545, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4271772261929882545, guid: 06f7dd0dc912f584999bdbb7b9eca9b2,
         type: 3}

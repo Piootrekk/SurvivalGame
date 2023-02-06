@@ -34,6 +34,8 @@ public class AIManager : MonoBehaviour
     float timer;
     float delay = 3f;
 
+    public bool GetDamage { get => getDamage; set => getDamage = value; }
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -113,7 +115,10 @@ public class AIManager : MonoBehaviour
         if (!isOnAttack)
         {
             isOnAttack = true;
+            animator.SetTrigger("Attack");
+            Debug.Log("Attack");
             Invoke(nameof(ResetAttack), timeBetweenAttack);
+            
         }
     }
 
@@ -128,7 +133,7 @@ public class AIManager : MonoBehaviour
         isPlayerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
         if (!isPlayerInAttackRange && !isPlayerInSightRange) { Walk(); animator.SetBool("IsChase", false); }
         else if (!isPlayerInAttackRange && isPlayerInSightRange) Chase();
-        else if (isPlayerInAttackRange && isPlayerInSightRange) Attack();
+        else if (isPlayerInAttackRange && isPlayerInSightRange) { Attack(); animator.SetBool("IsChase", false); }
     }
 
     private void CheckPasiveRanges()

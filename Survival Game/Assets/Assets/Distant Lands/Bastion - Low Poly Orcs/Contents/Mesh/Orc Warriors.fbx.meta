@@ -1,312 +1,920 @@
 fileFormatVersion: 2
 guid: 00936c4f6f3e60d4783c84af85128f55
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Head Orc (Bald)
-    100002: Head Orc (Beard)
-    100004: Head Orc (Earing)
-    100006: Head Orc (Hair 2)
-    100008: Head Orc (Hat)
-    100010: Head Orc (Leather Helmet)
-    100012: Head Orc (Metal Helmet 1)
-    100014: Head Orc (Metal Helmet 2)
-    100016: Head Orc (Metal Helmet 3)
-    100018: Head Orc (Metal Helmet Horns 1)
-    100020: Head Orc (Metal Helmet Horns 2)
-    100022: Head Orc (Short Hair)
-    100024: Legs Orc (Heavy Armor)
-    100026: Legs Orc (Knee Pads
-    100028: Legs Orc (Loincloth)
-    100030: Legs Orc (Long Pants)
-    100032: Legs Orc (Skull Belt)
-    100034: Legs Orc (Torn Pants)
-    100036: LowManHead
-    100038: LowManHead_end
-    100040: LowManHips
-    100042: LowManLeftArm
-    100044: LowManLeftFoot
-    100046: LowManLeftForeArm
-    100048: LowManLeftHand
-    100050: LowManLeftHandIndex1
-    100052: LowManLeftHandIndex2
-    100054: LowManLeftHandIndex2_end
-    100056: LowManLeftHandMiddle1
-    100058: LowManLeftHandMiddle2
-    100060: LowManLeftHandMiddle2_end
-    100062: LowManLeftHandPinky1
-    100064: LowManLeftHandPinky2
-    100066: LowManLeftHandPinky2_end
-    100068: LowManLeftHandRing1
-    100070: LowManLeftHandRing2
-    100072: LowManLeftHandRing2_end
-    100074: LowManLeftHandThumb1
-    100076: LowManLeftHandThumb1_end
-    100078: LowManLeftLeg
-    100080: LowManLeftShoulder
-    100082: LowManLeftToeBase
-    100084: LowManLeftToeBase_end
-    100086: LowManLeftUpLeg
-    100088: LowManNeck
-    100090: LowManRightArm
-    100092: LowManRightFoot
-    100094: LowManRightForeArm
-    100096: LowManRightHand
-    100098: LowManRightHandIndex1
-    100100: LowManRightHandIndex2
-    100102: LowManRightHandIndex2_end
-    100104: LowManRightHandMiddle1
-    100106: LowManRightHandMiddle2
-    100108: LowManRightHandMiddle2_end
-    100110: LowManRightHandPinky1
-    100112: LowManRightHandPinky2
-    100114: LowManRightHandPinky2_end
-    100116: LowManRightHandRing1
-    100118: LowManRightHandRing2
-    100120: LowManRightHandRing2_end
-    100122: LowManRightHandThumb1
-    100124: LowManRightHandThumb1_end
-    100126: LowManRightLeg
-    100128: LowManRightShoulder
-    100130: LowManRightToeBase
-    100132: LowManRightToeBase_end
-    100134: LowManRightUpLeg
-    100136: LowManSpine
-    100138: LowManSpine1
-    100140: LowManSpine2
-    100142: Orc
-    100144: //RootNode
-    100146: Shoes Orc (Boots)
-    100148: Shoes Orc (None)
-    100150: Shoes Orc (Sandals)
-    100152: Torso Orc (Armor 1)
-    100154: Torso Orc (Armor 2)
-    100156: Torso Orc (Heavy Armor Pads)
-    100158: Torso Orc (Heavy Armor)
-    100160: Torso Orc (Plain)
-    100162: Torso Orc (Shirt with Furs)
-    100164: Torso Orc (Spike Armor)
-    100166: Torso Orc (Torn Shirt
-    100168: Torso Orc (Vest)
-    100170: Torso Orc (Banner Carrier)
-    400000: Head Orc (Bald)
-    400002: Head Orc (Beard)
-    400004: Head Orc (Earing)
-    400006: Head Orc (Hair 2)
-    400008: Head Orc (Hat)
-    400010: Head Orc (Leather Helmet)
-    400012: Head Orc (Metal Helmet 1)
-    400014: Head Orc (Metal Helmet 2)
-    400016: Head Orc (Metal Helmet 3)
-    400018: Head Orc (Metal Helmet Horns 1)
-    400020: Head Orc (Metal Helmet Horns 2)
-    400022: Head Orc (Short Hair)
-    400024: Legs Orc (Heavy Armor)
-    400026: Legs Orc (Knee Pads
-    400028: Legs Orc (Loincloth)
-    400030: Legs Orc (Long Pants)
-    400032: Legs Orc (Skull Belt)
-    400034: Legs Orc (Torn Pants)
-    400036: LowManHead
-    400038: LowManHead_end
-    400040: LowManHips
-    400042: LowManLeftArm
-    400044: LowManLeftFoot
-    400046: LowManLeftForeArm
-    400048: LowManLeftHand
-    400050: LowManLeftHandIndex1
-    400052: LowManLeftHandIndex2
-    400054: LowManLeftHandIndex2_end
-    400056: LowManLeftHandMiddle1
-    400058: LowManLeftHandMiddle2
-    400060: LowManLeftHandMiddle2_end
-    400062: LowManLeftHandPinky1
-    400064: LowManLeftHandPinky2
-    400066: LowManLeftHandPinky2_end
-    400068: LowManLeftHandRing1
-    400070: LowManLeftHandRing2
-    400072: LowManLeftHandRing2_end
-    400074: LowManLeftHandThumb1
-    400076: LowManLeftHandThumb1_end
-    400078: LowManLeftLeg
-    400080: LowManLeftShoulder
-    400082: LowManLeftToeBase
-    400084: LowManLeftToeBase_end
-    400086: LowManLeftUpLeg
-    400088: LowManNeck
-    400090: LowManRightArm
-    400092: LowManRightFoot
-    400094: LowManRightForeArm
-    400096: LowManRightHand
-    400098: LowManRightHandIndex1
-    400100: LowManRightHandIndex2
-    400102: LowManRightHandIndex2_end
-    400104: LowManRightHandMiddle1
-    400106: LowManRightHandMiddle2
-    400108: LowManRightHandMiddle2_end
-    400110: LowManRightHandPinky1
-    400112: LowManRightHandPinky2
-    400114: LowManRightHandPinky2_end
-    400116: LowManRightHandRing1
-    400118: LowManRightHandRing2
-    400120: LowManRightHandRing2_end
-    400122: LowManRightHandThumb1
-    400124: LowManRightHandThumb1_end
-    400126: LowManRightLeg
-    400128: LowManRightShoulder
-    400130: LowManRightToeBase
-    400132: LowManRightToeBase_end
-    400134: LowManRightUpLeg
-    400136: LowManSpine
-    400138: LowManSpine1
-    400140: LowManSpine2
-    400142: Orc
-    400144: //RootNode
-    400146: Shoes Orc (Boots)
-    400148: Shoes Orc (None)
-    400150: Shoes Orc (Sandals)
-    400152: Torso Orc (Armor 1)
-    400154: Torso Orc (Armor 2)
-    400156: Torso Orc (Heavy Armor Pads)
-    400158: Torso Orc (Heavy Armor)
-    400160: Torso Orc (Plain)
-    400162: Torso Orc (Shirt with Furs)
-    400164: Torso Orc (Spike Armor)
-    400166: Torso Orc (Torn Shirt
-    400168: Torso Orc (Vest)
-    400170: Torso Orc (Banner Carrier)
-    2100000: Orc Skin
-    2100002: Leather
-    2100004: Fabric 1
-    2100006: Straw
-    2100008: Skull
-    2100010: Hair
-    2100012: Metal
-    2100014: Banner
-    2300000: Head Orc (Bald)
-    2300002: Head Orc (Beard)
-    2300004: Head Orc (Earing)
-    2300006: Head Orc (Hair 2)
-    2300008: Head Orc (Hat)
-    2300010: Head Orc (Leather Helmet)
-    2300012: Head Orc (Metal Helmet 1)
-    2300014: Head Orc (Metal Helmet 2)
-    2300016: Head Orc (Metal Helmet 3)
-    2300018: Head Orc (Metal Helmet Horns 1)
-    2300020: Head Orc (Metal Helmet Horns 2)
-    2300022: Head Orc (Short Hair)
-    2300024: Legs Orc (Heavy Armor)
-    2300026: Legs Orc (Knee Pads
-    2300028: Legs Orc (Loincloth)
-    2300030: Legs Orc (Skull Belt)
-    2300032: Legs Orc (Torn Pants)
-    2300034: Shoes Orc (Boots)
-    2300036: Shoes Orc (None)
-    2300038: Shoes Orc (Sandals)
-    2300040: Torso Orc (Armor 1)
-    2300042: Torso Orc (Armor 2)
-    2300044: Torso Orc (Banner Carrier)
-    2300046: Torso Orc (Heavy Armor Pads)
-    2300048: Torso Orc (Heavy Armor)
-    2300050: Torso Orc (Plain)
-    2300052: Torso Orc (Shirt with Furs)
-    2300054: Torso Orc (Spike Armor)
-    2300056: Torso Orc (Torn Shirt
-    2300058: Torso Orc (Vest)
-    3300000: Head Orc (Bald)
-    3300002: Head Orc (Beard)
-    3300004: Head Orc (Earing)
-    3300006: Head Orc (Hair 2)
-    3300008: Head Orc (Hat)
-    3300010: Head Orc (Leather Helmet)
-    3300012: Head Orc (Metal Helmet 1)
-    3300014: Head Orc (Metal Helmet 2)
-    3300016: Head Orc (Metal Helmet 3)
-    3300018: Head Orc (Metal Helmet Horns 1)
-    3300020: Head Orc (Metal Helmet Horns 2)
-    3300022: Head Orc (Short Hair)
-    3300024: Legs Orc (Heavy Armor)
-    3300026: Legs Orc (Knee Pads
-    3300028: Legs Orc (Loincloth)
-    3300030: Legs Orc (Skull Belt)
-    3300032: Legs Orc (Torn Pants)
-    3300034: Shoes Orc (Boots)
-    3300036: Shoes Orc (None)
-    3300038: Shoes Orc (Sandals)
-    3300040: Torso Orc (Armor 1)
-    3300042: Torso Orc (Armor 2)
-    3300044: Torso Orc (Banner Carrier)
-    3300046: Torso Orc (Heavy Armor Pads)
-    3300048: Torso Orc (Heavy Armor)
-    3300050: Torso Orc (Plain)
-    3300052: Torso Orc (Shirt with Furs)
-    3300054: Torso Orc (Spike Armor)
-    3300056: Torso Orc (Torn Shirt
-    3300058: Torso Orc (Vest)
-    4300000: Shoes Orc (None)
-    4300002: Torso Orc (Plain)
-    4300004: Legs Orc (Loincloth)
-    4300006: Shoes Orc (Boots)
-    4300008: Shoes Orc (Sandals)
-    4300010: Head Orc (Bald)
-    4300012: Torso Orc (Vest)
-    4300014: Torso Orc (Armor 1)
-    4300016: Legs Orc (Skull Belt)
-    4300018: Legs Orc (Torn Pants)
-    4300020: Head Orc (Short Hair)
-    4300022: Head Orc (Leather Helmet)
-    4300024: Torso Orc (Shirt with Furs)
-    4300026: Head Orc (Hair 2)
-    4300028: Legs Orc (Long Pants)
-    4300030: Head Orc (Earing)
-    4300032: Torso Orc (Armor 2)
-    4300034: Head Orc (Hat)
-    4300036: Head Orc (Metal Helmet 1)
-    4300038: Head Orc (Metal Helmet 2)
-    4300040: Head Orc (Beard)
-    4300042: Torso Orc (Heavy Armor)
-    4300044: Head Orc (Metal Helmet 3)
-    4300046: Torso Orc (Heavy Armor Pads)
-    4300048: Legs Orc (Heavy Armor)
-    4300050: Legs Orc (Knee Pads
-    4300052: Torso Orc (Torn Shirt
-    4300054: Head Orc (Metal Helmet Horns 1)
-    4300056: Head Orc (Metal Helmet Horns 2)
-    4300058: Torso Orc (Spike Armor)
-    4300060: Torso Orc (Banner Carrier)
-    9500000: //RootNode
-    13700000: Head Orc (Bald)
-    13700002: Head Orc (Beard)
-    13700004: Head Orc (Earing)
-    13700006: Head Orc (Hair 2)
-    13700008: Head Orc (Hat)
-    13700010: Head Orc (Leather Helmet)
-    13700012: Head Orc (Metal Helmet 1)
-    13700014: Head Orc (Metal Helmet 2)
-    13700016: Head Orc (Metal Helmet 3)
-    13700018: Head Orc (Metal Helmet Horns 1)
-    13700020: Head Orc (Metal Helmet Horns 2)
-    13700022: Head Orc (Short Hair)
-    13700024: Legs Orc (Heavy Armor)
-    13700026: Legs Orc (Knee Pads
-    13700028: Legs Orc (Loincloth)
-    13700030: Legs Orc (Long Pants)
-    13700032: Legs Orc (Skull Belt)
-    13700034: Legs Orc (Torn Pants)
-    13700036: Shoes Orc (Boots)
-    13700038: Shoes Orc (None)
-    13700040: Shoes Orc (Sandals)
-    13700042: Torso Orc (Armor 1)
-    13700044: Torso Orc (Armor 2)
-    13700046: Torso Orc (Heavy Armor Pads)
-    13700048: Torso Orc (Heavy Armor)
-    13700050: Torso Orc (Plain)
-    13700052: Torso Orc (Shirt with Furs)
-    13700054: Torso Orc (Spike Armor)
-    13700056: Torso Orc (Torn Shirt
-    13700058: Torso Orc (Vest)
-    13700060: Torso Orc (Banner Carrier)
-    2186277476908879412: ImportLogs
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Head Orc (Bald)
+  - first:
+      1: 100002
+    second: Head Orc (Beard)
+  - first:
+      1: 100004
+    second: Head Orc (Earing)
+  - first:
+      1: 100006
+    second: Head Orc (Hair 2)
+  - first:
+      1: 100008
+    second: Head Orc (Hat)
+  - first:
+      1: 100010
+    second: Head Orc (Leather Helmet)
+  - first:
+      1: 100012
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      1: 100014
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      1: 100016
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      1: 100018
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      1: 100020
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      1: 100022
+    second: Head Orc (Short Hair)
+  - first:
+      1: 100024
+    second: Legs Orc (Heavy Armor)
+  - first:
+      1: 100026
+    second: Legs Orc (Knee Pads
+  - first:
+      1: 100028
+    second: Legs Orc (Loincloth)
+  - first:
+      1: 100030
+    second: Legs Orc (Long Pants)
+  - first:
+      1: 100032
+    second: Legs Orc (Skull Belt)
+  - first:
+      1: 100034
+    second: Legs Orc (Torn Pants)
+  - first:
+      1: 100036
+    second: LowManHead
+  - first:
+      1: 100038
+    second: LowManHead_end
+  - first:
+      1: 100040
+    second: LowManHips
+  - first:
+      1: 100042
+    second: LowManLeftArm
+  - first:
+      1: 100044
+    second: LowManLeftFoot
+  - first:
+      1: 100046
+    second: LowManLeftForeArm
+  - first:
+      1: 100048
+    second: LowManLeftHand
+  - first:
+      1: 100050
+    second: LowManLeftHandIndex1
+  - first:
+      1: 100052
+    second: LowManLeftHandIndex2
+  - first:
+      1: 100054
+    second: LowManLeftHandIndex2_end
+  - first:
+      1: 100056
+    second: LowManLeftHandMiddle1
+  - first:
+      1: 100058
+    second: LowManLeftHandMiddle2
+  - first:
+      1: 100060
+    second: LowManLeftHandMiddle2_end
+  - first:
+      1: 100062
+    second: LowManLeftHandPinky1
+  - first:
+      1: 100064
+    second: LowManLeftHandPinky2
+  - first:
+      1: 100066
+    second: LowManLeftHandPinky2_end
+  - first:
+      1: 100068
+    second: LowManLeftHandRing1
+  - first:
+      1: 100070
+    second: LowManLeftHandRing2
+  - first:
+      1: 100072
+    second: LowManLeftHandRing2_end
+  - first:
+      1: 100074
+    second: LowManLeftHandThumb1
+  - first:
+      1: 100076
+    second: LowManLeftHandThumb1_end
+  - first:
+      1: 100078
+    second: LowManLeftLeg
+  - first:
+      1: 100080
+    second: LowManLeftShoulder
+  - first:
+      1: 100082
+    second: LowManLeftToeBase
+  - first:
+      1: 100084
+    second: LowManLeftToeBase_end
+  - first:
+      1: 100086
+    second: LowManLeftUpLeg
+  - first:
+      1: 100088
+    second: LowManNeck
+  - first:
+      1: 100090
+    second: LowManRightArm
+  - first:
+      1: 100092
+    second: LowManRightFoot
+  - first:
+      1: 100094
+    second: LowManRightForeArm
+  - first:
+      1: 100096
+    second: LowManRightHand
+  - first:
+      1: 100098
+    second: LowManRightHandIndex1
+  - first:
+      1: 100100
+    second: LowManRightHandIndex2
+  - first:
+      1: 100102
+    second: LowManRightHandIndex2_end
+  - first:
+      1: 100104
+    second: LowManRightHandMiddle1
+  - first:
+      1: 100106
+    second: LowManRightHandMiddle2
+  - first:
+      1: 100108
+    second: LowManRightHandMiddle2_end
+  - first:
+      1: 100110
+    second: LowManRightHandPinky1
+  - first:
+      1: 100112
+    second: LowManRightHandPinky2
+  - first:
+      1: 100114
+    second: LowManRightHandPinky2_end
+  - first:
+      1: 100116
+    second: LowManRightHandRing1
+  - first:
+      1: 100118
+    second: LowManRightHandRing2
+  - first:
+      1: 100120
+    second: LowManRightHandRing2_end
+  - first:
+      1: 100122
+    second: LowManRightHandThumb1
+  - first:
+      1: 100124
+    second: LowManRightHandThumb1_end
+  - first:
+      1: 100126
+    second: LowManRightLeg
+  - first:
+      1: 100128
+    second: LowManRightShoulder
+  - first:
+      1: 100130
+    second: LowManRightToeBase
+  - first:
+      1: 100132
+    second: LowManRightToeBase_end
+  - first:
+      1: 100134
+    second: LowManRightUpLeg
+  - first:
+      1: 100136
+    second: LowManSpine
+  - first:
+      1: 100138
+    second: LowManSpine1
+  - first:
+      1: 100140
+    second: LowManSpine2
+  - first:
+      1: 100142
+    second: Orc
+  - first:
+      1: 100144
+    second: //RootNode
+  - first:
+      1: 100146
+    second: Shoes Orc (Boots)
+  - first:
+      1: 100148
+    second: Shoes Orc (None)
+  - first:
+      1: 100150
+    second: Shoes Orc (Sandals)
+  - first:
+      1: 100152
+    second: Torso Orc (Armor 1)
+  - first:
+      1: 100154
+    second: Torso Orc (Armor 2)
+  - first:
+      1: 100156
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      1: 100158
+    second: Torso Orc (Heavy Armor)
+  - first:
+      1: 100160
+    second: Torso Orc (Plain)
+  - first:
+      1: 100162
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      1: 100164
+    second: Torso Orc (Spike Armor)
+  - first:
+      1: 100166
+    second: Torso Orc (Torn Shirt
+  - first:
+      1: 100168
+    second: Torso Orc (Vest)
+  - first:
+      1: 100170
+    second: Torso Orc (Banner Carrier)
+  - first:
+      4: 400000
+    second: Head Orc (Bald)
+  - first:
+      4: 400002
+    second: Head Orc (Beard)
+  - first:
+      4: 400004
+    second: Head Orc (Earing)
+  - first:
+      4: 400006
+    second: Head Orc (Hair 2)
+  - first:
+      4: 400008
+    second: Head Orc (Hat)
+  - first:
+      4: 400010
+    second: Head Orc (Leather Helmet)
+  - first:
+      4: 400012
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      4: 400014
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      4: 400016
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      4: 400018
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      4: 400020
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      4: 400022
+    second: Head Orc (Short Hair)
+  - first:
+      4: 400024
+    second: Legs Orc (Heavy Armor)
+  - first:
+      4: 400026
+    second: Legs Orc (Knee Pads
+  - first:
+      4: 400028
+    second: Legs Orc (Loincloth)
+  - first:
+      4: 400030
+    second: Legs Orc (Long Pants)
+  - first:
+      4: 400032
+    second: Legs Orc (Skull Belt)
+  - first:
+      4: 400034
+    second: Legs Orc (Torn Pants)
+  - first:
+      4: 400036
+    second: LowManHead
+  - first:
+      4: 400038
+    second: LowManHead_end
+  - first:
+      4: 400040
+    second: LowManHips
+  - first:
+      4: 400042
+    second: LowManLeftArm
+  - first:
+      4: 400044
+    second: LowManLeftFoot
+  - first:
+      4: 400046
+    second: LowManLeftForeArm
+  - first:
+      4: 400048
+    second: LowManLeftHand
+  - first:
+      4: 400050
+    second: LowManLeftHandIndex1
+  - first:
+      4: 400052
+    second: LowManLeftHandIndex2
+  - first:
+      4: 400054
+    second: LowManLeftHandIndex2_end
+  - first:
+      4: 400056
+    second: LowManLeftHandMiddle1
+  - first:
+      4: 400058
+    second: LowManLeftHandMiddle2
+  - first:
+      4: 400060
+    second: LowManLeftHandMiddle2_end
+  - first:
+      4: 400062
+    second: LowManLeftHandPinky1
+  - first:
+      4: 400064
+    second: LowManLeftHandPinky2
+  - first:
+      4: 400066
+    second: LowManLeftHandPinky2_end
+  - first:
+      4: 400068
+    second: LowManLeftHandRing1
+  - first:
+      4: 400070
+    second: LowManLeftHandRing2
+  - first:
+      4: 400072
+    second: LowManLeftHandRing2_end
+  - first:
+      4: 400074
+    second: LowManLeftHandThumb1
+  - first:
+      4: 400076
+    second: LowManLeftHandThumb1_end
+  - first:
+      4: 400078
+    second: LowManLeftLeg
+  - first:
+      4: 400080
+    second: LowManLeftShoulder
+  - first:
+      4: 400082
+    second: LowManLeftToeBase
+  - first:
+      4: 400084
+    second: LowManLeftToeBase_end
+  - first:
+      4: 400086
+    second: LowManLeftUpLeg
+  - first:
+      4: 400088
+    second: LowManNeck
+  - first:
+      4: 400090
+    second: LowManRightArm
+  - first:
+      4: 400092
+    second: LowManRightFoot
+  - first:
+      4: 400094
+    second: LowManRightForeArm
+  - first:
+      4: 400096
+    second: LowManRightHand
+  - first:
+      4: 400098
+    second: LowManRightHandIndex1
+  - first:
+      4: 400100
+    second: LowManRightHandIndex2
+  - first:
+      4: 400102
+    second: LowManRightHandIndex2_end
+  - first:
+      4: 400104
+    second: LowManRightHandMiddle1
+  - first:
+      4: 400106
+    second: LowManRightHandMiddle2
+  - first:
+      4: 400108
+    second: LowManRightHandMiddle2_end
+  - first:
+      4: 400110
+    second: LowManRightHandPinky1
+  - first:
+      4: 400112
+    second: LowManRightHandPinky2
+  - first:
+      4: 400114
+    second: LowManRightHandPinky2_end
+  - first:
+      4: 400116
+    second: LowManRightHandRing1
+  - first:
+      4: 400118
+    second: LowManRightHandRing2
+  - first:
+      4: 400120
+    second: LowManRightHandRing2_end
+  - first:
+      4: 400122
+    second: LowManRightHandThumb1
+  - first:
+      4: 400124
+    second: LowManRightHandThumb1_end
+  - first:
+      4: 400126
+    second: LowManRightLeg
+  - first:
+      4: 400128
+    second: LowManRightShoulder
+  - first:
+      4: 400130
+    second: LowManRightToeBase
+  - first:
+      4: 400132
+    second: LowManRightToeBase_end
+  - first:
+      4: 400134
+    second: LowManRightUpLeg
+  - first:
+      4: 400136
+    second: LowManSpine
+  - first:
+      4: 400138
+    second: LowManSpine1
+  - first:
+      4: 400140
+    second: LowManSpine2
+  - first:
+      4: 400142
+    second: Orc
+  - first:
+      4: 400144
+    second: //RootNode
+  - first:
+      4: 400146
+    second: Shoes Orc (Boots)
+  - first:
+      4: 400148
+    second: Shoes Orc (None)
+  - first:
+      4: 400150
+    second: Shoes Orc (Sandals)
+  - first:
+      4: 400152
+    second: Torso Orc (Armor 1)
+  - first:
+      4: 400154
+    second: Torso Orc (Armor 2)
+  - first:
+      4: 400156
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      4: 400158
+    second: Torso Orc (Heavy Armor)
+  - first:
+      4: 400160
+    second: Torso Orc (Plain)
+  - first:
+      4: 400162
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      4: 400164
+    second: Torso Orc (Spike Armor)
+  - first:
+      4: 400166
+    second: Torso Orc (Torn Shirt
+  - first:
+      4: 400168
+    second: Torso Orc (Vest)
+  - first:
+      4: 400170
+    second: Torso Orc (Banner Carrier)
+  - first:
+      21: 2100000
+    second: Orc Skin
+  - first:
+      21: 2100002
+    second: Leather
+  - first:
+      21: 2100004
+    second: Fabric 1
+  - first:
+      21: 2100006
+    second: Straw
+  - first:
+      21: 2100008
+    second: Skull
+  - first:
+      21: 2100010
+    second: Hair
+  - first:
+      21: 2100012
+    second: Metal
+  - first:
+      21: 2100014
+    second: Banner
+  - first:
+      23: 2300000
+    second: Head Orc (Bald)
+  - first:
+      23: 2300002
+    second: Head Orc (Beard)
+  - first:
+      23: 2300004
+    second: Head Orc (Earing)
+  - first:
+      23: 2300006
+    second: Head Orc (Hair 2)
+  - first:
+      23: 2300008
+    second: Head Orc (Hat)
+  - first:
+      23: 2300010
+    second: Head Orc (Leather Helmet)
+  - first:
+      23: 2300012
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      23: 2300014
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      23: 2300016
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      23: 2300018
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      23: 2300020
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      23: 2300022
+    second: Head Orc (Short Hair)
+  - first:
+      23: 2300024
+    second: Legs Orc (Heavy Armor)
+  - first:
+      23: 2300026
+    second: Legs Orc (Knee Pads
+  - first:
+      23: 2300028
+    second: Legs Orc (Loincloth)
+  - first:
+      23: 2300030
+    second: Legs Orc (Skull Belt)
+  - first:
+      23: 2300032
+    second: Legs Orc (Torn Pants)
+  - first:
+      23: 2300034
+    second: Shoes Orc (Boots)
+  - first:
+      23: 2300036
+    second: Shoes Orc (None)
+  - first:
+      23: 2300038
+    second: Shoes Orc (Sandals)
+  - first:
+      23: 2300040
+    second: Torso Orc (Armor 1)
+  - first:
+      23: 2300042
+    second: Torso Orc (Armor 2)
+  - first:
+      23: 2300044
+    second: Torso Orc (Banner Carrier)
+  - first:
+      23: 2300046
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      23: 2300048
+    second: Torso Orc (Heavy Armor)
+  - first:
+      23: 2300050
+    second: Torso Orc (Plain)
+  - first:
+      23: 2300052
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      23: 2300054
+    second: Torso Orc (Spike Armor)
+  - first:
+      23: 2300056
+    second: Torso Orc (Torn Shirt
+  - first:
+      23: 2300058
+    second: Torso Orc (Vest)
+  - first:
+      33: 3300000
+    second: Head Orc (Bald)
+  - first:
+      33: 3300002
+    second: Head Orc (Beard)
+  - first:
+      33: 3300004
+    second: Head Orc (Earing)
+  - first:
+      33: 3300006
+    second: Head Orc (Hair 2)
+  - first:
+      33: 3300008
+    second: Head Orc (Hat)
+  - first:
+      33: 3300010
+    second: Head Orc (Leather Helmet)
+  - first:
+      33: 3300012
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      33: 3300014
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      33: 3300016
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      33: 3300018
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      33: 3300020
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      33: 3300022
+    second: Head Orc (Short Hair)
+  - first:
+      33: 3300024
+    second: Legs Orc (Heavy Armor)
+  - first:
+      33: 3300026
+    second: Legs Orc (Knee Pads
+  - first:
+      33: 3300028
+    second: Legs Orc (Loincloth)
+  - first:
+      33: 3300030
+    second: Legs Orc (Skull Belt)
+  - first:
+      33: 3300032
+    second: Legs Orc (Torn Pants)
+  - first:
+      33: 3300034
+    second: Shoes Orc (Boots)
+  - first:
+      33: 3300036
+    second: Shoes Orc (None)
+  - first:
+      33: 3300038
+    second: Shoes Orc (Sandals)
+  - first:
+      33: 3300040
+    second: Torso Orc (Armor 1)
+  - first:
+      33: 3300042
+    second: Torso Orc (Armor 2)
+  - first:
+      33: 3300044
+    second: Torso Orc (Banner Carrier)
+  - first:
+      33: 3300046
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      33: 3300048
+    second: Torso Orc (Heavy Armor)
+  - first:
+      33: 3300050
+    second: Torso Orc (Plain)
+  - first:
+      33: 3300052
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      33: 3300054
+    second: Torso Orc (Spike Armor)
+  - first:
+      33: 3300056
+    second: Torso Orc (Torn Shirt
+  - first:
+      33: 3300058
+    second: Torso Orc (Vest)
+  - first:
+      43: 4300000
+    second: Shoes Orc (None)
+  - first:
+      43: 4300002
+    second: Torso Orc (Plain)
+  - first:
+      43: 4300004
+    second: Legs Orc (Loincloth)
+  - first:
+      43: 4300006
+    second: Shoes Orc (Boots)
+  - first:
+      43: 4300008
+    second: Shoes Orc (Sandals)
+  - first:
+      43: 4300010
+    second: Head Orc (Bald)
+  - first:
+      43: 4300012
+    second: Torso Orc (Vest)
+  - first:
+      43: 4300014
+    second: Torso Orc (Armor 1)
+  - first:
+      43: 4300016
+    second: Legs Orc (Skull Belt)
+  - first:
+      43: 4300018
+    second: Legs Orc (Torn Pants)
+  - first:
+      43: 4300020
+    second: Head Orc (Short Hair)
+  - first:
+      43: 4300022
+    second: Head Orc (Leather Helmet)
+  - first:
+      43: 4300024
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      43: 4300026
+    second: Head Orc (Hair 2)
+  - first:
+      43: 4300028
+    second: Legs Orc (Long Pants)
+  - first:
+      43: 4300030
+    second: Head Orc (Earing)
+  - first:
+      43: 4300032
+    second: Torso Orc (Armor 2)
+  - first:
+      43: 4300034
+    second: Head Orc (Hat)
+  - first:
+      43: 4300036
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      43: 4300038
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      43: 4300040
+    second: Head Orc (Beard)
+  - first:
+      43: 4300042
+    second: Torso Orc (Heavy Armor)
+  - first:
+      43: 4300044
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      43: 4300046
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      43: 4300048
+    second: Legs Orc (Heavy Armor)
+  - first:
+      43: 4300050
+    second: Legs Orc (Knee Pads
+  - first:
+      43: 4300052
+    second: Torso Orc (Torn Shirt
+  - first:
+      43: 4300054
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      43: 4300056
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      43: 4300058
+    second: Torso Orc (Spike Armor)
+  - first:
+      43: 4300060
+    second: Torso Orc (Banner Carrier)
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Head Orc (Bald)
+  - first:
+      137: 13700002
+    second: Head Orc (Beard)
+  - first:
+      137: 13700004
+    second: Head Orc (Earing)
+  - first:
+      137: 13700006
+    second: Head Orc (Hair 2)
+  - first:
+      137: 13700008
+    second: Head Orc (Hat)
+  - first:
+      137: 13700010
+    second: Head Orc (Leather Helmet)
+  - first:
+      137: 13700012
+    second: Head Orc (Metal Helmet 1)
+  - first:
+      137: 13700014
+    second: Head Orc (Metal Helmet 2)
+  - first:
+      137: 13700016
+    second: Head Orc (Metal Helmet 3)
+  - first:
+      137: 13700018
+    second: Head Orc (Metal Helmet Horns 1)
+  - first:
+      137: 13700020
+    second: Head Orc (Metal Helmet Horns 2)
+  - first:
+      137: 13700022
+    second: Head Orc (Short Hair)
+  - first:
+      137: 13700024
+    second: Legs Orc (Heavy Armor)
+  - first:
+      137: 13700026
+    second: Legs Orc (Knee Pads
+  - first:
+      137: 13700028
+    second: Legs Orc (Loincloth)
+  - first:
+      137: 13700030
+    second: Legs Orc (Long Pants)
+  - first:
+      137: 13700032
+    second: Legs Orc (Skull Belt)
+  - first:
+      137: 13700034
+    second: Legs Orc (Torn Pants)
+  - first:
+      137: 13700036
+    second: Shoes Orc (Boots)
+  - first:
+      137: 13700038
+    second: Shoes Orc (None)
+  - first:
+      137: 13700040
+    second: Shoes Orc (Sandals)
+  - first:
+      137: 13700042
+    second: Torso Orc (Armor 1)
+  - first:
+      137: 13700044
+    second: Torso Orc (Armor 2)
+  - first:
+      137: 13700046
+    second: Torso Orc (Heavy Armor Pads)
+  - first:
+      137: 13700048
+    second: Torso Orc (Heavy Armor)
+  - first:
+      137: 13700050
+    second: Torso Orc (Plain)
+  - first:
+      137: 13700052
+    second: Torso Orc (Shirt with Furs)
+  - first:
+      137: 13700054
+    second: Torso Orc (Spike Armor)
+  - first:
+      137: 13700056
+    second: Torso Orc (Torn Shirt
+  - first:
+      137: 13700058
+    second: Torso Orc (Vest)
+  - first:
+      137: 13700060
+    second: Torso Orc (Banner Carrier)
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -349,7 +957,7 @@ ModelImporter:
       name: Straw
     second: {fileID: 2100000, guid: 58b406f6a8051a34a951e2327666961b, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -358,6 +966,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -382,25 +991,34 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -409,24 +1027,424 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
-    human: []
+    serializedVersion: 3
+    human:
+    - boneName: LowManHips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManNeck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManLeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManRightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowManSpine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
-    - name: Ork Warriors(Clone)
+    - name: Orc Warriors(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Shoes Orc (None)
-      parentName: Ork Warriors(Clone)
+    - name: Head Orc (Bald)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Beard)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Earing)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Hair 2)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Hat)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Leather Helmet)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Metal Helmet 1)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Metal Helmet 2)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Metal Helmet 3)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Metal Helmet Horns 1)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Metal Helmet Horns 2)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Head Orc (Short Hair)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Legs Orc (Heavy Armor)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Legs Orc (Knee Pads
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Legs Orc (Loincloth)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Legs Orc (Skull Belt)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Legs Orc (Torn Pants)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Orc
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
@@ -439,22 +1457,22 @@ ModelImporter:
       parentName: LowManHips
       position: {x: -0.09726756, y: -0.057784498, z: 0.0000000034498122}
       rotation: {x: 0.6899179, y: -0.056023665, z: -0.053704184, w: 0.71971554}
-      scale: {x: 1.0000044, y: 0.9999944, z: 1.0000052}
+      scale: {x: 1, y: 0.9999996, z: 1}
     - name: LowManLeftLeg
       parentName: LowManLeftUpLeg
       position: {x: -0.00000014260411, y: 0.000000077626396, z: 0.41396242}
       rotation: {x: 0.06093684, y: 0.025125548, z: -0.007978737, w: 0.99779344}
-      scale: {x: 0.9999964, y: 0.9999984, z: 0.9999972}
+      scale: {x: 0.99999994, y: 0.99999267, z: 0.99999946}
     - name: LowManLeftFoot
       parentName: LowManLeftLeg
       position: {x: -0.00000034323892, y: -0.000000038763368, z: 0.35561472}
       rotation: {x: -0.5292821, y: 0.0039445534, z: 0.053297598, w: 0.8467611}
-      scale: {x: 1.0000032, y: 1.0000249, z: 0.99999017}
+      scale: {x: 0.9999999, y: 1.0000032, z: 1}
     - name: LowManLeftToeBase
       parentName: LowManLeftFoot
       position: {x: 0.000000049695373, y: 0.000000008166836, z: 0.18345621}
       rotation: {x: -0.26146153, y: 0.046164528, z: 0.01252074, w: 0.96402806}
-      scale: {x: 1.0000015, y: 0.9999463, z: 1.0000588}
+      scale: {x: 1, y: 0.9999309, z: 1.0000831}
     - name: LowManLeftToeBase_end
       parentName: LowManLeftToeBase
       position: {x: -0, y: 0.18345615, z: 0}
@@ -464,22 +1482,22 @@ ModelImporter:
       parentName: LowManHips
       position: {x: 0.09726756, y: -0.057784498, z: 0.0000000034498122}
       rotation: {x: 0.6899179, y: 0.056023665, z: 0.053704184, w: 0.71971554}
-      scale: {x: 1.0000044, y: 0.9999944, z: 1.0000052}
+      scale: {x: 1, y: 0.9999996, z: 1}
     - name: LowManRightLeg
       parentName: LowManRightUpLeg
       position: {x: 0.00000014260411, y: 0.000000077626396, z: 0.41396242}
       rotation: {x: 0.06093684, y: -0.025125548, z: 0.007978737, w: 0.99779344}
-      scale: {x: 0.9999964, y: 0.9999984, z: 0.9999972}
+      scale: {x: 0.99999994, y: 0.99999267, z: 0.99999946}
     - name: LowManRightFoot
       parentName: LowManRightLeg
       position: {x: 0.00000034323892, y: -0.000000038763368, z: 0.35561472}
       rotation: {x: -0.52928203, y: -0.0039445595, z: -0.053297587, w: 0.8467611}
-      scale: {x: 1.0000027, y: 1.0000213, z: 0.9999897}
+      scale: {x: 0.99999887, y: 1.0000015, z: 1.0000011}
     - name: LowManRightToeBase
       parentName: LowManRightFoot
       position: {x: -0.000000054091213, y: 0.000000001610325, z: 0.18345623}
       rotation: {x: -0.26146147, y: -0.04616452, z: -0.012520735, w: 0.964028}
-      scale: {x: 1.0000012, y: 0.99994475, z: 1.000056}
+      scale: {x: 0.99999577, y: 0.99992925, z: 1.0000865}
     - name: LowManRightToeBase_end
       parentName: LowManRightToeBase
       position: {x: -0, y: 0.18345617, z: 0}
@@ -489,42 +1507,42 @@ ModelImporter:
       parentName: LowManHips
       position: {x: -0, y: 0.06451187, z: 0}
       rotation: {x: -0.7071068, y: -4.930381e-32, z: 7.703721e-32, w: 0.7071068}
-      scale: {x: 1, y: 1.0000066, z: 1.0000066}
+      scale: {x: 1, y: 0.9999996, z: 0.9999996}
     - name: LowManSpine1
       parentName: LowManSpine
       position: {x: -0, y: 0, z: 0.14704925}
       rotation: {x: -0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1.0000173, z: 1.0000173}
+      scale: {x: 1, y: 1.0000143, z: 1.0000143}
     - name: LowManSpine2
       parentName: LowManSpine1
       position: {x: 0.000000053240736, y: 0, z: 0.14704956}
       rotation: {x: -0.000000029802322, y: -0.352939, z: 0.000000014901161, w: 0.9356464}
-      scale: {x: 1.000012, y: 1.0000323, z: 1.0000277}
+      scale: {x: 1.000011, y: 1.0000285, z: 1.0000212}
     - name: LowManLeftShoulder
       parentName: LowManSpine2
       position: {x: -0.00000026226044, y: 0, z: 0.09767824}
       rotation: {x: -0.4120304, y: 0.000000045231946, z: 0.9111701, w: 0.000000010573266}
-      scale: {x: 0.99983776, y: 1.0000176, z: 1.0001726}
+      scale: {x: 0.9997987, y: 1.0000144, z: 1.0002044}
     - name: LowManLeftArm
       parentName: LowManLeftShoulder
       position: {x: -0.0000004832598, y: 0, z: 0.09867812}
       rotation: {x: 0.00000006258955, y: -0.014864234, z: 0.00000006384169, w: -0.9998896}
-      scale: {x: 1.0000275, y: 1.0000387, z: 1.00005}
+      scale: {x: 1.0000186, y: 1.0000353, z: 1.0000428}
     - name: LowManLeftForeArm
       parentName: LowManLeftArm
       position: {x: 0.0000009870529, y: 0, z: 0.25175828}
       rotation: {x: -0.01577435, y: -0.01846839, z: -0.00017747137, w: 0.9997051}
-      scale: {x: 1.0000345, y: 1.0000248, z: 1.0000002}
+      scale: {x: 1.0000455, y: 1.0000244, z: 0.9999904}
     - name: LowManLeftHand
       parentName: LowManLeftForeArm
       position: {x: -0.0000005605242, y: -0.0000001881077, z: 0.26024285}
       rotation: {x: -0.366381, y: 0.055759825, z: -0.01934409, w: 0.92859125}
-      scale: {x: 1.0000058, y: 0.99999994, z: 1.0000622}
+      scale: {x: 1.0000098, y: 0.99993455, z: 1.0001136}
     - name: LowManLeftHandThumb1
       parentName: LowManLeftHand
       position: {x: 0.00000053346156, y: -0.00000032879592, z: 0.07503349}
-      rotation: {x: -0.0865692, y: 0.752171, z: 0.65152, w: -0.047605436}
-      scale: {x: 0.9998877, y: 1.0002319, z: 0.9999442}
+      rotation: {x: -0.027406039, y: 0.7703813, z: 0.6294925, w: -0.09747229}
+      scale: {x: 0.9997186, y: 1.000594, z: 0.99971163}
     - name: LowManLeftHandThumb1_end
       parentName: LowManLeftHandThumb1
       position: {x: -0, y: 0.08623934, z: 0}
@@ -534,12 +1552,12 @@ ModelImporter:
       parentName: LowManLeftHand
       position: {x: -0.02409304, y: -0.055163946, z: 0.08407598}
       rotation: {x: -0.9115935, y: -0.11815059, z: 0.21402708, w: 0.3305001}
-      scale: {x: 0.9996407, y: 1.0003772, z: 1.000037}
+      scale: {x: 0.99917686, y: 1.001102, z: 0.9997354}
     - name: LowManLeftHandIndex2
       parentName: LowManLeftHandIndex1
       position: {x: -0.019423757, y: 0.0023515965, z: -0.030042682}
       rotation: {x: -0.14915681, y: -0.49946088, z: 0.6911961, w: 0.5005388}
-      scale: {x: 1.0003903, y: 0.9986577, z: 1.0010134}
+      scale: {x: 1.0008582, y: 0.9967737, z: 1.0024154}
     - name: LowManLeftHandIndex2_end
       parentName: LowManLeftHandIndex2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -549,12 +1567,12 @@ ModelImporter:
       parentName: LowManLeftHand
       position: {x: -0.022832744, y: -0.06642447, z: 0.07294309}
       rotation: {x: -0.91159344, y: -0.118150614, z: 0.21402715, w: 0.33050027}
-      scale: {x: 0.99964505, y: 1.0003844, z: 1.0000414}
+      scale: {x: 0.9991791, y: 1.001108, z: 0.9997362}
     - name: LowManLeftHandMiddle2
       parentName: LowManLeftHandMiddle1
       position: {x: -0.019423706, y: 0.0023516074, z: -0.030042741}
       rotation: {x: -0.14915738, y: -0.49946105, z: 0.6911962, w: 0.5005383}
-      scale: {x: 1.0003855, y: 0.99865675, z: 1.0010059}
+      scale: {x: 1.0008552, y: 0.99677515, z: 1.002413}
     - name: LowManLeftHandMiddle2_end
       parentName: LowManLeftHandMiddle2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -564,12 +1582,12 @@ ModelImporter:
       parentName: LowManLeftHand
       position: {x: -0.02171767, y: -0.07638747, z: 0.063093014}
       rotation: {x: -0.91159344, y: -0.11815061, z: 0.2140272, w: 0.33050025}
-      scale: {x: 0.9996433, y: 1.000385, z: 1.0000453}
+      scale: {x: 0.9991811, y: 1.0011083, z: 0.99973977}
     - name: LowManLeftHandRing2
       parentName: LowManLeftHandRing1
       position: {x: -0.019423684, y: 0.002351581, z: -0.030042712}
       rotation: {x: -0.1491574, y: -0.4994611, z: 0.6911961, w: 0.5005384}
-      scale: {x: 1.0003719, y: 0.9986434, z: 1.0010059}
+      scale: {x: 1.0008402, y: 0.9967657, z: 1.0024034}
     - name: LowManLeftHandRing2_end
       parentName: LowManLeftHandRing2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -579,12 +1597,12 @@ ModelImporter:
       parentName: LowManLeftHand
       position: {x: -0.020338088, y: -0.088713795, z: 0.0509064}
       rotation: {x: -0.91159344, y: -0.11815061, z: 0.2140272, w: 0.33050025}
-      scale: {x: 0.9996433, y: 1.000385, z: 1.0000453}
+      scale: {x: 0.9991811, y: 1.0011083, z: 0.99973977}
     - name: LowManLeftHandPinky2
       parentName: LowManLeftHandPinky1
       position: {x: -0.019423649, y: 0.0023515795, z: -0.03004266}
       rotation: {x: -0.1491575, y: -0.499461, z: 0.6911962, w: 0.50053835}
-      scale: {x: 1.0003828, y: 0.99865174, z: 1.0010043}
+      scale: {x: 1.0008485, y: 0.996771, z: 1.002403}
     - name: LowManLeftHandPinky2_end
       parentName: LowManLeftHandPinky2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -594,27 +1612,27 @@ ModelImporter:
       parentName: LowManSpine2
       position: {x: 0.096879706, y: 0, z: 0.012464094}
       rotation: {x: -0.00000002415866, y: 0.91116476, z: 0.000000031573308, w: 0.41204223}
-      scale: {x: 0.9998355, y: 1.000007, z: 1.0001745}
+      scale: {x: 0.99979883, y: 1.0000073, z: 1.0002038}
     - name: LowManRightArm
       parentName: LowManRightShoulder
       position: {x: -0.00000063584736, y: -0.000000009536743, z: 0.09867809}
       rotation: {x: 0.0000001258094, y: 0.014864411, z: 6.210195e-10, w: 0.9998896}
-      scale: {x: 1.0000256, y: 1.0000248, z: 1.0000161}
+      scale: {x: 1.0000248, y: 1.0000211, z: 1.0000083}
     - name: LowManRightForeArm
       parentName: LowManRightArm
       position: {x: 0.0000006496906, y: 0, z: 0.25175828}
       rotation: {x: 0.015774183, y: -0.018468475, z: 0.00017743127, w: 0.999705}
-      scale: {x: 1.0000058, y: 1.0000072, z: 0.99999815}
+      scale: {x: 1.0000049, y: 1.0000032, z: 0.99999005}
     - name: LowManRightHand
       parentName: LowManRightForeArm
       position: {x: -0.0000001618528, y: 0.00000015346613, z: 0.26024285}
       rotation: {x: 0.36638084, y: 0.055759624, z: 0.019344164, w: 0.92859125}
-      scale: {x: 1.0000162, y: 0.9999671, z: 0.9999953}
+      scale: {x: 1.0000322, y: 0.99991155, z: 1.0000448}
     - name: LowManRightHandThumb1
       parentName: LowManRightHand
       position: {x: 0.00000045359133, y: 0.0000005299544, z: 0.075033106}
-      rotation: {x: 0.74628454, y: -0.092550576, z: -0.047387965, w: 0.6574558}
-      scale: {x: 0.99997044, y: 1.0002335, z: 0.99984777}
+      rotation: {x: 0.7699828, y: -0.029940248, z: -0.10057224, w: 0.62937695}
+      scale: {x: 0.9998147, y: 1.0006218, z: 0.99959856}
     - name: LowManRightHandThumb1_end
       parentName: LowManRightHandThumb1
       position: {x: -0, y: 0.086239174, z: 0}
@@ -624,12 +1642,12 @@ ModelImporter:
       parentName: LowManRightHand
       position: {x: -0.023979839, y: 0.056175184, z: 0.08307631}
       rotation: {x: -0.48089927, y: 0.37188458, z: 0.7741339, w: -0.17650655}
-      scale: {x: 0.9997714, y: 1.0004374, z: 0.9998627}
+      scale: {x: 0.9993643, y: 1.0012183, z: 0.9994419}
     - name: LowManRightHandIndex2
       parentName: LowManRightHandIndex1
       position: {x: -0.030084465, y: 0.0023515543, z: 0.01935918}
       rotation: {x: 0.6911961, y: -0.5005385, z: 0.14915785, w: 0.49946088}
-      scale: {x: 1.0007601, y: 0.9990146, z: 1.0003107}
+      scale: {x: 1.0017737, y: 0.99754715, z: 1.0007309}
     - name: LowManRightHandIndex2_end
       parentName: LowManRightHandIndex2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -639,12 +1657,12 @@ ModelImporter:
       parentName: LowManRightHand
       position: {x: -0.022615368, y: 0.06836655, z: 0.07102314}
       rotation: {x: -0.480899, y: 0.37188452, z: 0.7741341, w: -0.17650658}
-      scale: {x: 0.99978995, y: 1.0004518, z: 0.9998746}
+      scale: {x: 0.9993793, y: 1.0012293, z: 0.99945104}
     - name: LowManRightHandMiddle2
       parentName: LowManRightHandMiddle1
       position: {x: -0.030084467, y: 0.0023515543, z: 0.019359052}
       rotation: {x: 0.6911963, y: -0.50053823, z: 0.14915746, w: 0.49946094}
-      scale: {x: 1.0007585, y: 0.9990157, z: 1.0003102}
+      scale: {x: 1.0017791, y: 0.99755424, z: 1.0007366}
     - name: LowManRightHandMiddle2_end
       parentName: LowManRightHandMiddle2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -654,12 +1672,12 @@ ModelImporter:
       parentName: LowManRightHand
       position: {x: -0.02152786, y: 0.078083366, z: 0.061416533}
       rotation: {x: -0.4808993, y: 0.37188455, z: 0.77413386, w: -0.17650667}
-      scale: {x: 0.99978125, y: 1.000437, z: 0.9998748}
+      scale: {x: 0.99937487, y: 1.001223, z: 0.9994504}
     - name: LowManRightHandRing2
       parentName: LowManRightHandRing1
       position: {x: -0.030084554, y: 0.002351553, z: 0.019359076}
       rotation: {x: 0.6911961, y: -0.5005386, z: 0.14915775, w: 0.4994607}
-      scale: {x: 1.0007458, y: 0.9989959, z: 1.0002878}
+      scale: {x: 1.0017682, y: 0.99753946, z: 1.0007193}
     - name: LowManRightHandRing2_end
       parentName: LowManRightHandRing2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -669,12 +1687,12 @@ ModelImporter:
       parentName: LowManRightHand
       position: {x: -0.020281026, y: 0.08922366, z: 0.050402515}
       rotation: {x: -0.4808992, y: 0.3718845, z: 0.7741339, w: -0.17650667}
-      scale: {x: 0.99977875, y: 1.0004338, z: 0.9998638}
+      scale: {x: 0.99937224, y: 1.0012234, z: 0.9994465}
     - name: LowManRightHandPinky2
       parentName: LowManRightHandPinky1
       position: {x: -0.03008453, y: 0.0023515427, z: 0.019359}
       rotation: {x: 0.69119596, y: -0.5005386, z: 0.14915763, w: 0.49946085}
-      scale: {x: 1.0007365, y: 0.9989779, z: 1.000271}
+      scale: {x: 1.0017635, y: 0.9975227, z: 1.0007088}
     - name: LowManRightHandPinky2_end
       parentName: LowManRightHandPinky2
       position: {x: -0, y: 0.09924485, z: 0}
@@ -684,159 +1702,79 @@ ModelImporter:
       parentName: LowManSpine2
       position: {x: 0.0971186, y: 0, z: 0.110414274}
       rotation: {x: 0.000000029802317, y: 0.352939, z: -0.000000014901163, w: 0.9356463}
-      scale: {x: 1.0001674, y: 0.99998605, z: 0.9998173}
+      scale: {x: 1.0002046, y: 0.9999934, z: 0.9997951}
     - name: LowManHead
       parentName: LowManNeck
       position: {x: 0.00000001351647, y: 0, z: 0.10339248}
       rotation: {x: 0.7071068, y: -0.000000014901161, z: 0.0000000024210052, w: 0.7071068}
-      scale: {x: 1.0000006, y: 1.000006, z: 1.0000143}
+      scale: {x: 0.9999984, y: 0.99999535, z: 1.0000002}
     - name: LowManHead_end
       parentName: LowManHead
       position: {x: -0, y: 0.10339248, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Torso Orc (Plain)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Loincloth)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Shoes Orc (Boots)
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: -6.8876294e-18, z: 1.176363e-17, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Shoes Orc (None)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Shoes Orc (Sandals)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Bald)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Torso Orc (Vest)
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Torso Orc (Armor 1)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Skull Belt)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Torn Pants)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Short Hair)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Leather Helmet)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Torso Orc (Shirt with Furs)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Hair 2)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Long Pants)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Earing)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: -1.3775253e-17, z: 2.3527263e-17}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Torso Orc (Armor 2)
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Hat)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Metal Helmet 1)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Metal Helmet 2)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Beard)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Torso Orc (Heavy Armor)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Metal Helmet 3)
-      parentName: Ork Warriors(Clone)
+    - name: Torso Orc (Banner Carrier)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Torso Orc (Heavy Armor Pads)
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Heavy Armor)
-      parentName: Ork Warriors(Clone)
+    - name: Torso Orc (Heavy Armor)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Legs Orc (Knee Pads
-      parentName: Ork Warriors(Clone)
+    - name: Torso Orc (Plain)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Torso Orc (Torn Shirt
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Metal Helmet Horns 1)
-      parentName: Ork Warriors(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
-    - name: Head Orc (Metal Helmet Horns 2)
-      parentName: Ork Warriors(Clone)
+    - name: Torso Orc (Shirt with Furs)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
     - name: Torso Orc (Spike Armor)
-      parentName: Ork Warriors(Clone)
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Torso Orc (Torn Shirt
+      parentName: Orc Warriors(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: Torso Orc (Vest)
+      parentName: Orc Warriors(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.00000008146035, y: 1.1763632e-17, z: 6.887626e-18, w: 1}
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
@@ -847,13 +1785,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

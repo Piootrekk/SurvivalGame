@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81449518958e6ea41aa51c46d75518ae, type: 3}
+  m_Name: GrilledMeat
+  m_EditorClassIdentifier: 
+  itemId: 22
+  nameItem: Grilled Meat
+  description: Use to eat
+  itemSprite: {fileID: 21300000, guid: 9332c2afbbaddc041bf05e050763b955, type: 3}
+  prefab: {fileID: 6225732306763118652, guid: 690b4a0a7eafe104aa7f4ad2510e8d42, type: 3}
+  isStackable: 1
+  stackLimit: 99
+  itemType: 2
+  itemInUse: {fileID: 0}
+  healthBonus: 15
+  sleepBonus: 15
+  hungerBonus: 40
+  thirstBonus: 0
+  enemyDamage: 0
+  woodDamage: 0
+  stoneDamage: 0
+  playerConstructionDamage: 0

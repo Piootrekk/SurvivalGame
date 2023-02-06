@@ -27,7 +27,7 @@ public class PauseManager : MonoBehaviour
 
     private void ChangeTimeScale(bool input)
     {
-       if(input)
+       if(input || GameOverScript.Instance.GameOver)
        {
             Time.timeScale = 0;
        }

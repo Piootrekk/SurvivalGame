@@ -23,6 +23,11 @@ public class AttackManager : MonoBehaviour
             AddCurrentAttackToDamage(iAttack);
             iAttack?.OnAction(damage, hitInfo.point, hitInfo.normal);
             HotBarSlots.Instance.ItemInUse.GetComponent<UI_ItemData>().ReduceDurability();
+            if(hitInfo.transform.GetComponent<AIManager>() != null)
+            {
+                Debug.Log("Enemy Hit");
+                hitInfo.transform.GetComponent<AIManager>().GetDamage = true;
+            }    
         }
     }
 

@@ -417,14 +417,14 @@ public class UI_InventoryManager : MonoBehaviour
 
         itemName.GetComponent<TextMeshProUGUI>().text = DATA.NameItem;
         desc.GetComponent<TextMeshProUGUI>().text = DATA.Description;
-        if (DATA.SleepBonus > 0) { statsList[0].text = $"Sleep Bonus: {DATA.SleepBonus}"; statsList.RemoveAt(0); }
-        if (DATA.HungerBonus > 0) { statsList[0].text = $"Hunger Bonus: {DATA.HungerBonus}"; statsList.RemoveAt(0); }
-        if (DATA.ThirstBonus > 0) { statsList[0].text = $"Thirst Bonus: {DATA.ThirstBonus}"; statsList.RemoveAt(0); }
-        if (DATA.HealthBonus > 0) { statsList[0].text = $"Thirst Bonus: {DATA.HealthBonus}"; statsList.RemoveAt(0); }
-        if (DATA.EnemyDamage > 0) { statsList[0].text = $"Enemy damage: {DATA.EnemyDamage}"; statsList.RemoveAt(0); }
-        if (DATA.WoodDamage > 0) { statsList[0].text = $"Wood damage: {DATA.WoodDamage}"; statsList.RemoveAt(0); }
-        if (DATA.StoneDamage > 0) { statsList[0].text = $"Stone damage: {DATA.StoneDamage}"; statsList.RemoveAt(0); }
-        if (DATA.PlayerConstructionDamage > 0) { statsList[0].text = $"Buildings damage: {DATA.PlayerConstructionDamage}"; statsList.RemoveAt(0); }
+        if (DATA.SleepBonus != 0) { statsList[0].text = $"Sleep Bonus: {DATA.SleepBonus}"; statsList.RemoveAt(0); }
+        if (DATA.HungerBonus != 0) { statsList[0].text = $"Hunger Bonus: {DATA.HungerBonus}"; statsList.RemoveAt(0); }
+        if (DATA.ThirstBonus != 0) { statsList[0].text = $"Thirst Bonus: {DATA.ThirstBonus}"; statsList.RemoveAt(0); }
+        if (DATA.HealthBonus != 0) { statsList[0].text = $"Health Bonus: {DATA.HealthBonus}"; statsList.RemoveAt(0); }
+        if (DATA.EnemyDamage != 0) { statsList[0].text = $"Enemy damage: {DATA.EnemyDamage}"; statsList.RemoveAt(0); }
+        if (DATA.WoodDamage != 0) { statsList[0].text = $"Wood damage: {DATA.WoodDamage}"; statsList.RemoveAt(0); }
+        if (DATA.StoneDamage != 0) { statsList[0].text = $"Stone damage: {DATA.StoneDamage}"; statsList.RemoveAt(0); }
+        if (DATA.PlayerConstructionDamage != 0) { statsList[0].text = $"Buildings damage: {DATA.PlayerConstructionDamage}"; statsList.RemoveAt(0); }
     }
 
     public void EmptyDataPanel()

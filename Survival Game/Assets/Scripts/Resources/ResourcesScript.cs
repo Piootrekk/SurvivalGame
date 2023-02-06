@@ -11,7 +11,7 @@ public class ResourcesScript : MonoBehaviour, IAttack
     [SerializeField] AttackType attackType;
 
     public AttackType AttackType { get => attackType; set => attackType = value; }
-
+    public int CurrentHP { get => currentHP; set => currentHP = value; }
     private void Awake()
     {
         currentHP = startHP;
