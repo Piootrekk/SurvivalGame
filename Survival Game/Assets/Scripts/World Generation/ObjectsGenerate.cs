@@ -29,6 +29,9 @@ public class ObjectsGenerate : MonoBehaviour
         spawnPlayer = GetComponent<SpawnMyMan>();
         spawnPlayer.GetSpawnRangeCoordinates();
         spawnPlayer.SpawnMyDude();
+        GetComponent<DynamicNavMesh>().BuildMesh();
+        GetComponent<DynamicNavMesh>().CanCheck = true;
+
     }
 
     public void Generate()

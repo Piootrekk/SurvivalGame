@@ -23,7 +23,7 @@ public class EnemyAttack : MonoBehaviour
             var item = hitInfo.collider.gameObject;
             if (item.CompareTag("Player"))
             {
-                StatsManager.Instance.Health.TakePoints(currentDamage);
+                StatsManager.Instance.Health.TakePoints(currentDamage * DayNightCycleManager.Instance.DamageMultiplayer);
                 Debug.Log(currentDamage);
             }
             else if (item.GetComponent<ResourcesScript>() != null)

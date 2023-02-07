@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7688679659872106646}
   - component: {fileID: 558860862327149072}
   - component: {fileID: 460870923}
+  - component: {fileID: 379800460}
+  - component: {fileID: 379800461}
   m_Layer: 6
   m_Name: ChunkGenerate
   m_TagString: Untagged
@@ -115,8 +117,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453d36f4d6b7c2f4a93f8dc5880f370e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5402538552438608068, guid: b3db46798118c884d9e5a13b26065032, type: 3}
+  player: {fileID: 853612672430875487, guid: 212e2be96c0e8cf47937f5053f533d67, type: 3}
   maxHeight: 30
   mask:
     serializedVersion: 2
     m_Bits: 1344
+--- !u!114 &379800460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688679659872106644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 3671
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
+--- !u!114 &379800461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688679659872106644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f26988d04bf65345908067b59bc68ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

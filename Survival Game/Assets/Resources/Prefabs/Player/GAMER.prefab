@@ -6617,7 +6617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2780731455580076390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UseItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10548,7 +10548,7 @@ GameObject:
   - component: {fileID: 2780731456324738709}
   - component: {fileID: 2780731456324738706}
   - component: {fileID: 2780731456324738704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraEquip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
