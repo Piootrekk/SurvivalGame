@@ -3160,27 +3160,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2512132112110565151, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
-        type: 3}
-      propertyPath: drops.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512132112110565151, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
-        type: 3}
-      propertyPath: drops.Array.data[0].item
-      value: 
-      objectReference: {fileID: 11400000, guid: b3cac8a50caa65143bc40f4db77eae63,
-        type: 2}
-    - target: {fileID: 2512132112110565151, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
-        type: 3}
-      propertyPath: drops.Array.data[0].amount
-      value: 3
+    - target: {fileID: 1232789700, guid: a82fb194bce48394cbe0ad9fe4a3af4e, type: 3}
+      propertyPath: interactableLayer.m_Bits
+      value: 2176
       objectReference: {fileID: 0}
     - target: {fileID: 3273881438402005891, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1132911082}
+    - target: {fileID: 3273881438402005891, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
+        type: 3}
+      propertyPath: buildMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273881438402005891, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
+        type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 8456141352005174972, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
         type: 3}
       propertyPath: m_RootOrder

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class AIManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class AIManager : MonoBehaviour
     [Space]
     [Header("Basic settings")]
     [SerializeField] Transform player;
-    [SerializeField] LayerMask playerMask, groundMask;
+    [SerializeField] LayerMask playerMask, groundMask, buildMask;
     [SerializeField] float speed;
     [Space]
     [Header("Range")]
@@ -23,6 +24,7 @@ public class AIManager : MonoBehaviour
     private float rotationSpeed = 2f;
     private bool isPlayerInAttackRange;
     private bool isPlayerInSightRange;
+    private bool isBuildInAttackRange;
     private bool getDamage;
     private bool isOnAttack;
     private Vector3 walkPoint;
@@ -30,6 +32,7 @@ public class AIManager : MonoBehaviour
     private Animator animator;
     private bool invokeMethod = true;
     private NavMeshAgent agent;
+    private List<Collider> collidersBuild;
 
     float timer;
     float delay = 3f;
@@ -72,7 +75,7 @@ public class AIManager : MonoBehaviour
             timer = Time.time;
         } 
         var distance = transform.position - walkPoint;
-        if (distance.magnitude < 1f)
+        if (distance.magnitude < 2f)
         {
             isPointSet = false;
             animator.SetBool("IsWalk", false);
@@ -131,10 +134,34 @@ public class AIManager : MonoBehaviour
     {
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
         isPlayerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
+        isBuildInAttackRange = Physics.CheckSphere(transform.position, attackRange, buildMask);
+        if (isBuildInAttackRange)
+        {
+            collidersBuild = Physics.OverlapSphere(transform.position, attackRange, buildMask).ToList();
+            
+            Debug.Log("Object in range: " + collidersBuild.FirstOrDefault().gameObject.name);
+            AttackBuild();
+            return;
+        }
         if (!isPlayerInAttackRange && !isPlayerInSightRange) { Walk(); animator.SetBool("IsChase", false); }
         else if (!isPlayerInAttackRange && isPlayerInSightRange) Chase();
         else if (isPlayerInAttackRange && isPlayerInSightRange) { Attack(); animator.SetBool("IsChase", false); }
     }
+
+    private void AttackBuild()
+    {
+        agent.SetDestination(collidersBuild.First().transform.position);
+        transform.LookAt(collidersBuild.First().transform.position);
+        if (!isOnAttack)
+        {
+            isOnAttack = true;
+            animator.SetTrigger("Attack");
+            Debug.Log("Attack");
+            Invoke(nameof(ResetAttack), timeBetweenAttack);
+
+        }
+    }
+
 
     private void CheckPasiveRanges()
     {

@@ -381,7 +381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHP: 0
   startHP: 200
-  drops: []
+  drops:
+  - item: {fileID: 11400000, guid: b3cac8a50caa65143bc40f4db77eae63, type: 2}
+    amount: 3
   particlesDuringHit: {fileID: 8653691354826667977, guid: 8e086bd026ff0cf439661809410ebc57,
     type: 3}
   attackType: 1
