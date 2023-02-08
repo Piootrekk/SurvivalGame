@@ -179,12 +179,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   waves:
-  - seed: 5613
+  - seed: 111
     frequency: 1
     amplitude: 1
-  - seed: 9915
+  - seed: 111
     frequency: 0.5
     amplitude: 2
-  - seed: 6712
+  - seed: 111
     frequency: 0.25
     amplitude: 4

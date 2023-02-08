@@ -3268,6 +3268,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2780731456075595082, guid: 212e2be96c0e8cf47937f5053f533d67,
+        type: 3}
+      propertyPath: playerExp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3827474339888674461, guid: 212e2be96c0e8cf47937f5053f533d67,
         type: 3}
       propertyPath: m_AnchorMax.y

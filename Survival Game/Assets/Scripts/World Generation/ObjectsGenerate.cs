@@ -31,7 +31,7 @@ public class ObjectsGenerate : MonoBehaviour
         spawnPlayer.SpawnMyDude();
         GetComponent<DynamicNavMesh>().BuildMesh();
         GetComponent<DynamicNavMesh>().CanCheck = true;
-
+        Invoke(nameof(SpawnMobs), 1);
     }
 
     public void Generate()
@@ -65,6 +65,19 @@ public class ObjectsGenerate : MonoBehaviour
                 
             }
         }
+    }
+
+    private void SpawnMobs()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            GetComponent<SpawnMobs>().SpawnAgresiveMob();
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            GetComponent<SpawnMobs>().SpawnPassiveMob();
+        }
+        GetComponent<SpawnMobs>().SpawnedSuccesfully = true;
     }
 }
 

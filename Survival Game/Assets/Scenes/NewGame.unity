@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379800460, guid: da834a44517ab63448bed43f5fac961d, type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 3159
+      objectReference: {fileID: 0}
     - target: {fileID: 7688679659872106644, guid: da834a44517ab63448bed43f5fac961d,
         type: 3}
       propertyPath: m_Name
@@ -192,3 +196,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da834a44517ab63448bed43f5fac961d, type: 3}
+--- !u!1 &379800459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688679659872106644, guid: da834a44517ab63448bed43f5fac961d,
+    type: 3}
+  m_PrefabInstance: {fileID: 379800458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &379800467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379800459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea949417d4200bd488c25decae17cd61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passiveMob: {fileID: 5141039955416039249, guid: 5103d59eab51ea4448c861f0ef880e01,
+    type: 3}
+  agresiveMob: {fileID: 8456141352005174972, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
+    type: 3}
+  maxHeight: 30
+  mask:
+    serializedVersion: 2
+    m_Bits: 64

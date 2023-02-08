@@ -12,7 +12,7 @@ public class DynamicNavMesh : MonoBehaviour
     public void BuildMesh()
     {
         List<GameObject> objects = GameObject.FindObjectsOfType<GameObject>().ToList();
-        objectCount = objects.Where(o => o.layer != LayerMask.NameToLayer("UI")).Count();
+        objectCount = objects.Where(o => o.layer == LayerMask.NameToLayer("Resoursable") || o.layer == LayerMask.NameToLayer("Buildable")).Count();
         gameObject.GetComponent<NavMeshSurface>().BuildNavMesh();
         Debug.Log(objectCount);
     }
@@ -21,8 +21,8 @@ public class DynamicNavMesh : MonoBehaviour
     {
         if (!CanCheck) return;
         List<GameObject> objects = FindObjectsOfType<GameObject>().ToList();
-        int temp = objects.Where(o => o.layer != LayerMask.NameToLayer("UI")).Count();
-        if(temp != objectCount)
+        int temp = objects.Where(o => o.layer == LayerMask.NameToLayer("Resoursable") || o.layer == LayerMask.NameToLayer("Buildable")).Count();
+        if (temp != objectCount)
         {
             Debug.Log("Liczba wszystkich obiektów w scenie: " + objectCount);
             objectCount = temp;

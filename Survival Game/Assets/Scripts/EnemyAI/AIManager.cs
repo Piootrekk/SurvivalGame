@@ -44,6 +44,10 @@ public class AIManager : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerController>().transform;
+    }
 
     private void FixedUpdate()
     {
@@ -143,6 +147,14 @@ public class AIManager : MonoBehaviour
             AttackBuild();
             return;
         }
+        if (getDamage)
+        {
+            animator.SetTrigger("OnHit");
+            Debug.Log(getDamage);
+            getDamage = false;
+            animator.SetBool("IsChase", false);
+            return;
+        }
         if (!isPlayerInAttackRange && !isPlayerInSightRange) { Walk(); animator.SetBool("IsChase", false); }
         else if (!isPlayerInAttackRange && isPlayerInSightRange) Chase();
         else if (isPlayerInAttackRange && isPlayerInSightRange) { Attack(); animator.SetBool("IsChase", false); }
@@ -150,7 +162,8 @@ public class AIManager : MonoBehaviour
 
     private void AttackBuild()
     {
-        agent.SetDestination(collidersBuild.First().transform.position);
+        Vector3 faceCenter = CalculateFaceCenter(collidersBuild.First());
+        agent.SetDestination(faceCenter);
         transform.LookAt(collidersBuild.First().transform.position);
         if (!isOnAttack)
         {
@@ -181,9 +194,29 @@ public class AIManager : MonoBehaviour
             isPointSet = true;
 
         }
-        else GenerateWalkPoint();   
+        else GenerateWalkPoint();
     }
 
+
+    private Vector3 CalculateFaceCenter(Collider collider)
+    {
+        SphereCollider sphereCollider = collider as SphereCollider;
+        if (sphereCollider != null)
+        {
+            return sphereCollider.transform.position + sphereCollider.center;
+        }
+        BoxCollider boxCollider = collider as BoxCollider;
+        if (boxCollider != null)
+        {
+            Vector3 faceCenter = boxCollider.transform.position + boxCollider.center;
+            faceCenter += boxCollider.transform.right * boxCollider.size.x / 2f;
+            faceCenter += boxCollider.transform.up * boxCollider.size.y / 2f;
+
+            return faceCenter;
+        }
+
+        return collider.transform.position;
+    }
 }
 
 

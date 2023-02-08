@@ -362,6 +362,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  buildMask:
+    serializedVersion: 2
+    m_Bits: 0
   speed: 3
   walkPointRange: 5
   attackRange: 1
