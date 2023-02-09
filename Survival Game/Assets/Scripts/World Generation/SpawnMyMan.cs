@@ -9,6 +9,8 @@ public class SpawnMyMan : MonoBehaviour
     [SerializeField] LayerMask mask;
     private Vector2 spawnPlace;
 
+    public GameObject Player { get => player; set => player = value; }
+
     public void GetSpawnRangeCoordinates()
     {
         spawnPlace = new(GetComponent<GenerateLevel>().SummarySizeX, GetComponent<GenerateLevel>().SummarySizeZ);

@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &379800458
+--- !u!1001 &1348088194
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 7688679659872106644, guid: da834a44517ab63448bed43f5fac961d,
         type: 3}
       propertyPath: m_Name
-      value: ChunkGenerate
+      value: GenerateFromSaveWorld
       objectReference: {fileID: 0}
     - target: {fileID: 7688679659872106645, guid: da834a44517ab63448bed43f5fac961d,
         type: 3}
@@ -190,71 +190,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 379800467, guid: da834a44517ab63448bed43f5fac961d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da834a44517ab63448bed43f5fac961d, type: 3}
---- !u!1 &379800459 stripped
+--- !u!1 &1348088195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7688679659872106644, guid: da834a44517ab63448bed43f5fac961d,
     type: 3}
-  m_PrefabInstance: {fileID: 379800458}
+  m_PrefabInstance: {fileID: 1348088194}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &379800460
+--- !u!114 &1348088196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379800459}
+  m_GameObject: {fileID: 1348088195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9828f20d2ebd4af4787d85bdd21a5f06, type: 3}
+  m_Script: {fileID: 11500000, guid: e5e40c7e81a948c48b5df70b659d8d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidthInTiles: 15
-  mapDepthInTiles: 15
+  mapWidthInTiles: 0
+  mapDepthInTiles: 0
   tilePrefab: {fileID: 1188602811658080878, guid: e12f91b909958c34c99d241e69eb1ae3,
     type: 3}
+  player: {fileID: 41505049682377189, guid: 212e2be96c0e8cf47937f5053f533d67, type: 3}
+  enviromentDataBase:
+  - {fileID: 8456141352005343900, guid: a82fb194bce48394cbe0ad9fe4a3af4e, type: 3}
+  - {fileID: 5481852943564662251, guid: 5103d59eab51ea4448c861f0ef880e01, type: 3}
+  - {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153, type: 3}
+  - {fileID: 8217921764671092139, guid: acb7937ad838b5d448737c07bc8c76c4, type: 3}
+  - {fileID: 838651735941853193, guid: 70bb884f2c243ff42b41e6185dafc9ab, type: 3}
+  - {fileID: 6788724058745802645, guid: 58750b6d76f3cef4d8c6bb6cf0594230, type: 3}
   SummarySizeX: 0
   SummarySizeZ: 0
---- !u!114 &379800461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379800459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9566db30c54b3b429109610ec85b092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - prefab: {fileID: 6788724058745802645, guid: 58750b6d76f3cef4d8c6bb6cf0594230,
-      type: 3}
-    destiny: 100
-  - prefab: {fileID: 8217921764671092139, guid: acb7937ad838b5d448737c07bc8c76c4,
-      type: 3}
-    destiny: 50
-  - prefab: {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
-      type: 3}
-    destiny: 50
-  - prefab: {fileID: 838651735941853193, guid: 70bb884f2c243ff42b41e6185dafc9ab, type: 3}
-    destiny: 70
-  - prefab: {fileID: 4738874151613689730, guid: 6486f0af2b2dead44a029b39885387fe,
-      type: 3}
-    destiny: 70
-  - prefab: {fileID: 7355544077212196147, guid: 77a5e15f206e3f848bdf5d94b37d9d4f,
-      type: 3}
-    destiny: 50
-  canSpawn:
-    serializedVersion: 2
-    m_Bits: 64
-  cannotSpawn:
-    serializedVersion: 2
-    m_Bits: 1024
-  minHeight: 0
-  maxHeight: 50
-  xRange: {x: 0, y: 0}
-  zRange: {x: 0, y: 0}
-  rotateTowardsNormal: 0
-  rotationRange: {x: 0, y: 360}

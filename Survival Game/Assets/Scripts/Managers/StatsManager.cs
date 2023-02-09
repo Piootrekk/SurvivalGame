@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
-    [SerializeField] private Transform health;
-    [SerializeField] private Transform hunger;
-    [SerializeField] private Transform thirst;
-    [SerializeField] private Transform sleep;
+    [SerializeField] public Transform health;
+    [SerializeField] public Transform hunger;
+    [SerializeField] public Transform thirst;
+    [SerializeField] public Transform sleep;
 
-    public PlayerStats Health => health.GetComponent<PlayerStats>();
+    public PlayerStats Health { get => health.GetComponent<PlayerStats>();  }
     public PlayerStats Hunger => hunger.GetComponent<PlayerStats>();
     public PlayerStats Thirst => thirst.GetComponent<PlayerStats>();
     public PlayerStats Sleep => sleep.GetComponent<PlayerStats>();

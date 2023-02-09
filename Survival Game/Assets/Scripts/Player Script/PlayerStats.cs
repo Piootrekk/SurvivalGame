@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     private float basicMaxPoints;
 
     public float CurrentPoints { get { return currentPoints; } set { currentPoints = value; } }
-    public float MaxPoints { get { return currentPoints; } set { currentPoints = value; } }
+    public float MaxPoints { get { return maxPoints; } set { maxPoints = value; } }
     public float DecayRate { get { return decayRate; } set { decayRate = value; } }
     public float BasicMaxPoints { get { return basicMaxPoints; } set { basicMaxPoints = value; } }
 

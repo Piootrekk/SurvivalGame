@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7688679659872106645}
   - component: {fileID: -7818278866073442377}
-  - component: {fileID: 7688679659872106646}
-  - component: {fileID: 558860862327149072}
   - component: {fileID: 460870923}
   - component: {fileID: 379800460}
   - component: {fileID: 379800461}
+  - component: {fileID: 379800467}
   m_Layer: 6
-  m_Name: ChunkGenerate
+  m_Name: GenerateFromSaveWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,66 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7688679659872106644}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7688679659872106646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688679659872106644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9828f20d2ebd4af4787d85bdd21a5f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapWidthInTiles: 30
-  mapDepthInTiles: 30
-  tilePrefab: {fileID: 1188602811658080878, guid: e12f91b909958c34c99d241e69eb1ae3,
-    type: 3}
-  SummarySizeX: 0
-  SummarySizeZ: 0
---- !u!114 &558860862327149072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688679659872106644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9566db30c54b3b429109610ec85b092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - prefab: {fileID: 6788724058745802645, guid: 58750b6d76f3cef4d8c6bb6cf0594230,
-      type: 3}
-    destiny: 200
-  - prefab: {fileID: 838651735941853193, guid: 70bb884f2c243ff42b41e6185dafc9ab, type: 3}
-    destiny: 125
-  - prefab: {fileID: 8217921764671092139, guid: acb7937ad838b5d448737c07bc8c76c4,
-      type: 3}
-    destiny: 50
-  - prefab: {fileID: 5294878000163241234, guid: f2ea62b4b455a8a4f92aa5fc68d9a153,
-      type: 3}
-    destiny: 50
-  - prefab: {fileID: 4738874151613689730, guid: 6486f0af2b2dead44a029b39885387fe,
-      type: 3}
-    destiny: 50
-  - prefab: {fileID: 7355544077212196147, guid: 77a5e15f206e3f848bdf5d94b37d9d4f,
-      type: 3}
-    destiny: 50
-  canSpawn:
-    serializedVersion: 2
-    m_Bits: 64
-  cannotSpawn:
-    serializedVersion: 2
-    m_Bits: 3072
-  minHeight: 0
-  maxHeight: 50
-  xRange: {x: 0, y: 290}
-  zRange: {x: 0, y: 290}
-  rotateTowardsNormal: 0.1
-  rotationRange: {x: 0, y: 360}
 --- !u!114 &460870923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +79,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 3671
+    m_Bits: 3159
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -164,3 +103,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f26988d04bf65345908067b59bc68ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &379800467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688679659872106644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea949417d4200bd488c25decae17cd61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passiveMob: {fileID: 5141039955416039249, guid: 5103d59eab51ea4448c861f0ef880e01,
+    type: 3}
+  agresiveMob: {fileID: 8456141352005174972, guid: a82fb194bce48394cbe0ad9fe4a3af4e,
+    type: 3}
+  maxHeight: 30
+  mask:
+    serializedVersion: 2
+    m_Bits: 64

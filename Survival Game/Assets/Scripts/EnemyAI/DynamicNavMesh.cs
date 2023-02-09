@@ -31,4 +31,3 @@ public class DynamicNavMesh : MonoBehaviour
         
     }
 }
-//Source mesh Meat0_1 does not allow read access This will work in playmode in the editor but not in player

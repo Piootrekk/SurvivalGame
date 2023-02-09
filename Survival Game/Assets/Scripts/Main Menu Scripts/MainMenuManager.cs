@@ -64,7 +64,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void LoadGame()
     {
-
+        SceneManager.LoadScene("SavedGame");
     }
     public void Settings()
     {

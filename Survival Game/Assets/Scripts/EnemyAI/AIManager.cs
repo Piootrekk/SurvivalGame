@@ -100,18 +100,20 @@ public class AIManager : MonoBehaviour
 
     private void Run()
     {
+        agent.speed = speed;
         if (!isPointSet && isPlayerInAttackRange && isPlayerInSightRange) GenerateWalkPoint();
         if(isPointSet) animator.SetBool("IsRun", true);
         if (isPointSet)
         {
-            agent.speed = 1f;
             agent.SetDestination(walkPoint);
         }
         var distance = transform.position - walkPoint;
         if (distance.magnitude < 1f)
         {
             animator.SetBool("IsRun", false);
+            animator.SetBool("IsWalk", true);
             isPointSet = false;
+            getDamage = false;
         }
     }
 
@@ -179,9 +181,14 @@ public class AIManager : MonoBehaviour
     private void CheckPasiveRanges()
     {
         isPlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
+        if (getDamage)
+        {
+            Run();
+            return;
+        }
         if (!isPlayerInSightRange)  Walk(); 
         else if (isPlayerInSightRange) Walk();
-        else if (getDamage) Run();
+        
     }
 
     private void GenerateWalkPoint()

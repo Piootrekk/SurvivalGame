@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 978374690}
   - component: {fileID: 479185735}
   - component: {fileID: 479185736}
+  - component: {fileID: 807688910}
   m_Layer: 13
   m_Name: Fox
   m_TagString: Untagged
@@ -547,7 +548,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  speed: 3
+  buildMask:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 10
   walkPointRange: 5
   attackRange: 1
   sightRange: 5
@@ -566,7 +570,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &479185736
 CapsuleCollider:
@@ -582,6 +586,26 @@ CapsuleCollider:
   m_Height: 3.48
   m_Direction: 2
   m_Center: {x: 0, y: 1.17, z: 0}
+--- !u!114 &807688910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481852943564662251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63124eb24dec10d47a560c33c6482950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  startHP: 50
+  drops:
+  - item: {fileID: 11400000, guid: b3cac8a50caa65143bc40f4db77eae63, type: 2}
+    amount: 1
+  particlesDuringHit: {fileID: 8653691354826667977, guid: 8e086bd026ff0cf439661809410ebc57,
+    type: 3}
+  attackType: 1
 --- !u!1 &6224853148371670669
 GameObject:
   m_ObjectHideFlags: 0
